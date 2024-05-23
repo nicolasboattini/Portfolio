@@ -72,15 +72,28 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col p-4 gap-4 border-t-2 sm:border-t-0 sm:border-l-2 border-solid border-DARK-D-P-light">
+
                 <div className="w-full h-full flex flex-col gap-2 justify-start items-center">
-                  <p className="text-left w-full">Desarrollo Front-end:</p>
+                  <p className="text-left w-full">Lenguajes de Programación:</p>
+                  <section className="w-full flex flex-wrap gap-2 pl-4">
+                    <img src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+                  </section>
+                </div>
+
+                <div className="w-full h-full flex flex-col gap-2 justify-start items-center">
+                  <p className="text-left w-full">Tecnologías Web Fundamentales:</p>
                   <section className="w-full flex flex-wrap gap-2 pl-4">
                     <img src="https://img.shields.io/badge/HTML5%20-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
                     <img src="https://img.shields.io/badge/CSS%20-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-                    <img src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+                  </section>
+                </div>
+
+                <div className="w-full h-full flex flex-col gap-2 justify-start items-center">
+                  <p className="text-left w-full">Frameworks y Librerías::</p>
+                  <section className="w-full flex flex-wrap gap-2 pl-4">
                     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-                    <img src="https://img.shields.io/badge/Tailwind_CSS-4392DB?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
                     <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Nextjs" />
+                    <img src="https://img.shields.io/badge/Tailwind_CSS-4392DB?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
                   </section>
                 </div>
 
@@ -92,12 +105,8 @@ export default function Home() {
                   </section>
                 </div>
               </div>
-
-
+              
             </article>
-
-
-
           </section>
 
           <section className="min-h-full w-auto my-auto">
