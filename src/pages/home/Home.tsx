@@ -19,19 +19,19 @@ export default function Home() {
             <section className="
             w-full
             flex flex-col justify-center items-center
-            sm:flex-row sm:justify-start gap-2"
+            sm:flex-row sm:justify-start gap-[5vw]"
             >
-              <article className="w-48 h-48 sm:w-60 sm:h-60 rounded-full overflow-hidden border-2 border-solid border-LIGHT-D-P-dark dark:border-DARK-D-P-light">
+              <article className="w-48 h-48 sm:min-w-60 sm:h-60 rounded-full overflow-hidden border-2 border-solid border-LIGHT-D-P-dark dark:border-DARK-D-P-light">
                 <img className="w-full h-full object-cover object-center" src="FotoCVSinFondo.png" alt="Foto de perfil" />
               </article>
 
-              <article className="sm:w-1/2 flex flex-col justify-center items-start gap-3 text-DARK-D-P text-lg sm:text-xl">
+              <article className="sm:w-full flex flex-col justify-center items-start gap-3 text-DARK-D-P text-lg sm:text-xl">
                 <p>👤 Nombre: <span className="text-L-T-S">Leandro Daniel Schugurensky</span></p>
                 <p>👨‍💻 Programador: <span className="text-L-T-S">🎓 Trainee</span></p>
                 <p>🎂 Edad: <span className="text-L-T-S">23 años</span></p>
                 <p>🌍 País: <span className="text-L-T-S">Argentina</span></p>
                 <p>📚 Educación: <span className="text-L-T-S">Estudiante autodidacta</span></p>
-                <p>🎯 Objetivo: <span className="text-L-T-S">Actualmente, estoy persiguiendo mi pasión por la programación con el objetivo de convertirme en un programador Front-end.</span></p>
+                <p className="text-balance">🎯 Objetivo: <span className="text-L-T-S">Actualmente, estoy persiguiendo mi pasión por la programación con el objetivo de convertirme en un programador Front-end.</span></p>
               </article>
             </section>
           </section>
@@ -64,10 +64,10 @@ export default function Home() {
             <article className="
             w-full
             flex flex-col justify-center items-center
-            sm:flex-row sm:justify-start gap-2"
+            sm:flex-row sm:justify-start sm:items-start gap-2"
             >
               <p className="text-DARK-D-P text-xl">Skills</p>
-              <div className="w-full flex flex-col gap-2">
+              <div className="w-full flex flex-col gap-2 justify-start items-center">
                 <p className="text-left w-full">Desarrollo Front-end:</p>
                 <section className="w-full flex flex-wrap gap-2 pl-4">
                   <img src="https://img.shields.io/badge/HTML5%20-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
@@ -79,7 +79,7 @@ export default function Home() {
                 </section>
               </div>
 
-              <div className="w-full flex flex-col gap-2">
+              <div className="w-full flex flex-col gap-2 justify-center">
                 <p className="text-left w-full">Base de datos:</p>
                 <section className="w-full flex flex-wrap gap-2 pl-4">
                   <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongodb" />
