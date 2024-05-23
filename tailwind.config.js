@@ -10,6 +10,7 @@ export default {
       screens:{
       },
       fontFamily: {
+        ubuntu: ["Ubuntu", 'sans-serif'],
       },
       colors: {
         // Colores personalizados para el modo claro
@@ -32,7 +33,7 @@ export default {
         'L-T-P': {
           light: '#1c1e26',
           DEFAULT: '#030304',
-          dark: '000000',
+          dark: '#000000',
         },
         'L-T-S': {
           light: '#ffffff',
@@ -42,7 +43,7 @@ export default {
 
         // Colores personalizados para el modo oscuro
         'DARK-BG-P': {
-          light: '000046',
+          light: '#000046',
           DEFAULT: '#000020',
           dark: '#1a1a37',
         },
