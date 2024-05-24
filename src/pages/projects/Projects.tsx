@@ -24,13 +24,15 @@ export default function Projects() {
             >
               {dataProjects.map(project => (
                 <article className="w-full flex flex-col gap-2" key={project.id}>
-                  <div className="w-full h-44 border border-pink-600"></div>
+                  <div className="w-full h-auto border border-pink-600">
+                    <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/1.png`} alt="Portada del proyecto" />
+                  </div>
 
                   <div className="w-full flex flex-col gap-2">
                     <p className="w-full text-center">{project.title}</p>
                     <p>{project.description}</p>
 
-                    <section className="flex gap-2">
+                    <section className="w-full flex gap-2 flex-wrap">
                       {project.techs.map(tech => (
                         <p key={tech}>{tech}</p>
                       ))}
