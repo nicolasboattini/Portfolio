@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import dataProjects from "../../data/dataProjects.ts";
 export default function Projects() {
-  
+
   return (
     <section className="w-full min-h-screen flex flex-col items-center p-2 gap-3
     bg-LIGHT-BG-P dark:bg-DARK-BG-P dark:text-D-T-P text-L-T-P">
@@ -18,15 +19,27 @@ export default function Projects() {
         <div className="flex w-full">
           <section className="w-full flex flex-col gap-3 py-5 pl-[5vw]">
             <section className="
-            w-full
-            flex flex-col justify-center items-center
-            sm:flex-row sm:justify-start gap-[5vw]"
+            w-full gap-[5vw]
+            grid grid-cols-1 sm:grid-cols-2"
             >
-              <article className="flex flex-col gap-2">
-                <Link to='/projects/1'>Boton 1</Link>
-                <Link to='/projects/2'>Boton 2</Link>
-                <Link to='/projects/3'>Boton 3</Link>
-              </article>
+              {dataProjects.map(project => (
+                <article className="w-full flex flex-col gap-2" key={project.id}>
+                  <div className="w-full h-44 border border-pink-600"></div>
+
+                  <div className="w-full flex flex-col gap-2">
+                    <p className="w-full text-center">{project.title}</p>
+                    <p>{project.description}</p>
+
+                    <section className="flex gap-2">
+                      {project.techs.map(tech => (
+                        <p key={tech}>{tech}</p>
+                      ))}
+                    </section>
+                  </div>
+
+                </article>
+              ))}
+
             </section>
           </section>
 
