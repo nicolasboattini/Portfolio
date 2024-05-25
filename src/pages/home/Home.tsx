@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <section className="w-full min-h-screen flex flex-col items-center p-2 gap-3
     bg-LIGHT-BG-P dark:bg-DARK-BG-P dark:text-D-T-P text-L-T-P">
-      <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark">
+      <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark rounded-md shadow-md shadow-[#2c2c5d]">
         <p className="text-sm sm:text-xl text-L-T-S">
           {`<`}
           <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>
@@ -48,7 +48,7 @@ export default function Home() {
         </p>
       </article>
 
-      <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark">
+      <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark rounded-md shadow-md shadow-[#2c2c5d]">
         <p className="text-sm sm:text-xl text-L-T-S">
           {`<`}
           <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>

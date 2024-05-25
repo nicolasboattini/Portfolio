@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section className="w-full min-h-screen flex flex-col items-center p-2 gap-3
     bg-LIGHT-BG-P dark:bg-DARK-BG-P dark:text-D-T-P text-L-T-P">
-      <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark">
+      <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark rounded-md shadow-md shadow-[#2c2c5d]">
         <p className="text-sm sm:text-xl text-L-T-S">
           {`<`}
           <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>
@@ -25,7 +25,7 @@ export default function Projects() {
             >
               {dataProjects.map(project => (
                 <article className="w-full h-full flex flex-col gap-2 p-2 rounded-lg
-                bg-white bg-opacity-10 border-2 border-DARK-D-P-light"
+                bg-white bg-opacity-10 border-2 border-DARK-D-P-light shadow shadow-DARK-D-P-light"
                   key={project.id}>
                   <div className="w-full h-auto">
                     <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/1.png`} alt="Portada del proyecto" />
