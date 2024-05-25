@@ -58,7 +58,7 @@ export default function Projects() {
           </section>
 
           <section className="min-h-full w-auto my-auto">
-            <p className="inline-block text-8xl sm:text-9xl font-ubuntu font-normal text-DARK-D-P">;</p>
+            <p className="hidden sm:inline-block text-8xl sm:text-9xl font-ubuntu font-normal text-DARK-D-P">;</p>
           </section>
         </div>
 
