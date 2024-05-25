@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import dataProjects from "../../data/dataProjects.ts";
-import GithubIcon from "../../components/icons/GithubIcon.tsx";
 export default function Projects() {
 
   return (
@@ -24,25 +23,31 @@ export default function Projects() {
             grid grid-cols-1 sm:grid-cols-2"
             >
               {dataProjects.map(project => (
-                <article className="w-full h-full flex flex-col gap-2" key={project.id}>
-                  <div className="w-full h-auto border border-pink-600">
+                <article className="w-full h-full flex flex-col gap-2 p-2 rounded-lg
+                bg-white bg-opacity-10 border-2 border-DARK-D-P-light"
+                  key={project.id}>
+                  <div className="w-full h-auto">
                     <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/1.png`} alt="Portada del proyecto" />
                   </div>
 
-                  <div className="w-full flex gap-2">
-                    <section className="flex flex-col w-11/12">
-                      <p className="w-full text-center">{project.title}</p>
-                      <p>{project.description}</p>
+                  <div className="w-full flex flex-col gap-2">
+                    <p className="w-full text-center text-xl text-DARK-D-P">{project.title}</p>
 
-                      <article className="w-full flex gap-2 flex-wrap">
-                        {project.techs.map(tech => (
-                          <p key={tech}>{tech}</p>
-                        ))}
+                    <section className="w-full flex gap-2">
+                      <article className="w-11/12 flex flex-col gap-2">
+                        <p className="">{project.description}</p>
+                      </article>
+
+                      <article className="w-1/12 flex flex-col items-center gap-2">
+                        <Link to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-DARK-D-P-light"></span></Link>
+                        <a href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-DARK-D-P-light"></span></a>
                       </article>
                     </section>
-                    <section className="w-1/12 flex flex-col items-center gap-2">
-                      <Link to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-DARK-D-P"></span></Link>
-                      <a href={project.linkGithub} target="_blank"><span className="w-8 h-8 icon-[iconoir--github-circle] hover:text-DARK-D-P"></span></a>
+
+                    <section className="w-full flex gap-2 flex-wrap">
+                      {project.techs.map(tech => (
+                        <p key={tech}>{tech}</p>
+                      ))}
                     </section>
                   </div>
                 </article>
