@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import dataProjects from "../../data/dataProjects.ts";
+import Techs from "../../components/Techs.tsx";
 export default function Projects() {
 
   return (
@@ -16,7 +17,7 @@ export default function Projects() {
           {`>`}
         </p>
 
-        <div className="flex w-full">
+        <div className="flex w-full gap-2">
           <section className="w-full flex flex-col gap-3 py-5 pl-[5vw]">
             <section className="
             w-full gap-[5vw]
@@ -44,9 +45,9 @@ export default function Projects() {
                       </article>
                     </section>
 
-                    <section className="w-full flex gap-2 flex-wrap">
+                    <section className="w-full flex gap-2 flex-wrap justify-center">
                       {project.techs.map(tech => (
-                        <p key={tech}>{tech}</p>
+                        <Techs key={tech} tech={tech}/>
                       ))}
                     </section>
                   </div>
