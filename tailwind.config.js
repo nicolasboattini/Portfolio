@@ -1,5 +1,7 @@
+import { addDynamicIconSelectors } from '@iconify/tailwind';
+
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,8 +9,7 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      screens:{
-      },
+      screens: {},
       fontFamily: {
         ubuntu: ["Ubuntu", 'sans-serif'],
       },
@@ -29,7 +30,6 @@ export default {
           DEFAULT: '#ffdd85', 
           dark: '#ffcc55'     
         },
-
         'L-T-P': {
           light: '#1c1e26',
           DEFAULT: '#030304',
@@ -40,7 +40,6 @@ export default {
           DEFAULT: '#e4e4e4',
           dark: '#b1b1b1',
         },
-
         // Colores personalizados para el modo oscuro
         'DARK-BG-P': {
           light: '#000046',
@@ -57,7 +56,6 @@ export default {
           DEFAULT: '#ff9800',
           dark: '#cc7900',
         },
-        
         'D-T-P': {
           light: '#fffbfe',
           DEFAULT: '#f9f6f9',
@@ -71,5 +69,9 @@ export default {
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    addDynamicIconSelectors()
+  ],
+};
+
+export default config;

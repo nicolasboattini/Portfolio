@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import dataProjects from "../../data/dataProjects.ts";
+import GithubIcon from "../../components/icons/GithubIcon.tsx";
 export default function Projects() {
 
   return (
@@ -23,22 +24,27 @@ export default function Projects() {
             grid grid-cols-1 sm:grid-cols-2"
             >
               {dataProjects.map(project => (
-                <article className="w-full flex flex-col gap-2" key={project.id}>
+                <article className="w-full h-full flex flex-col gap-2" key={project.id}>
                   <div className="w-full h-auto border border-pink-600">
                     <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/1.png`} alt="Portada del proyecto" />
                   </div>
 
-                  <div className="w-full flex flex-col gap-2">
-                    <p className="w-full text-center">{project.title}</p>
-                    <p>{project.description}</p>
+                  <div className="w-full flex gap-2">
+                    <section className="flex flex-col w-11/12">
+                      <p className="w-full text-center">{project.title}</p>
+                      <p>{project.description}</p>
 
-                    <section className="w-full flex gap-2 flex-wrap">
-                      {project.techs.map(tech => (
-                        <p key={tech}>{tech}</p>
-                      ))}
+                      <article className="w-full flex gap-2 flex-wrap">
+                        {project.techs.map(tech => (
+                          <p key={tech}>{tech}</p>
+                        ))}
+                      </article>
+                    </section>
+                    <section className="w-1/12 flex flex-col items-center gap-2">
+                      <Link to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-DARK-D-P"></span></Link>
+                      <a href={project.linkGithub} target="_blank"><span className="w-8 h-8 icon-[iconoir--github-circle] hover:text-DARK-D-P"></span></a>
                     </section>
                   </div>
-
                 </article>
               ))}
 
