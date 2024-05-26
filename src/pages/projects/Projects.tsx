@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css'
 import dataProjects from "../../data/dataProjects.ts";
@@ -9,15 +10,7 @@ export default function Projects() {
     <section className="w-full min-h-screen flex flex-col items-center p-2 gap-3
     bg-LIGHT-BG-P dark:bg-DARK-BG-P dark:text-D-T-P text-L-T-P">
       <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark rounded-md shadow-md shadow-[#2c2c5d]">
-        <p className="text-sm sm:text-xl text-L-T-S">
-          {`<`}
-          <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>
-          {' '}
-          <span className="text-LIGHT-D-P-dark dark:text-DARK-D-P">id</span>
-          =
-          <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">"section__proyectos"</span>
-          {`>`}
-        </p>
+        <TagOpen section={"proyectos"} />
 
         <div className="flex w-full gap-2">
           <section className="w-full flex flex-col gap-3 py-5 pl-[5vw]">
@@ -43,7 +36,7 @@ export default function Projects() {
 
                       <article className="w-1/12 flex flex-col items-center gap-2">
                         <Link data-tooltip-id="my-tooltip" data-tooltip-content="Ver más" to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-DARK-D-P-light"></span></Link>
-                        <a data-tooltip-id="my-tooltip" data-tooltip-content="Github"  href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-DARK-D-P-light"></span></a>
+                        <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-DARK-D-P-light"></span></a>
                         <Tooltip id="my-tooltip" />
                       </article>
                     </section>
@@ -65,13 +58,8 @@ export default function Projects() {
           </section>
         </div>
 
-        <p className="text-sm sm:text-xl text-L-T-S">
-          {`</`}
-          <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>
-          {`>`}
-        </p>
+        <TagClose />
       </article>
-      
     </section>
   )
 }

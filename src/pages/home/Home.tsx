@@ -1,4 +1,5 @@
 import Navbar from "../../components/navbar/Navbar.tsx";
+import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
 
 export default function Home() {
   return (
@@ -9,15 +10,7 @@ export default function Home() {
 
       <section className="w-full h-full flex justify-center items-center">
         <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark rounded-md shadow-md shadow-[#2c2c5d]">
-          <p className="text-sm sm:text-xl text-L-T-S">
-            {`<`}
-            <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>
-            {' '}
-            <span className="text-LIGHT-D-P-dark dark:text-DARK-D-P">id</span>
-            =
-            <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">"section__presentación"</span>
-            {`>`}
-          </p>
+        <TagOpen section={"presentación"} />
 
           <div className="flex w-full">
             <section className="w-full flex flex-col gap-3 py-5 pl-[5vw]">
@@ -43,9 +36,9 @@ export default function Home() {
 
                     </div>
                   </div>
-                  <div className="flex gap-4 justify-center">
-                    <a href="https://github.com/Schugu" target="_blank">
-                      <span className="w-10 h-10 icon-[mdi--github] hover:text-DARK-D-P"></span>
+                  <div className="flex gap-4 justify-center items-center">
+                    <a href="https://github.com/Schugu" target="_blank" className="flex justify-center items-center p-2 border-2 border-transparent hover:border-DARK-D-P">
+                      <span className="w-10 h-10 icon-[mdi--github]"></span>
                     </a>
                     <a href="https://www.linkedin.com/in/leandrodanielschugurensky/" target="_blank">
                       <span className="w-10 h-10 icon-[mdi--linkedin] hover:text-DARK-D-P"></span>
@@ -58,6 +51,10 @@ export default function Home() {
                     </a>
                     <a href="mailto:leo.schugu@gmail.com">
                       <span className="w-10 h-10 icon-[mdi--email-outline] hover:text-DARK-D-P"></span>
+                    </a>
+                    <a href="" className="w-20 h-10 flex justify-center items-center">
+                      <span className="w-full h-full icon-[academicons--cv]"></span>
+                      <span className="w-full h-full icon-[material-symbols--download]"></span>
                     </a>
                   </div>
 
@@ -97,11 +94,7 @@ export default function Home() {
             </section>
           </div>
 
-          <p className="text-sm sm:text-xl text-L-T-S">
-            {`</`}
-            <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>
-            {`>`}
-          </p>
+          <TagClose />
         </article>
       </section>
 

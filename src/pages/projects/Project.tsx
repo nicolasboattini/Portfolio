@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
 import dataProjects from '../../data/dataProjects';
 import Techs from "../../components/Techs.tsx";
 
@@ -16,15 +17,7 @@ export default function Project() {
     <section className="w-full min-h-screen flex flex-col items-center p-2 gap-3
     bg-LIGHT-BG-P dark:bg-DARK-BG-P dark:text-D-T-P text-L-T-P">
       <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark rounded-md shadow-md shadow-[#2c2c5d]">
-        <p className="text-sm sm:text-xl text-L-T-S">
-          {`<`}
-          <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>
-          {' '}
-          <span className="text-LIGHT-D-P-dark dark:text-DARK-D-P">id</span>
-          =
-          <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">"section__proyectos__{project.title}"</span>
-          {`>`}
-        </p>
+        <TagOpen section={project.title}/>
 
         <div className="flex w-full gap-2">
           <section className="w-full flex flex-col gap-3 py-5 pl-[5vw]">
@@ -32,7 +25,7 @@ export default function Project() {
             w-full gap-[5vw]
             grid grid-cols-1 sm:grid-cols-2"
             >
-            
+              
 
             </section>
           </section>
@@ -42,11 +35,7 @@ export default function Project() {
           </section>
         </div>
 
-        <p className="text-sm sm:text-xl text-L-T-S">
-          {`</`}
-          <span className="text-LIGHT-D-P dark:text-DARK-D-P-light">section</span>
-          {`>`}
-        </p>
+        <TagClose />
       </article>
     </section>
   );
