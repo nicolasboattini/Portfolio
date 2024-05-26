@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css'
 import dataProjects from "../../data/dataProjects.ts";
 import Techs from "../../components/Techs.tsx";
 export default function Projects() {
@@ -40,14 +42,15 @@ export default function Projects() {
                       </article>
 
                       <article className="w-1/12 flex flex-col items-center gap-2">
-                        <Link to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-DARK-D-P-light"></span></Link>
-                        <a href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-DARK-D-P-light"></span></a>
+                        <Link data-tooltip-id="my-tooltip" data-tooltip-content="Ver más" to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-DARK-D-P-light"></span></Link>
+                        <a data-tooltip-id="my-tooltip" data-tooltip-content="Github"  href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-DARK-D-P-light"></span></a>
+                        <Tooltip id="my-tooltip" />
                       </article>
                     </section>
 
                     <section className="w-full flex gap-2 flex-wrap justify-center">
                       {project.techs.map(tech => (
-                        <Techs key={tech} tech={tech}/>
+                        <Techs key={tech} tech={tech} />
                       ))}
                     </section>
                   </div>
@@ -68,6 +71,7 @@ export default function Projects() {
           {`>`}
         </p>
       </article>
+      
     </section>
   )
 }

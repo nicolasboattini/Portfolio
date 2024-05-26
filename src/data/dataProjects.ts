@@ -26,7 +26,7 @@ const dataProjects: Project[] = [
   },
   {
     id: '3',
-    title: ' Subscriptions Tracker 📋',
+    title: 'Subscriptions Tracker 📋',
     description: 'Aplicación web para trackear subscripciones',
     techs: ['HTML', 'CSS', 'JavaScript', 'React'],
     linkGithub: 'https://github.com/Schugu/SubscriptionsTracker',
