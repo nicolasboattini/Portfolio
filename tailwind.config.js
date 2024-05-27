@@ -14,21 +14,33 @@ const config = {
         ubuntu: ["Ubuntu", 'sans-serif'],
       },
       colors: {
+        'CREMA': {
+          DEFAULT: '#f1e1cf',
+        },
+        'AMARILLO': {
+          DEFAULT: '#ffcc50',
+        },
+        'AZUL': {
+          DEFAULT: '#2196f3',
+        },
+
+
+
         // Colores personalizados para el modo claro
         'LIGHT-BG-P': {
-          light: '#f0f8ff',   
-          DEFAULT: '#e0e7ff', 
-          dark: '#c0c7ff'    
+          light: '#f0f8ff',
+          DEFAULT: '#e0e7ff',
+          dark: '#c0c7ff'
         },
         'LIGHT-BG-S': {
-          light: '#dfefff',  
+          light: '#dfefff',
           DEFAULT: '#cfe7ff',
-          dark: '#afc7ff'     
+          dark: '#afc7ff'
         },
         'LIGHT-D-P': {
-          light: '#ffedb5',   
-          DEFAULT: '#ffdd85', 
-          dark: '#ffcc55'     
+          light: '#ffedb5',
+          DEFAULT: '#ffdd85',
+          dark: '#ffcc55'
         },
         'L-T-P': {
           light: '#1c1e26',
