@@ -8,7 +8,7 @@ import IconosTechs from "../../components/IconosTechs.tsx";
 export default function Home() {
   return (
     <section className="w-full min-h-screen flex flex-col items-center md:gap-3
-    bg-LIGHT-BG-P dark:bg-DARK-BG-P dark:text-[#f1e1cf] text-L-T-P">
+    bg-LIGHT-BG-P dark:bg-DARK-BG-P dark:text-CREMA text-L-T-P">
 
       <Navbar></Navbar>
 
@@ -24,12 +24,12 @@ export default function Home() {
             md:flex-row md:justify-evenly md:items-center gap-2"
               >
 
-                <section className="w-48 h-48 md:min-w-80 md:h-80 rounded-full overflow-hidden border-2 border-solid border-LIGHT-D-P-dark dark:border-DARK-D-P-light">
+                <section className="w-48 h-48 md:min-w-80 md:h-80 rounded-full overflow-hidden border-2 border-solid border-AMARILLO dark:border-AMARILLO">
                   <img className="w-full h-full object-cover object-center" src="FotoCVSinFondo.png" alt="Foto de perfil" />
                 </section>
 
                 <section className="md:w-full flex flex-col gap-5 md:gap-10">
-                  <p className="text-center text-lg md:text-4xl text-DARK-D-P-light">{dataProfile.fullname}</p>
+                  <p className="text-center text-lg md:text-4xl text-AMARILLO">{dataProfile.fullname}</p>
 
                   <article className="w-full flex gap-5 flex-wrap justify-center items-center text-base md:text-2xl">
                     <Subtitle string={dataProfile.dev} />
@@ -46,17 +46,17 @@ export default function Home() {
                   </article>
 
                   <article className="w-full flex flex-col gap-2 items-center ">
-                    <p className="text-[#2196f3] text-base md:text-2xl">SKILLS</p>
+                    <p className="text-AZUL text-base md:text-2xl">SKILLS</p>
                     <div className="flex flex-col items-start gap-4">
                       <section className="flex flex-wrap gap-x-4 gap-y-1">
-                        <p className="text-DARK-D-P-light text-md md:text-xl">Desarrollo Front-end:</p>
+                        <p className="text-AMARILLO text-md md:text-xl">Desarrollo Front-end:</p>
                         {dataProfile.skills.frontEnd.map((tech) => (
                           <IconosTechs key={tech} tech={tech} />
                         ))}
                       </section>
                       
                       <section className="flex flex-wrap gap-x-4 gap-y-1">
-                        <p className="text-DARK-D-P-light text-md md:text-xl">Base de datos:</p>
+                        <p className="text-AMARILLO text-md md:text-xl">Base de datos:</p>
                         {dataProfile.skills.dataBase.map((tech) => (
                           <IconosTechs key={tech} tech={tech} />
                         ))}
@@ -69,7 +69,7 @@ export default function Home() {
             </article>
 
             <article className="min-h-full w-auto my-auto">
-              <p className="hidden md:inline-block text-8xl md:text-9xl font-ubuntu font-normal text-[#2196f3]">;</p>
+              <p className="hidden md:inline-block text-8xl md:text-9xl font-ubuntu font-normal text-AZUL">;</p>
             </article>
           </section>
 
