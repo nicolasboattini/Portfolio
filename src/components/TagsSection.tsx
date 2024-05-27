@@ -1,5 +1,8 @@
+interface TagOpenProps {
+  section: string;
+}
 
-const TagOpen = ({ section }) => {
+const TagOpen = ({ section }: TagOpenProps) => {
   return (
     <p className="text-sm sm:text-xl text-L-T-S">
       {`<`}
