@@ -6,7 +6,7 @@ interface FlagProps {
 }
 const Subtitle = ({ string }: SubtitleProps) => {
   return (
-    <p className="md:min-h-14 flex items-center justify-center px-1 text-center
+    <p className="md:min-h-14 flex items-center justify-center px-1 md:px-3 text-center
                   rounded-lg bg-white bg-opacity-10 
                   border-2 border-DARK-D-P-light shadow shadow-DARK-D-P-light">
       {string}
