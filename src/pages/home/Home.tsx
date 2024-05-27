@@ -34,7 +34,7 @@ export default function Home() {
                   <article className="w-full flex gap-5 flex-wrap justify-center items-center text-base md:text-2xl">
                     <Subtitle string={dataProfile.dev} />
                     <Subtitle string={dataProfile.years} />
-                    <Flag flag={dataProfile.nationality} />
+                    <Flag nationality={dataProfile.nationality} />
                   </article>
 
                   <article className="flex flex-wrap gap-0.5 md:gap-4 justify-center items-center">
