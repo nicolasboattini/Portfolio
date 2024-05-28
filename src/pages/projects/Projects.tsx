@@ -26,14 +26,14 @@ export default function Projects() {
             >
               {dataProjects.map(project => (
                 <article className="w-full h-full flex flex-col gap-2 p-2 rounded-lg
-                bg-white bg-opacity-10 border-2 border-DARK-D-P-light shadow shadow-DARK-D-P-light"
+                bg-white bg-opacity-10 border-2 border-AMARILLO shadow shadow-AMARILLO"
                   key={project.id}>
                   <div className="w-full h-auto">
                     <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/1.png`} alt="Portada del proyecto" />
                   </div>
 
                   <div className="w-full flex flex-col gap-2">
-                    <p className="w-full text-center text-xl text-AMARILLO">{project.title}</p>
+                    <p className="w-full text-center text-xl border-b-2 border-AMARILLO">{project.title}</p>
 
                     <section className="w-full flex gap-2">
                       <article className="w-11/12 flex flex-col gap-2 pl-2">
@@ -41,8 +41,8 @@ export default function Projects() {
                       </article>
 
                       <article className="w-1/12 flex flex-col items-center gap-2">
-                        <Link data-tooltip-id="my-tooltip" data-tooltip-content="Ver más" to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-DARK-D-P-light"></span></Link>
-                        <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-DARK-D-P-light"></span></a>
+                        <Link data-tooltip-id="my-tooltip" data-tooltip-content="Ver más" to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-AMARILLO"></span></Link>
+                        <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AMARILLO"></span></a>
                         <Tooltip id="my-tooltip" />
                       </article>
                     </section>
