@@ -9,17 +9,19 @@ export default function Projects() {
 
   return (
     <section className="w-full min-h-screen flex flex-col items-center 
-    bg-LIGHT-BG-P dark:bg-DARK-BG dark:text-CREMA text-L-T-P gap-2">
+    bg-LIGHT-BG-P dark:bg-DARK-BG dark:text-CREMA text-L-T-P">
 
       <Navbar />
 
-      <article className="mx-0 my-auto w-full h-auto md:h-auto md:w-11/12 p-4 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-dark rounded-md border-2 border-DARK-BORDER-light">
+      <article className="mx-0 my-6 w-full h-auto md:h-auto md:w-11/12 md:pt-4 md:pr-4 md:pb-6 md:pl-7 p-2
+      bg-LIGHT-BG-P-dark dark:bg-DARK-BG-dark 
+      rounded-md border-2 border-DARK-BORDER-light">
         <TagOpen section={"proyectos"} />
 
-        <div className="flex w-full gap-2">
-          <section className="w-full flex flex-col gap-3 py-5 pl-[5vw]">
+        <div className="flex w-full justify-center md:gap-4">
+          <section className="w-full flex flex-col gap-3 p-2 md:py-5 md:pl-[5vw]">
             <section className="
-            w-full gap-[5vw]
+            w-full gap-[4vw]
             grid grid-cols-1 sm:grid-cols-2"
             >
               {dataProjects.map(project => (
@@ -31,11 +33,11 @@ export default function Projects() {
                   </div>
 
                   <div className="w-full flex flex-col gap-2">
-                    <p className="w-full text-center text-xl text-DARK-D-P">{project.title}</p>
+                    <p className="w-full text-center text-xl text-AMARILLO">{project.title}</p>
 
                     <section className="w-full flex gap-2">
-                      <article className="w-11/12 flex flex-col gap-2">
-                        <p className="">{project.description}</p>
+                      <article className="w-11/12 flex flex-col gap-2 pl-2">
+                        <p className="indent-4">{project.description}</p>
                       </article>
 
                       <article className="w-1/12 flex flex-col items-center gap-2">
@@ -58,7 +60,7 @@ export default function Projects() {
           </section>
 
           <section className="min-h-full w-auto my-auto">
-            <p className="hidden sm:inline-block text-8xl sm:text-9xl font-ubuntu font-normal text-DARK-D-P">;</p>
+            <p className="hidden sm:inline-block text-8xl sm:text-9xl font-ubuntu font-normal text-AZUL">;</p>
           </section>
         </div>
 
