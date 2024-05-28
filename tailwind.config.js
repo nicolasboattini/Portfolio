@@ -24,6 +24,19 @@ const config = {
           DEFAULT: '#2196f3',
         },
 
+        'DARK-BG': {
+          light: '#18263E',
+          DEFAULT: '#0E192B',
+          dark: '#060e1c',
+        },
+        'DARK-BORDER': {
+          light: '#637591',
+          DEFAULT: '#50617C',
+          dark: '#3F4F6A',
+        },
+
+        
+
 
 
         // Colores personalizados para el modo claro
