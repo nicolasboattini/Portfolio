@@ -12,7 +12,7 @@ export default function Home() {
 
       <Navbar></Navbar>
 
-      <div className="mx-0 my-auto w-full h-screen md:h-auto md:w-11/12 p-4 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-dark rounded-md border-2 border-DARK-BORDER-light">
+      <div className="mx-0 my-auto w-full h-auto md:h-auto md:w-11/12 p-4 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-dark rounded-md border-2 border-DARK-BORDER-light">
         <TagOpen section={"Presentación"} />
 
         <section className="flex w-full">
