@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
+import Navbar from "../../components/navbar/Navbar.tsx";
+import dataProjects from "../../data/dataProjects.ts";
+import Techs from "../../components/Techs.tsx";
 import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css'
-import dataProjects from "../../data/dataProjects.ts";
-import Techs from "../../components/Techs.tsx";
 export default function Projects() {
 
   return (
-    <section className="w-full min-h-screen flex flex-col items-center p-2 gap-3
-    bg-LIGHT-BG-P dark:bg-DARK-BG-P dark:text-D-T-P text-L-T-P">
-      <article className="w-full sm:w-11/12 p-2 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-P-dark rounded-md shadow-md shadow-[#2c2c5d]">
+    <section className="w-full min-h-screen flex flex-col items-center 
+    bg-LIGHT-BG-P dark:bg-DARK-BG dark:text-CREMA text-L-T-P gap-2">
+
+      <Navbar />
+
+      <article className="mx-0 my-auto w-full h-auto md:h-auto md:w-11/12 p-4 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-dark rounded-md border-2 border-DARK-BORDER-light">
         <TagOpen section={"proyectos"} />
 
         <div className="flex w-full gap-2">
