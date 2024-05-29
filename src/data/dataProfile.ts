@@ -14,6 +14,7 @@ interface Profile {
   skills: {
     frontEnd: string[];
     dataBase: string[];
+    versionControl: string[];
   };
   profilePicture: string;
 }
@@ -33,7 +34,8 @@ const dataProfile: Profile = {
   },
   skills: {
     frontEnd: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind'],
-    dataBase: ['MongoDb', 'Firebase']
+    dataBase: ['MongoDb', 'Firebase'],
+    versionControl: ['Git', 'GitHub']
   },
   profilePicture: 'FotoCVSinFondo.png'
 };
