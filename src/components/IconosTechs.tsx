@@ -33,6 +33,12 @@ const IconosTechs = ({ tech }: IconosTechsProps) => {
       case 'Firebase':
         setIcono('icon-[ri--firebase-fill]');
         break;
+      case 'Git':
+        setIcono('icon-[mdi--git]')
+        break
+      case 'GitHub':
+        setIcono('icon-[ri--github-fill]')
+        break
       default:
         setIcono('icon-[hugeicons--image-not-found-01]');
     }

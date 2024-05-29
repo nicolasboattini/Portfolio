@@ -60,6 +60,13 @@ export default function Home() {
                         <IconosTechs key={tech} tech={tech} />
                       ))}
                     </section>
+
+                    <section className="flex flex-wrap gap-x-4 gap-y-1">
+                      <p className="text-AMARILLO text-md md:text-xl">Control de versiones:</p>
+                      {dataProfile.skills.versionControl.map((tech) => (
+                        <IconosTechs key={tech} tech={tech} />
+                      ))}
+                    </section>
                   </div>
                 </article>
               </section>
