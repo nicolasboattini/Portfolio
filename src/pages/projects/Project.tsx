@@ -1,12 +1,16 @@
-import { useParams, Link } from 'react-router-dom';
-import Navbar from "../../components/navbar/Navbar.tsx";
-import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
+import { useParams } from 'react-router-dom';
+import Navbar from "../../components/navbar/Navbar";
+import { TagOpen, TagClose } from "../../components/TagsSection";
 import dataProjects from '../../data/dataProjects';
-import Techs from "../../components/Techs.tsx";
+import Techs from "../../components/Techs";
 import { Tooltip } from 'react-tooltip';
+import { useState } from 'react';
+
+type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 
 export default function Project() {
-  const { projectId } = useParams();
+  const { projectId } = useParams<{ projectId: string }>();
+  const [device, setDevice] = useState<DeviceType>('desktop');
 
   const project = dataProjects.find(p => p.id === projectId);
 
@@ -34,10 +38,10 @@ export default function Project() {
             md:flex-row md:justify-evenly md:items-center gap-2"
             >
 
-              <article className="w-full h-full flex flex-col gap-2 p-2"
+              <section className="w-full h-full flex flex-col gap-2 p-2"
               >
 
-                <div className="w-full flex flex-col gap-2">
+                <article className="w-full flex flex-col gap-2">
                   <p className="w-full text-center text-xl border-b-2 border-AMARILLO">{project.title}</p>
 
                   <section className="w-full flex gap-2">
@@ -56,9 +60,31 @@ export default function Project() {
                       <Techs key={tech} tech={tech} />
                     ))}
                   </section>
-                </div>
-              </article>
+                </article>
 
+                <article className='w-full'>
+                  <p>Capturas</p>
+
+                  <span onClick={() => setDevice('cellphone')} className="icon-[ion--phone-portrait-sharp]" />
+                  <span onClick={() => setDevice('tablet')} className="icon-[ion--tablet-portrait-sharp]" />
+                  <span onClick={() => setDevice('desktop')} className="icon-[ion--ios-desktop]" />
+
+                  <div className={`w-full grid gap-2 
+                  ${device === 'cellphone' ? 'grid-cols-3 md:grid-cols-4' : ''}
+                  ${device === 'tablet' ? 'grid-cols-2 md:grid-cols-3' : ''}
+                  ${device === 'desktop' ? 'grid-cols-1 md:grid-cols-2' : ''}`}>
+
+                    {[...Array(project.cantScreenshots[device])].map((_, index) => (
+                      <img
+                        key={index}
+                        src={`/projects/${project.id}/screenshots/${device}/${index + 1}.png`}
+                        alt={`Screenshot ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </article>
+
+              </section>
             </div>
           </article>
 
