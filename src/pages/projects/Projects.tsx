@@ -29,7 +29,7 @@ export default function Projects() {
                 bg-white bg-opacity-10 border-2 border-AMARILLO shadow shadow-AMARILLO"
                   key={project.id}>
                   <div className="w-full h-auto">
-                    <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/1.png`} alt="Portada del proyecto" />
+                    <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/frontPage.png`} alt="Portada del proyecto" />
                   </div>
 
                   <div className="w-full flex flex-col gap-2">
