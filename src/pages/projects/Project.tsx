@@ -63,30 +63,39 @@ export default function Project() {
                   </section>
                 </article>
 
-                <article className='w-full'>
-
-                  <p>Captura de pantalla:</p>
+                <article className='w-full flex flex-col gap-4 '>
+                  <p className='text-2xl'>Captura de pantalla:</p>
 
                   <div className='flex gap-6'>
-                    <SelectResolution onClick={()=> setDevice('cellphone')}>
+                    <SelectResolution
+                      onClick={() => setDevice('desktop')}
+                      styleClass={device === 'desktop' ? 'border-AMARILLO bg-white bg-opacity-10' : 'border-transparent'}
+                    >
                       <span
-                        className="w-9 h-9 icon-[ion--phone-portrait-sharp]"
+                        className="w-16 h-10 icon-[ion--ios-desktop]"
                       />
-                      <p>Celular</p>
+                      <p>PC</p>
                     </SelectResolution>
 
-                    <SelectResolution onClick={()=> setDevice('tablet')}>
+                    <SelectResolution
+                      onClick={() => setDevice('tablet')}
+                      styleClass={device === 'tablet' ? 'border-AMARILLO bg-white bg-opacity-10' : 'border-transparent'}
+                    >
                       <span
                         className="w-9 h-9 icon-[ion--tablet-portrait-sharp]"
                       />
                       <p>Tablet</p>
                     </SelectResolution>
 
-                    <SelectResolution onClick={()=> setDevice('desktop')}>
+                    <SelectResolution
+                      onClick={() => setDevice('cellphone')}
+                      styleClass={device === 'cellphone' ? 'border-AMARILLO bg-white bg-opacity-10' : 'border-transparent'}
+
+                    >
                       <span
-                        className="w-16 h-10 icon-[ion--ios-desktop]"
+                        className="w-9 h-9 icon-[ion--phone-portrait-sharp]"
                       />
-                      <p>PC</p>
+                      <p>Celular</p>
                     </SelectResolution>
                   </div>
 
