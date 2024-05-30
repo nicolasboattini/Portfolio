@@ -13,6 +13,7 @@ export default function Navbar() {
       <article className="flex gap-2">
         <Link to='/home' className={`border-b-2  border-DARK-BORDER-light ${location.pathname === '/home' ? 'border-white' : ''}`}>Home</Link>
         <Link to='/projects' className={`border-b-2  border-DARK-BORDER-light ${location.pathname === '/projects' ? 'border-white' : ''}`}>Projects</Link>
+        <Link to='/cv' className={`border-b-2  border-DARK-BORDER-light ${location.pathname === '/cv' ? 'border-white' : ''}`}>Curriculum vitae</Link>
       </article>
 
 
