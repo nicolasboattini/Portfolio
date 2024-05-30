@@ -36,7 +36,7 @@ const SocialNetworkIcon = ({ socialNetwork, link }: SocialNetworkProps) => {
   return (
     <a href={link} target="_blank"
       className="flex justify-center items-center p-1 rounded-xl
-                border-2 border-transparent hover:border-DARK-D-P-light
+                border-2 border-transparent hover:border-AMARILLO
                 hover:bg-white hover:bg-opacity-10 
                 transition-colors duration-100 ease-in-out
                 ">
