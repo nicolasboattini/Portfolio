@@ -5,7 +5,11 @@ interface Project {
   moreInfo: string[];
   techs: string[];
   linkGithub : string;
-  cantScreenshots: number;
+  cantScreenshots: {
+    cellphone: number;
+    tablet: number;
+    desktop: number;
+  };
 }
 
 const dataProjects: Project[] = [
@@ -19,7 +23,11 @@ const dataProjects: Project[] = [
     ],
     techs: ['JavaScript', 'React', 'Tailwind', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
     linkGithub: 'https://github.com/Schugu/BalanceApp',
-    cantScreenshots: 1
+    cantScreenshots: {
+      cellphone: 6,
+      tablet: 0,
+      desktop: 0,
+    }
   },
   {
     id: '2',
@@ -28,7 +36,11 @@ const dataProjects: Project[] = [
     moreInfo:[],
     techs: ['JavaScript', 'Next.js', 'Tailwind'],
     linkGithub: 'https://github.com/Schugu/prueba-tecnica-neowyze',
-    cantScreenshots: 1
+    cantScreenshots: {
+      cellphone: 6,
+      tablet: 0,
+      desktop: 0,
+    }
   },
   {
     id: '3',
@@ -39,7 +51,11 @@ const dataProjects: Project[] = [
     ],
     techs: ['HTML', 'CSS', 'JavaScript', 'React'],
     linkGithub: 'https://github.com/Schugu/SubscriptionsTracker',
-    cantScreenshots: 1
+    cantScreenshots: {
+      cellphone: 6,
+      tablet: 0,
+      desktop: 0,
+    }
   },
   {
     id: '4',
@@ -50,7 +66,11 @@ const dataProjects: Project[] = [
     ],
     techs: ['HTML', 'CSS', 'JavaScript'],
     linkGithub: 'https://github.com/Schugu/BraillePage',
-    cantScreenshots: 1
+    cantScreenshots: {
+      cellphone: 6,
+      tablet: 4,
+      desktop: 5,
+    }
   },
 ];
 
