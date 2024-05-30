@@ -5,6 +5,7 @@ import dataProjects from '../../data/dataProjects';
 import Techs from "../../components/Techs";
 import { Tooltip } from 'react-tooltip';
 import { useState } from 'react';
+import SelectResolution from "./SelectResolution.tsx";
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 
@@ -63,11 +64,33 @@ export default function Project() {
                 </article>
 
                 <article className='w-full'>
-                  <p>Capturas</p>
 
-                  <span onClick={() => setDevice('cellphone')} className="icon-[ion--phone-portrait-sharp]" />
-                  <span onClick={() => setDevice('tablet')} className="icon-[ion--tablet-portrait-sharp]" />
-                  <span onClick={() => setDevice('desktop')} className="icon-[ion--ios-desktop]" />
+                  <p>Captura de pantalla:</p>
+
+                  <div className='flex gap-6'>
+                    <SelectResolution onClick={()=> setDevice('cellphone')}>
+                      <span
+                        className="w-9 h-9 icon-[ion--phone-portrait-sharp]"
+                      />
+                      <p>Celular</p>
+                    </SelectResolution>
+
+                    <SelectResolution onClick={()=> setDevice('tablet')}>
+                      <span
+                        className="w-9 h-9 icon-[ion--tablet-portrait-sharp]"
+                      />
+                      <p>Tablet</p>
+                    </SelectResolution>
+
+                    <SelectResolution onClick={()=> setDevice('desktop')}>
+                      <span
+                        className="w-16 h-10 icon-[ion--ios-desktop]"
+                      />
+                      <p>PC</p>
+                    </SelectResolution>
+                  </div>
+
+
 
                   <div className={`w-full grid gap-2 
                   ${device === 'cellphone' ? 'grid-cols-3 md:grid-cols-4' : ''}
