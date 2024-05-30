@@ -33,12 +33,10 @@ export default function Project() {
             flex flex-col justify-center items-center
             md:flex-row md:justify-evenly md:items-center gap-2"
             >
-              
 
+              <article className="w-full h-full flex flex-col gap-2 p-2"
+              >
 
-              <article className="w-full h-full flex gap-2 p-2"
-               >
-                
                 <div className="w-full flex flex-col gap-2">
                   <p className="w-full text-center text-xl border-b-2 border-AMARILLO">{project.title}</p>
 
@@ -48,7 +46,6 @@ export default function Project() {
                     </article>
 
                     <article className="w-1/12 flex flex-col items-center gap-2">
-                      <Link data-tooltip-id="my-tooltip" data-tooltip-content="Ver más" to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-AMARILLO"></span></Link>
                       <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AMARILLO"></span></a>
                       <Tooltip id="my-tooltip" />
                     </article>
@@ -59,10 +56,6 @@ export default function Project() {
                       <Techs key={tech} tech={tech} />
                     ))}
                   </section>
-                </div>
-
-                <div className="w-full h-auto">
-                  <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/1.png`} alt="Portada del proyecto" />
                 </div>
               </article>
 
