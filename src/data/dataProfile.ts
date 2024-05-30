@@ -30,7 +30,7 @@ const dataProfile: Profile = {
     instagram: "https://www.instagram.com/leanschugu/",
     freecodecamp: "https://www.freecodecamp.org/certification/Schugu/responsive-web-design",
     email: "mailto:leo.schugu@gmail.com",
-    cv: "/CV/CV_Leandro_Daniel_Schugurensky.pdf"
+    cv: "/CV/CV.pdf"
   },
   skills: {
     frontEnd: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind'],
