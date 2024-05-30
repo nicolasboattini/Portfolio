@@ -11,8 +11,8 @@ export default function Navbar() {
       <p>{dataProfile.fullname}</p>
 
       <article className="flex gap-2">
-        <Link to='/home' className={`border-b-2 border-transparent ${location.pathname === '/home' ? 'border-DARK-BORDER-light' : ''}`}>Home</Link>
-        <Link to='/projects' className={`border-b-2 border-transparent ${location.pathname === '/projects' ? 'border-DARK-BORDER-light' : ''}`}>Projects</Link>
+        <Link to='/home' className={`border-b-2  border-DARK-BORDER-light ${location.pathname === '/home' ? 'border-white' : ''}`}>Home</Link>
+        <Link to='/projects' className={`border-b-2  border-DARK-BORDER-light ${location.pathname === '/projects' ? 'border-white' : ''}`}>Projects</Link>
       </article>
 
 
