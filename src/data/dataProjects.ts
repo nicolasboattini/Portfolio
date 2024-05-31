@@ -55,9 +55,9 @@ const dataProjects: Project[] = [
     techs: ['HTML', 'CSS', 'JavaScript', 'React'],
     linkGithub: 'https://github.com/Schugu/SubscriptionsTracker',
     cantScreenshots: {
-      cellphone: 6,
-      tablet: 0,
-      desktop: 0,
+      cellphone: 3,
+      tablet: 2,
+      desktop: 2,
     }
   },
   {
