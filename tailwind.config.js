@@ -24,6 +24,7 @@ const config = {
           DEFAULT: '#2196f3',
         },
 
+        // Dark
         'DARK-BG': {
           light: '#18263E',
           DEFAULT: '#0E192B',
@@ -35,7 +36,25 @@ const config = {
           dark: '#3F4F6A',
         },
 
-        
+        //Light 
+        'LIGHT-BG': {
+          light: '#FAFCFF',
+          DEFAULT: '#F5FAFF',
+          dark: '#EBF1FB',
+        },
+        'LIGHT-T': {
+          light: '#D8E2F3',
+          DEFAULT: '#55657E',
+          dark: '#16202F',
+        },  
+
+        'LIGHT': {
+          AzulClaro: '#55657E',
+          AzulOscuro: '#16202F',
+          GrisClaro: '#62636C',
+          GrisOscuro: '#1E1F24',
+        },  
+
 
 
 
