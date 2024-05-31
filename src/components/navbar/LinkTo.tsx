@@ -13,7 +13,7 @@ export default function LinkTo({ to, label}: LinkToProps) {
       className={`border-b-2   
           ${location.pathname === to
           ? 'border-AZUL text-AZUL dark:border-CREMA dark:text-CREMA'
-          : 'border-LIGHT-GrisClaro text-LIGHT-GrisClaro  dark:border-DARK-BORDER-light '}
+          : 'border-LIGHT-AzulClaro text-LIGHT-AzulClaro  dark:border-DARK-BORDER-light '}
           hover:border-AZUL hover:text-AZUL dark:hover:border-CREMA dark:hover:text-CREMA
           transition-colors duration-300 ease-in-out
     `}>{label}</Link>

@@ -8,7 +8,7 @@ import IconosTechs from "../../components/IconosTechs.tsx";
 export default function Home() {
   return (
     <section className="w-full min-h-screen flex flex-col items-center 
-    bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-L-T-P">
+    bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-LIGHT-AzulOscuro">
 
       <Navbar />
 
@@ -24,12 +24,12 @@ export default function Home() {
             md:flex-row md:justify-evenly md:items-center gap-2"
             >
 
-              <section className="w-48 h-48 md:min-w-80 md:h-80 rounded-full overflow-hidden border-2 border-solid border-AMARILLO dark:border-AMARILLO">
+              <section className="w-48 h-48 md:min-w-80 md:h-80 rounded-full overflow-hidden border-2 border-solid border-AZUL dark:border-AMARILLO">
                 <img className="w-full h-full object-cover object-center" src="FotoCVSinFondo.png" alt="Foto de perfil" />
               </section>
 
               <section className="md:w-full flex flex-col gap-5 md:gap-10">
-                <p className="text-center text-lg md:text-4xl text-AMARILLO">{dataProfile.fullname}</p>
+                <p className="text-center text-lg md:text-4xl text-AZUL dark:text-AMARILLO">{dataProfile.fullname}</p>
 
                 <article className="w-full flex gap-5 flex-wrap justify-center items-center text-base md:text-2xl">
                   <Subtitle string={dataProfile.dev} />
