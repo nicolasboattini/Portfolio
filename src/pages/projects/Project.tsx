@@ -55,18 +55,18 @@ export default function Project() {
                     </section>
 
                     <section className='w-full flex flex-col gap-2'>
-                      <p className="w-full text-center text-xl border-b-2 border-AMARILLO mb-2">{project.title}</p>
-                      <p className="indent-4">{project.description}</p>
+                      <p className="w-full text-center text-xl md:text-3xl border-b-2 border-AMARILLO mb-2">{project.title}</p>
+                      <p className="indent-4 text-lg md:text-xl">{project.description}</p>
                       {
                         project.moreInfo.map(paragraph => (
-                          <p className='indent-4'>{paragraph}</p>
+                          <p className='indent-4 text-base md:text-xl'>{paragraph}</p>
                         ))
                       }
                     </section>
                   </div>
 
                   <section className='w-full flex flex-col gap-4'>
-                    <p className="w-full text-center text-xl text-AMARILLO">Tecnologías:</p>
+                    <p className="w-full text-center text-xl md:text-2xl text-AMARILLO">Tecnologías:</p>
                     <article className="flex gap-2 flex-wrap justify-center">
                       {project.techs.map(tech => (
                         <Techs key={tech} tech={tech} />
@@ -77,7 +77,7 @@ export default function Project() {
 
 
                 <article className='w-full flex flex-col gap-4 items-center'>
-                  <p className='text-2xl'>Capturas de pantalla:</p>
+                  <p className='text-xl md:text-2xl'>Capturas de pantalla:</p>
 
                   <div className='flex justify-center flex-wrap gap-6'>
                     <SelectResolution
