@@ -24,9 +24,9 @@ const dataProjects: Project[] = [
     techs: ['JavaScript', 'React', 'Tailwind', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
     linkGithub: 'https://github.com/Schugu/BalanceApp',
     cantScreenshots: {
-      cellphone: 6,
-      tablet: 0,
-      desktop: 0,
+      cellphone: 7,
+      tablet: 7,
+      desktop: 7,
     }
   },
   {
