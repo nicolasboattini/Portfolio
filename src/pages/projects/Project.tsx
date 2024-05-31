@@ -4,7 +4,7 @@ import { TagOpen, TagClose } from "../../components/TagsSection";
 import dataProjects from '../../data/dataProjects';
 import Techs from "../../components/Techs";
 import { Tooltip } from 'react-tooltip';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import SelectResolution from "./SelectResolution.tsx";
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
@@ -59,7 +59,7 @@ export default function Project() {
                       <p className="indent-4">{project.description}</p>
                       {
                         project.moreInfo.map(paragraph => (
-                          <p className='indent-4 text-balance'>{paragraph}</p>
+                          <p className='indent-4'>{paragraph}</p>
                         ))
                       }
                     </section>
