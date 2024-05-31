@@ -41,8 +41,8 @@ const dataProjects: Project[] = [
     linkGithub: 'https://github.com/Schugu/prueba-tecnica-neowyze',
     cantScreenshots: {
       cellphone: 6,
-      tablet: 0,
-      desktop: 0,
+      tablet: 6,
+      desktop: 6,
     }
   },
   {
