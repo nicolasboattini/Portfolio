@@ -36,9 +36,10 @@ const SocialNetworkIcon = ({ socialNetwork, link }: SocialNetworkProps) => {
   return (
     <a href={link} target="_blank"
       className="flex justify-center items-center p-1 rounded-xl
-                border-2 border-transparent hover:border-AMARILLO
-                hover:bg-white hover:bg-opacity-10 
+                border-2 border-transparent shadow
                 transition-colors duration-100 ease-in-out
+                hover:border-AZUL hover:shadow-AZUL hover:bg-AZUL hover:bg-opacity-10  border-LIGHT-AzulOscuro border-opacity-10
+                dark:hover:border-AMARILLO dark:hover:shadow-AMARILLO dark:hover:bg-white dark:hover:bg-opacity-10 dark:border-CREMA dark:border-opacity-10
                 ">
       <span className={`w-8 h-8 md:w-10 md:h-10 ${icono}`}></span>
     </a>
