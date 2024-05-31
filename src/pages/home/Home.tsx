@@ -12,7 +12,7 @@ export default function Home() {
 
       <Navbar />
 
-      <div className="mx-0 my-2 w-full h-auto md:h-auto md:w-11/12 p-4 
+      <div className="mx-0 my-6 w-full h-auto md:h-auto md:w-11/12 md:pt-4 md:pr-4 md:pb-6 md:pl-7 p-2
       bg-LIGHT-BG-dark dark:bg-DARK-BG-dark rounded-md border-2 border-AZUL dark:border-DARK-BORDER-light">
         <TagOpen section={"Presentación"} />
 
