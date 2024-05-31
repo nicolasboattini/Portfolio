@@ -4,7 +4,7 @@ import { TagOpen, TagClose } from "../../components/TagsSection";
 import dataProjects from '../../data/dataProjects';
 import Techs from "../../components/Techs";
 import { Tooltip } from 'react-tooltip';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SelectResolution from "./SelectResolution.tsx";
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
@@ -18,6 +18,9 @@ export default function Project() {
   if (!project) {
     return <div>Proyecto no encontrado...</div>;
   }
+
+  window.scrollTo(0, 0);
+
 
   return (
     <section className="w-full min-h-screen flex flex-col items-center 
@@ -42,31 +45,41 @@ export default function Project() {
               <section className="w-full h-full flex flex-col gap-2 p-2"
               >
 
-                <article className="w-full flex flex-col gap-2">
-                  <p className="w-full text-center text-xl border-b-2 border-AMARILLO">{project.title}</p>
-
-                  <section className="w-full flex gap-2">
-                    <article className="w-11/12 flex flex-col gap-2 pl-2">
-                      <p className="indent-4">{project.description}</p>
-                    </article>
-
-                    <article className="w-1/12 flex flex-col items-center gap-2">
-                      <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AMARILLO"></span></a>
+                <article className="w-full flex flex-wrap justify-center gap-4 p-4 bg-gray-800 rounded-lg">
+                  <div className='w-full flex flex-col'>
+                    <section className="w-full flex justify-end">
+                      <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank">
+                        <span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AMARILLO"></span>
+                      </a>
                       <Tooltip id="my-tooltip" />
-                    </article>
-                  </section>
+                    </section>
 
-                  <section className="w-full flex gap-2 flex-wrap justify-center">
-                    {project.techs.map(tech => (
-                      <Techs key={tech} tech={tech} />
-                    ))}
+                    <section className='w-full flex flex-col gap-2'>
+                      <p className="w-full text-center text-xl border-b-2 border-AMARILLO mb-2">{project.title}</p>
+                      <p className="indent-4">{project.description}</p>
+                      {
+                        project.moreInfo.map(paragraph => (
+                          <p className='indent-4 text-balance'>{paragraph}</p>
+                        ))
+                      }
+                    </section>
+                  </div>
+
+                  <section className='w-full flex flex-col gap-4'>
+                    <p className="w-full text-center text-xl text-AMARILLO">Tecnologías:</p>
+                    <article className="flex gap-2 flex-wrap justify-center">
+                      {project.techs.map(tech => (
+                        <Techs key={tech} tech={tech} />
+                      ))}
+                    </article>
                   </section>
                 </article>
 
-                <article className='w-full flex flex-col gap-4 '>
-                  <p className='text-2xl'>Captura de pantalla:</p>
 
-                  <div className='flex gap-6'>
+                <article className='w-full flex flex-col gap-4 items-center'>
+                  <p className='text-2xl'>Capturas de pantalla:</p>
+
+                  <div className='flex justify-center flex-wrap gap-6'>
                     <SelectResolution
                       onClick={() => setDevice('desktop')}
                       styleClass={device === 'desktop' ? 'border-AMARILLO bg-white bg-opacity-10' : 'border-transparent'}
@@ -90,7 +103,6 @@ export default function Project() {
                     <SelectResolution
                       onClick={() => setDevice('cellphone')}
                       styleClass={device === 'cellphone' ? 'border-AMARILLO bg-white bg-opacity-10' : 'border-transparent'}
-
                     >
                       <span
                         className="w-9 h-9 icon-[ion--phone-portrait-sharp]"
@@ -98,8 +110,6 @@ export default function Project() {
                       <p>Celular</p>
                     </SelectResolution>
                   </div>
-
-
 
                   <div className={`w-full grid gap-2 
                   ${device === 'cellphone' ? 'grid-cols-3 md:grid-cols-4' : ''}
