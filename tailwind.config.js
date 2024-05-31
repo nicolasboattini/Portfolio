@@ -19,9 +19,12 @@ const config = {
         },
         'AMARILLO': {
           DEFAULT: '#ffcc50',
+          dark: '#cca340',
         },
         'AZUL': {
+          light: '#89c4f3',
           DEFAULT: '#2196f3',
+          dark: '#145c96',
         },
 
         // Dark
@@ -51,6 +54,7 @@ const config = {
         'LIGHT': {
           AzulClaro: '#55657E',
           AzulOscuro: '#16202F',
+
           GrisClaro: '#62636C',
           GrisOscuro: '#1E1F24',
         },  

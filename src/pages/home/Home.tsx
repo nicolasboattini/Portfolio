@@ -8,11 +8,12 @@ import IconosTechs from "../../components/IconosTechs.tsx";
 export default function Home() {
   return (
     <section className="w-full min-h-screen flex flex-col items-center 
-    bg-LIGHT-BG-P dark:bg-DARK-BG dark:text-CREMA text-L-T-P">
+    bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-L-T-P">
 
       <Navbar />
 
-      <div className="mx-0 my-auto w-full h-auto md:h-auto md:w-11/12 p-4 bg-LIGHT-BG-P-dark dark:bg-DARK-BG-dark rounded-md border-2 border-DARK-BORDER-light">
+      <div className="mx-0 my-2 w-full h-auto md:h-auto md:w-11/12 p-4 
+      bg-LIGHT-BG-dark dark:bg-DARK-BG-dark rounded-md border-2 border-AZUL dark:border-DARK-BORDER-light">
         <TagOpen section={"Presentación"} />
 
         <section className="flex w-full">
