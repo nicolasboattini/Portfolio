@@ -24,14 +24,13 @@ export default function Project() {
 
   return (
     <section className="w-full min-h-screen flex flex-col items-center 
-    bg-LIGHT-BG-P dark:bg-DARK-BG dark:text-CREMA text-L-T-P">
+    bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-LIGHT-AzulOscuro">
 
       <Navbar />
 
       <article className="mx-0 my-6 w-full h-auto md:h-auto md:w-11/12 md:pt-4 md:pr-4 md:pb-6 md:pl-7 p-2
-      bg-LIGHT-BG-P-dark dark:bg-DARK-BG-dark 
-        rounded-md border-2 border-DARK-BORDER-light"
-      >
+      bg-LIGHT-BG-dark dark:bg-DARK-BG-dark rounded-md border-2 border-AZUL dark:border-DARK-BORDER-light">
+
         <TagOpen section={`Proyectos["${project.title}"]`} />
 
         <section className="flex w-full">
@@ -45,7 +44,8 @@ export default function Project() {
               <section className="w-full h-full flex flex-col gap-2 p-2"
               >
 
-                <article className="w-full flex flex-wrap justify-center gap-4 p-4 bg-gray-800 rounded-lg">
+                <article className="w-full flex flex-wrap justify-center gap-4 p-4 rounded-lg
+                dark:bg-gray-800 bg-AZUL bg-opacity-10">
                   <div className='w-full flex flex-col'>
                     <section className="w-full flex justify-end">
                       <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank">
@@ -55,7 +55,7 @@ export default function Project() {
                     </section>
 
                     <section className='w-full flex flex-col gap-2'>
-                      <p className="w-full text-center text-xl md:text-3xl border-b-2 border-AMARILLO mb-2">{project.title}</p>
+                      <p className="w-full text-center text-xl md:text-3xl border-b-2 border-AZUL-dark dark:border-AMARILLO mb-2">{project.title}</p>
                       <p className="indent-4 text-lg md:text-xl">{project.description}</p>
                       {
                         project.moreInfo.map(paragraph => (
@@ -66,7 +66,7 @@ export default function Project() {
                   </div>
 
                   <section className='w-full flex flex-col gap-4'>
-                    <p className="w-full text-center text-xl md:text-2xl text-AMARILLO">Tecnologías:</p>
+                    <p className="w-full text-center text-xl md:text-2xl text-AZUL-dark dark:text-AMARILLO">Tecnologías:</p>
                     <article className="flex gap-2 flex-wrap justify-center">
                       {project.techs.map(tech => (
                         <Techs key={tech} tech={tech} />
