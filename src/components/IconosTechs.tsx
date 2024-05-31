@@ -45,7 +45,7 @@ const IconosTechs = ({ tech }: IconosTechsProps) => {
   }, [tech]);
 
   return (
-    <span className={`w-6 h-6 md:w-8 md:h-8 ${icono}`}></span>
+    <span className={`w-6 h-6 md:w-8 md:h-8 ${icono} text-LIGHT-AzulClaro dark:text-CREMA`}></span>
   );
 };
 

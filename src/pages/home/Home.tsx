@@ -46,24 +46,24 @@ export default function Home() {
                 </article>
 
                 <article className="w-full flex flex-col gap-2 items-center ">
-                  <p className="text-AZUL text-base md:text-2xl">SKILLS</p>
+                  <p className="text-LIGHT-AzulOscuro dark:text-AZUL text-base md:text-2xl">SKILLS</p>
                   <div className="flex flex-col items-start gap-4">
                     <section className="flex flex-wrap gap-x-4 gap-y-1">
-                      <p className="text-AMARILLO text-md md:text-xl">Desarrollo Front-end:</p>
+                      <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl">Desarrollo Front-end:</p>
                       {dataProfile.skills.frontEnd.map((tech) => (
                         <IconosTechs key={tech} tech={tech} />
                       ))}
                     </section>
 
                     <section className="flex flex-wrap gap-x-4 gap-y-1">
-                      <p className="text-AMARILLO text-md md:text-xl">Base de datos:</p>
+                      <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl">Base de datos:</p>
                       {dataProfile.skills.dataBase.map((tech) => (
                         <IconosTechs key={tech} tech={tech} />
                       ))}
                     </section>
 
                     <section className="flex flex-wrap gap-x-4 gap-y-1">
-                      <p className="text-AMARILLO text-md md:text-xl">Control de versiones:</p>
+                      <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl">Control de versiones:</p>
                       {dataProfile.skills.versionControl.map((tech) => (
                         <IconosTechs key={tech} tech={tech} />
                       ))}
