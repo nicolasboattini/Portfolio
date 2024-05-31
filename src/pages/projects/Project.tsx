@@ -111,17 +111,22 @@ export default function Project() {
                     </SelectResolution>
                   </div>
 
-                  <div className={`w-full grid gap-2 
-                  ${device === 'cellphone' ? 'grid-cols-3 md:grid-cols-4' : ''}
-                  ${device === 'tablet' ? 'grid-cols-2 md:grid-cols-3' : ''}
-                  ${device === 'desktop' ? 'grid-cols-1 md:grid-cols-2' : ''}`}>
-
+                  <div className='w-full flex flex-wrap justify-center items-center'>
                     {[...Array(project.cantScreenshots[device])].map((_, index) => (
-                      <img
-                        key={index}
-                        src={`/projects/${project.id}/screenshots/${device}/${index + 1}.png`}
-                        alt={`Screenshot ${index + 1}`}
-                      />
+
+                      <section className={`p-1
+                      ${device === 'cellphone' ? 'w-full sm:w-1/4' : ''}
+                      ${device === 'tablet' ? 'w-full sm:w-1/3' : ''}
+                      ${device === 'desktop' ? 'w-full sm:w-1/2' : ''}
+                      `}>
+                        <img
+                          className='w-full h-auto border-2 border-AZUL'
+                          key={index}
+                          src={`/projects/${project.id}/screenshots/${device}/${index + 1}.png`}
+                          alt={`Screenshot ${index + 1}`}
+                        />
+                      </section>
+
                     ))}
                   </div>
                 </article>
