@@ -9,13 +9,14 @@ export default function Projects() {
 
   return (
     <section className="w-full min-h-screen flex flex-col items-center 
-    bg-LIGHT-BG-P dark:bg-DARK-BG dark:text-CREMA text-L-T-P">
+    bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-LIGHT-AzulOscuro">
 
       <Navbar />
 
       <article className="mx-0 my-6 w-full h-auto md:h-auto md:w-11/12 md:pt-4 md:pr-4 md:pb-6 md:pl-7 p-2
-      bg-LIGHT-BG-P-dark dark:bg-DARK-BG-dark 
-      rounded-md border-2 border-DARK-BORDER-light">
+      rounded-md border-2 
+      bg-LIGHT-BG-dark dark:bg-DARK-BG-dark border-AZUL dark:border-DARK-BORDER-light
+      ">
         <TagOpen section={"proyectos"} />
 
         <div className="flex w-full justify-center md:gap-4">
@@ -26,14 +27,16 @@ export default function Projects() {
             >
               {dataProjects.map(project => (
                 <article className="w-full h-full flex flex-col gap-2 p-2 rounded-lg
-                bg-white bg-opacity-10 border-2 border-AMARILLO shadow shadow-AMARILLO"
+                 border-2 shadow
+                 bg-AZUL bg-opacity-10  border-AZUL-dark shadow-AZUL-dark
+                 dark:bg-white dark:bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO"
                   key={project.id}>
                   <div className="w-full h-auto">
                     <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/frontPage.png`} alt="Portada del proyecto" />
                   </div>
 
                   <div className="w-full flex flex-col gap-2">
-                    <p className="w-full text-center text-xl border-b-2 border-AMARILLO">{project.title}</p>
+                    <p className="w-full text-center text-xl border-b-2 border-AZUL-dark dark:border-AMARILLO">{project.title}</p>
 
                     <section className="w-full flex gap-2">
                       <article className="w-11/12 flex flex-col gap-2 pl-2">
