@@ -6,6 +6,7 @@ import Techs from "../../components/Techs";
 import { Tooltip } from 'react-tooltip';
 import { useState } from 'react';
 import SelectResolution from "./SelectResolution.tsx";
+import ProjectNotFound from "./ProjectNotFound.tsx";
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 
@@ -16,7 +17,7 @@ export default function Project() {
   const project = dataProjects.find(p => p.id === projectId);
 
   if (!project) {
-    return <div>Proyecto no encontrado...</div>;
+    return <ProjectNotFound />;
   }
 
 
