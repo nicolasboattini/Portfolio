@@ -149,7 +149,24 @@ const dataProjects: Project[] = [
 export default dataProjects;
 ```
 
-Puedes reemplazar los valores de ejemplo con tu propia información para personalizar tu portafolio.
+También debes reemplazar estos archivos. Si deseas cambiarles el nombre, asegúrate de hacerlo primero en el archivo `dataProjects.ts`.
+```
+public
+├── profile
+│   ├── CV.pdf
+│   └── fotoDePerfil.png
+└── projects
+    └── projectID
+        ├── frontPage.png
+        └── screenshots
+            ├── cellphone
+            │   └── 1.png
+            ├── tablet
+            │   └── 1.png
+            └── desktop
+                └── 1.png
+```
+Recuerda que, si deseas añadir varias capturas de pantalla, debes especificar cuántas son en el archivo `dataProjects.ts`.
 
 
 ### Capturas de pantalla 📸
