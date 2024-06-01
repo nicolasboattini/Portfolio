@@ -156,7 +156,7 @@ public
 │   ├── CV.pdf
 │   └── fotoDePerfil.png
 └── projects
-    └── projectID
+    └── [projectID]
         ├── frontPage.png
         └── screenshots
             ├── cellphone
