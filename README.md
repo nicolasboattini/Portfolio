@@ -2,7 +2,7 @@
 
 > Práctica de TypeScript, React, Tailwind CSS. ✨
 
-🎯 Objetivo: Desarrollar una aplicación Portfolio para mostrar proyectos personales.
+🎯 **Objetivo:** Desarrollar una aplicación Portfolio para mostrar proyectos personales.
 
 ### Instalación y ejecución del proyecto (React) 🛠️💻
 
@@ -17,11 +17,10 @@
 3. Navega al directorio del proyecto clonado:
 
     ```bash
-    cd porfolio
+    cd portfolio
     ```
 
-
-3. Instala las dependencias del front end utilizando npm o yarn:
+4. Instala las dependencias del front end utilizando npm o yarn:
 
     ```bash
     npm install
@@ -29,19 +28,23 @@
     yarn
     ```
 
-4. Inicia el servidor de desarrollo del proyecto utilizando npm:
+5. Inicia el servidor de desarrollo del proyecto utilizando npm:
 
     ```bash
     npm run dev
     ```
 
-5. Una vez que el servidor de desarrollo del proyecto esté en funcionamiento, abre tu navegador web y navega a la dirección local para ver el proyecto en acción.
+6. Una vez que el servidor de desarrollo del proyecto esté en funcionamiento, abre tu navegador web y navega a la dirección local para ver el proyecto en acción.
 
 ### Personalización y comprensión del proyecto 🎨🧠
 
 Para personalizar y comprender el proyecto, sigue estas instrucciones:
 
-- Si deseas modificar o entender cómo funciona el proyecto, te recomiendo revisar los archivos y carpetas dentro de `src`. La lógica y la apariencia de las páginas se encuentra en la carpeta `pages` y la de los componentes individuales se encuentra en la carpeta `components`. Y el sistema de rutas se encuentra en el archivo `App.tsx`.
+- Si deseas modificar o entender cómo funciona el proyecto, revisa los archivos y carpetas dentro de `src`. 
+    - La lógica y la apariencia de las páginas se encuentran en la carpeta `pages`.
+    - Los componentes individuales se encuentran en la carpeta `components`.
+    - El sistema de rutas se encuentra en el archivo `App.tsx`.
 
 ### Capturas de pantalla 📸
-<img src='public/CapturaDePantalla1.png' alt='CapturaDePantalla1'>
+
+<img src='public/CapturaDePantalla1.png' alt='Captura de Pantalla 1'>
