@@ -168,6 +168,10 @@ public
 ```
 Recuerda que, si deseas añadir varias capturas de pantalla, debes especificar cuántas son en el archivo `dataProjects.ts`.
 
+#### 🚨IMPORTANTE🚨 
+Si no aparecen las tecnologías, habilidades o redes sociales como iconos, es posible que falten o que el icono de la página no esté funcionando correctamente. En ese caso, agrega un nuevo icono o reemplaza el que esté causando conflictos en `IconosTechs.tsx`, `SocialNetworkIcon.tsx` y `Techs.tsx`.
+
+
 
 ### Capturas de pantalla 📸
 
