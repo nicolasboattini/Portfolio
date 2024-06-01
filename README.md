@@ -171,6 +171,7 @@ Si no aparecen las tecnologías, habilidades o redes sociales como iconos, es po
 
 
 ### Capturas de pantalla 📸
+#### Celular
 <table width="100%">
   <tr>
     <td width="50%">
@@ -229,7 +230,58 @@ Si no aparecen las tecnologías, habilidades o redes sociales como iconos, es po
       <img src="/public/screenshotsPage/dark/phone/6.png" alt="Captura de pantalla"/>
     </td>
   </tr>
-
-  
-
 </table>
+
+#### PC
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <h2 align=center>Light Mode</h2>
+    </td>
+    <td width="50%">
+        <h2 align=center>Dark Mode</h2>
+    </td>
+  </tr>
+   
+  <tr>
+    <td align="center">
+       <img src="/public/screenshotsPage/light/desktop/1.png" alt="Captura de pantalla"/>
+    </td>
+    <td align="center">
+      <img src="/public/screenshotsPage/dark/desktop/1.png" alt="Captura de pantalla"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+       <img src="/public/screenshotsPage/light/desktop/2.png" alt="Captura de pantalla"/>
+    </td>
+    <td align="center">
+      <img src="/public/screenshotsPage/dark/desktop/2.png" alt="Captura de pantalla"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+       <img src="/public/screenshotsPage/light/desktop/3.png" alt="Captura de pantalla"/>
+    </td>
+    <td align="center">
+      <img src="/public/screenshotsPage/dark/desktop/3.png" alt="Captura de pantalla"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+       <img src="/public/screenshotsPage/light/desktop/4.png" alt="Captura de pantalla"/>
+    </td>
+    <td align="center">
+      <img src="/public/screenshotsPage/dark/desktop/4.png" alt="Captura de pantalla"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+       <img src="/public/screenshotsPage/light/desktop/5.png" alt="Captura de pantalla"/>
+    </td>
+    <td align="center">
+      <img src="/public/screenshotsPage/dark/desktop/5.png" alt="Captura de pantalla"/>
+    </td>
+  </tr>
+</table>
+
