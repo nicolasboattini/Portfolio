@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar/Navbar.tsx";
 import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
+import dataProfile from "../../data/dataProfile.ts";
 
 export default function Project() {
   return (
@@ -24,7 +25,7 @@ export default function Project() {
             >
               <article className="w-full h-full flex flex-col gap-2 p-2">
                 <div className="pdf-container" style={{ width: '100%', height: '100vh' }}>
-                  <embed src="/CV/CV.pdf" width="100%" height="100%" type="application/pdf" />
+                  <embed src={dataProfile.linksSocialNetworks.cv} width="100%" height="100%" type="application/pdf" />
                 </div>
 
               </article>

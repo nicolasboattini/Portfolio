@@ -30,14 +30,14 @@ const dataProfile: Profile = {
     instagram: "https://www.instagram.com/leanschugu/",
     freecodecamp: "https://www.freecodecamp.org/certification/Schugu/responsive-web-design",
     email: "mailto:leo.schugu@gmail.com",
-    cv: "/CV/CV.pdf"
+    cv: "/profile/CV.pdf"
   },
   skills: {
     frontEnd: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind'],
     dataBase: ['MongoDb', 'Firebase'],
     versionControl: ['Git', 'GitHub']
   },
-  profilePicture: 'fotoDePerfil.png'
+  profilePicture: '/profile/fotoDePerfil.png'
 };
 
 export default dataProfile;
