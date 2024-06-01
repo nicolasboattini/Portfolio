@@ -152,9 +152,6 @@ export default dataProjects;
 También debes reemplazar estos archivos. Si deseas cambiarles el nombre, asegúrate de hacerlo primero en el archivo `dataProjects.ts`.
 ```
 public
-├── profile
-│   ├── CV.pdf
-│   └── fotoDePerfil.png
 └── projects
     └── [projectID]
         ├── frontPage.png
