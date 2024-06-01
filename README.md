@@ -47,6 +47,59 @@ Para personalizar y comprender el proyecto, sigue estas instrucciones:
     - Los componentes individuales se encuentran en la carpeta `components`.
     - El sistema de rutas se encuentra en el archivo `App.tsx`.
 
+### Personalización del perfil 🧑‍💻
+
+He creado un archivo que se puede editar para agregar información personalizada al portafolio. Este archivo se encuentra en la carpeta `data` y se llama `dataProfile.ts`. A continuación se muestra un ejemplo genérico de cómo debería estructurarse este archivo para que puedas incluir tu propia información:
+
+```typescript
+interface Profile {
+  fullname: string;
+  dev: string;
+  years: string;
+  nationality: string;
+  linksSocialNetworks: {
+    github: string;
+    linkedin: string;
+    instagram: string;
+    freecodecamp: string;
+    email: string;
+    cv: string;
+  };
+  skills: {
+    frontEnd: string[];
+    dataBase: string[];
+    versionControl: string[];
+  };
+  profilePicture: string;
+}
+
+const dataProfile: Profile = {
+  fullname: 'Tu Nombre Completo',
+  dev: 'Tu Rol de Desarrollador',
+  years: 'Tu Edad',
+  nationality: 'Tu Nacionalidad',
+  linksSocialNetworks: {
+    github: "https://github.com/tu-usuario",
+    linkedin: "https://www.linkedin.com/in/tu-perfil/",
+    instagram: "https://www.instagram.com/tu-usuario/",
+    freecodecamp: "https://www.freecodecamp.org/tu-usuario",
+    email: "mailto:tu-email@ejemplo.com",
+    cv: "/CV/CV.pdf"
+  },
+  skills: {
+    frontEnd: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind'],
+    dataBase: ['MongoDB', 'Firebase'],
+    versionControl: ['Git', 'GitHub']
+  },
+  profilePicture: 'fotoDePerfil.png'
+};
+
+export default dataProfile;
+```
+
+Puedes reemplazar los valores de ejemplo con tu propia información para personalizar tu portafolio.
+
+
 ### Capturas de pantalla 📸
 
 <img src='public/CapturaDePantalla1.png' alt='Captura de Pantalla 1'>
