@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 interface SocialNetworkProps {
   socialNetwork: string;
   link: string;
+  tabIndex: number;
 }
 
-const SocialNetworkIcon = ({ socialNetwork, link }: SocialNetworkProps) => {
+const SocialNetworkIcon = ({ socialNetwork, link, tabIndex }: SocialNetworkProps) => {
   const [icono, setIcono] = useState('');
 
   useEffect(() => {
@@ -40,7 +41,9 @@ const SocialNetworkIcon = ({ socialNetwork, link }: SocialNetworkProps) => {
                 transition-colors duration-100 ease-in-out
                 hover:border-AZUL hover:shadow-AZUL hover:bg-AZUL hover:bg-opacity-10  border-LIGHT-AzulOscuro border-opacity-10 text-LIGHT-AzulClaro hover:text-LIGHT-AzulOscuro
                 dark:hover:border-AMARILLO dark:hover:shadow-AMARILLO dark:hover:bg-white dark:hover:bg-opacity-10 dark:border-CREMA dark:border-opacity-10 dark:text-CREMA-dark dark:hover:text-CREMA
-                ">
+                "
+    tabIndex={tabIndex} aria-label={`${socialNetwork}`}
+                >
       <span className={`w-8 h-8 md:w-10 md:h-10 ${icono}`}></span>
     </a>
   );

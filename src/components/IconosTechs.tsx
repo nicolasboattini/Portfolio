@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 
 interface IconosTechsProps {
   tech: string;
+  tabIndex: number;
 }
 
-const IconosTechs = ({ tech }: IconosTechsProps) => {
+const IconosTechs = ({ tech, tabIndex }: IconosTechsProps) => {
   const [icono, setIcono] = useState('');
-  
+
   useEffect(() => {
     switch (tech) {
       case 'HTML':
@@ -45,7 +46,12 @@ const IconosTechs = ({ tech }: IconosTechsProps) => {
   }, [tech]);
 
   return (
-    <span className={`w-6 h-6 md:w-8 md:h-8 ${icono} text-LIGHT-AzulClaro dark:text-CREMA`}></span>
+    <div
+      tabIndex={tabIndex} aria-label={`${tech}`}
+      className={`w-6 h-6 md:w-8 md:h-8 text-LIGHT-AzulClaro dark:text-CREMA`}
+    >
+      <span className={`w-full h-full ${icono}`}></span>
+    </div>
   );
 };
 

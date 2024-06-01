@@ -16,7 +16,7 @@ export default function Home() {
       rounded-md border-2 shadow 
       bg-LIGHT-BG-dark border-AZUL shadow-AZUL
       dark:bg-DARK-BG-dark dark:border-DARK-BORDER-light dark:shadow-DARK-BORDER-light">
-        
+
         <TagOpen section={"Presentación"} />
 
         <div className="flex w-full">
@@ -32,43 +32,58 @@ export default function Home() {
               </div>
 
               <div className="md:w-full flex flex-col gap-5 md:gap-10">
-                <p className="text-center text-lg md:text-4xl text-AZUL dark:text-AMARILLO">{dataProfile.fullname}</p>
+                <p className="text-center text-lg md:text-4xl text-AZUL dark:text-AMARILLO"
+                  tabIndex={7}
+                >{dataProfile.fullname}</p>
 
                 <section className="w-full flex gap-5 flex-wrap justify-center items-center text-base md:text-2xl">
-                  <Subtitle string={dataProfile.dev} />
-                  <Subtitle string={dataProfile.years} />
-                  <Flag nationality={dataProfile.nationality} />
+                  <Subtitle string={dataProfile.dev} tabIndex={8} />
+                  <Subtitle string={dataProfile.years} tabIndex={9} />
+                  <Flag nationality={dataProfile.nationality} tabIndex={10} />
                 </section>
 
                 <section className="flex flex-wrap gap-0.5 md:gap-4 justify-center items-center">
                   {
-                    Object.entries(dataProfile.linksSocialNetworks).map(([network, link]) => (
-                      <SocialNetworkIcon key={network} socialNetwork={network} link={link} />
+                    Object.entries(dataProfile.linksSocialNetworks).map(([network, link], index) => (
+                      <SocialNetworkIcon key={network} socialNetwork={network} link={link} tabIndex={10 + index} />
                     ))
                   }
                 </section>
 
                 <section className="w-full flex flex-col gap-2 items-center ">
-                  <p className="text-LIGHT-AzulOscuro dark:text-AZUL text-base md:text-2xl">SKILLS</p>
+                  <p
+                    className="text-LIGHT-AzulOscuro dark:text-AZUL text-base md:text-2xl"
+                    tabIndex={50}
+                  >SKILLS</p>
                   <article className="flex flex-col items-start gap-4">
                     <div className="flex flex-wrap gap-x-4 gap-y-1">
-                      <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl">Desarrollo Front-end:</p>
-                      {dataProfile.skills.frontEnd.map((tech) => (
-                        <IconosTechs key={tech} tech={tech} />
+                      <p
+                        className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl"
+                        tabIndex={51}
+                      >Desarrollo Front-end:</p>
+
+                      {dataProfile.skills.frontEnd.map((tech, index) => (
+                        <IconosTechs key={tech} tech={tech} tabIndex={51 + index} />
                       ))}
                     </div>
 
                     <div className="flex flex-wrap gap-x-4 gap-y-1">
-                      <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl">Base de datos:</p>
-                      {dataProfile.skills.dataBase.map((tech) => (
-                        <IconosTechs key={tech} tech={tech} />
+                      <p
+                        className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl"
+                        tabIndex={100}
+                      >Base de datos:</p>
+                      {dataProfile.skills.dataBase.map((tech, index) => (
+                        <IconosTechs key={tech} tech={tech} tabIndex={101 + index}/>
                       ))}
                     </div>
 
                     <div className="flex flex-wrap gap-x-4 gap-y-1">
-                      <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl">Control de versiones:</p>
-                      {dataProfile.skills.versionControl.map((tech) => (
-                        <IconosTechs key={tech} tech={tech} />
+                      <p
+                        className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl"
+                        tabIndex={150}
+                      >Control de versiones:</p>
+                      {dataProfile.skills.versionControl.map((tech, index) => (
+                        <IconosTechs key={tech} tech={tech} tabIndex={151 + index} />
                       ))}
                     </div>
                   </article>
