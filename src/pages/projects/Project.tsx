@@ -75,7 +75,8 @@ export default function Project() {
                   </div>
 
                   <section className='w-full flex flex-col gap-4'>
-                    <p className="w-full text-center text-xl md:text-2xl text-AZUL-dark dark:text-AMARILLO">Tecnologías:</p>
+                    <p tabIndex={20} 
+                    className="w-full text-center text-xl md:text-2xl text-AZUL-dark dark:text-AMARILLO">Tecnologías:</p>
                     <article className="flex gap-2 flex-wrap justify-center">
                       {project.techs.map((tech, index) => (
                         <Techs key={tech} tech={tech} tabIndex={index + 20} />
