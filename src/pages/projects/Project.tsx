@@ -19,8 +19,6 @@ export default function Project() {
     return <div>Proyecto no encontrado...</div>;
   }
 
-  window.scrollTo(0, 0);
-
 
   return (
     <section className="w-full min-h-screen flex flex-col items-center 
@@ -58,8 +56,8 @@ export default function Project() {
                       <p className="w-full text-center text-xl md:text-3xl border-b-2 border-AZUL-dark dark:border-AMARILLO mb-2">{project.title}</p>
                       <p className="indent-4 text-lg md:text-xl">{project.description}</p>
                       {
-                        project.moreInfo.map(paragraph => (
-                          <p className='indent-4 text-base md:text-xl'>{paragraph}</p>
+                        project.moreInfo.map((paragraph, index) => (
+                          <p key={index} className='indent-4 text-base md:text-xl'>{paragraph}</p>
                         ))
                       }
                     </section>
@@ -82,7 +80,7 @@ export default function Project() {
                   <div className='flex justify-center flex-wrap gap-6'>
                     <SelectResolution
                       onClick={() => setDevice('desktop')}
-                      styleClass={device === 'desktop' ? 'border-AMARILLO bg-white bg-opacity-10' : 'border-transparent'}
+                      device={device} resolution="desktop"
                     >
                       <span
                         className="w-16 h-10 icon-[ion--ios-desktop]"
@@ -92,7 +90,7 @@ export default function Project() {
 
                     <SelectResolution
                       onClick={() => setDevice('tablet')}
-                      styleClass={device === 'tablet' ? 'border-AMARILLO bg-white bg-opacity-10' : 'border-transparent'}
+                      device={device} resolution="tablet"
                     >
                       <span
                         className="w-9 h-9 icon-[ion--tablet-portrait-sharp]"
@@ -102,7 +100,7 @@ export default function Project() {
 
                     <SelectResolution
                       onClick={() => setDevice('cellphone')}
-                      styleClass={device === 'cellphone' ? 'border-AMARILLO bg-white bg-opacity-10' : 'border-transparent'}
+                      device={device} resolution="cellphone"
                     >
                       <span
                         className="w-9 h-9 icon-[ion--phone-portrait-sharp]"
@@ -114,14 +112,14 @@ export default function Project() {
                   <div className='w-full flex flex-wrap justify-center items-center'>
                     {[...Array(project.cantScreenshots[device])].map((_, index) => (
 
-                      <section className={`p-1
+                      <section key={index} className={`p-1
                       ${device === 'cellphone' ? 'w-full sm:w-1/4' : ''}
                       ${device === 'tablet' ? 'w-full sm:w-1/3' : ''}
                       ${device === 'desktop' ? 'w-full sm:w-1/2' : ''}
                       `}>
                         <img
                           className='w-full h-auto border-2 border-AZUL'
-                          key={index}
+
                           src={`/projects/${project.id}/screenshots/${device}/${index + 1}.png`}
                           alt={`Screenshot ${index + 1}`}
                         />
