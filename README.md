@@ -66,9 +66,8 @@ interface Profile {
     cv: string;
   };
   skills: {
-    frontEnd: string[];
-    dataBase: string[];
-    versionControl: string[];
+    stack: string[];
+
   };
   profilePicture: string;
 }
@@ -87,14 +86,55 @@ const dataProfile: Profile = {
     cv: "/CV/CV.pdf"
   },
   skills: {
-    frontEnd: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind'],
-    dataBase: ['MongoDB', 'Firebase'],
-    versionControl: ['Git', 'GitHub']
+    stack: ['tech1', 'tech2'],
   },
   profilePicture: 'fotoDePerfil.png'
 };
 
 export default dataProfile;
+```
+
+Puedes reemplazar los valores de ejemplo con tu propia información para personalizar tu portafolio.
+
+### Personalización del Proyectos 🚀
+
+He creado un archivo que contiene la información sobre los proyectos que se muestran en el portafolio. Este archivo se encuentra en la carpeta `data` y se llama `dataProjects.ts`. A continuación se muestra un ejemplo genérico de cómo debería estructurarse este archivo para incluir información sobre tus propios proyectos:
+
+```typescript
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  moreInfo: string[];
+  techs: string[];
+  linkGithub : string;
+  cantScreenshots: {
+    cellphone: number;
+    tablet: number;
+    desktop: number;
+  };
+}
+
+const dataProjects: Project[] = [
+  {
+    id: '1',
+    title: 'Nombre del Proyecto',
+    description: 'Descripción del proyecto...',
+    moreInfo:[
+      'Información adicional sobre el proyecto...',
+      'Otra información relevante...',
+    ],
+    techs: ['Tecnología utilizada 1', 'Tecnología utilizada 2', '...'],
+    linkGithub: 'Enlace al repositorio en GitHub',
+    cantScreenshots: {
+      cellphone: 0,
+      tablet: 0,
+      desktop: 0,
+    }
+  },
+];
+
+export default dataProjects;
 ```
 
 Puedes reemplazar los valores de ejemplo con tu propia información para personalizar tu portafolio.
