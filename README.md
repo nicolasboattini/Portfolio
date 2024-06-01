@@ -47,6 +47,9 @@ Para personalizar y comprender el proyecto, sigue estas instrucciones:
     - Los componentes individuales se encuentran en la carpeta `components`.
     - El sistema de rutas se encuentra en el archivo `App.tsx`.
 
+
+<br><br>
+## Usar este proyecto como template 📄
 ### Personalización del perfil 🧑‍💻
 
 He creado un archivo que se puede editar para agregar información personalizada al portafolio. Este archivo se encuentra en la carpeta `data` y se llama `dataProfile.ts`. A continuación se muestra un ejemplo genérico de cómo debería estructurarse este archivo para que puedas incluir tu propia información:
@@ -124,7 +127,7 @@ const dataProjects: Project[] = [
       'Información adicional sobre el proyecto...',
       'Otra información relevante...',
     ],
-    techs: ['Tecnología utilizada 1', 'Tecnología utilizada 2', '...'],
+    techs: ['Tech1', 'Tech2', '...'],
     linkGithub: 'Enlace al repositorio en GitHub',
     cantScreenshots: {
       cellphone: 0,
