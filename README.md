@@ -175,10 +175,10 @@ Si no aparecen las tecnologías, habilidades o redes sociales como iconos, es po
 <table width="100%">
   <tr>
     <td width="50%">
-      <h2 align=center>Light Mode</h2>
+      <h2 align=center>Light Mode ☀️</h2>
     </td>
     <td width="50%">
-        <h2 align=center>Dark Mode</h2>
+        <h2 align=center>Dark Mode 🌙</h2>
     </td>
   </tr>
    
@@ -236,10 +236,10 @@ Si no aparecen las tecnologías, habilidades o redes sociales como iconos, es po
 <table width="100%">
   <tr>
     <td width="50%">
-      <h2 align=center>Light Mode</h2>
+      <h2 align=center>Light Mode ☀️</h2>
     </td>
     <td width="50%">
-        <h2 align=center>Dark Mode</h2>
+        <h2 align=center>Dark Mode 🌙</h2>
     </td>
   </tr>
    
