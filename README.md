@@ -89,7 +89,7 @@ const dataProfile: Profile = {
     instagram: "https://www.instagram.com/tu-usuario/",
     freecodecamp: "https://www.freecodecamp.org/tu-usuario",
     email: "mailto:tu-email@ejemplo.com",
-    cv: "/CV/CV.pdf"
+    cv: "/profile/CV.pdf"
   },
   skills: {
     stack: ['tech1', 'tech2'],
