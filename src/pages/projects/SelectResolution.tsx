@@ -5,10 +5,11 @@ interface SelectResolutionProps {
   onClick?: () => void;
   device: string; 
   resolution: string;
+  tabIndex: number;
 }
 
 export default function SelectResolution(props: SelectResolutionProps) {
-  const { children, onClick, device, resolution } = props;
+  const { children, onClick, device, resolution, tabIndex } = props;
 
   return (
     <section
@@ -25,6 +26,8 @@ export default function SelectResolution(props: SelectResolutionProps) {
         : 'border-LIGHT-AzulOscuro border-opacity-10 text-LIGHT-AzulClaro dark:border-CREMA dark:border-opacity-10 dark:text-CREMA-dark '}
       `}
       onClick={onClick}
+      tabIndex={tabIndex}
+      aria-label={device}
     >
       {children}
     </section>
