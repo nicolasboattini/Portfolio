@@ -32,7 +32,7 @@ export default function Projects() {
                  dark:bg-white dark:bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO"
                   key={project.id}>
                   <div className="w-full h-auto">
-                    <img className="w-full h-full object-cover object-center" src={`/projects/${project.id}/frontPage.png`} alt="Portada del proyecto" />
+                    <img className="w-full h-full object-cover object-center rounded" src={`/projects/${project.id}/frontPage.png`} alt="Portada del proyecto" />
                   </div>
 
                   <div className="w-full flex flex-col gap-2">
