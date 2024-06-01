@@ -25,7 +25,7 @@ export default function ChangeTheme() {
 
   return (
     <div
-      tabIndex={2}
+      tabIndex={5}
       aria-label={`Cambiar de tema, tema actual: ${theme}`}
       onClick={handleChangeTheme}
       className="cursor-pointer select-none flex justify-center items-center"

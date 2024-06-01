@@ -3,12 +3,14 @@ import { Link, useLocation } from "react-router-dom"
 interface LinkToProps {
   to: string;
   label: string;
+  tabIndex: number;
 }
 
-export default function LinkTo({ to, label}: LinkToProps) {
+export default function LinkTo({ to, label, tabIndex }: LinkToProps) {
   const location = useLocation();
   return (
     <Link
+      tabIndex={tabIndex}
       to={to}
       className={`border-b-2   
           ${location.pathname === to
