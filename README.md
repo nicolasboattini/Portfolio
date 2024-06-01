@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+<h1 align='center'>🌟 Portfolio 💼🖥️🌟</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Práctica de TypeScript, React, Tailwind CSS. ✨
 
-Currently, two official plugins are available:
+🎯 Objetivo: Desarrollar una aplicación Portfolio para mostrar proyectos personales.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Instalación y ejecución del proyecto (React) 🛠️💻
 
-## Expanding the ESLint configuration
+1. Abre la consola en la ubicación deseada para clonar el repositorio.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Clona este repositorio en tu máquina local utilizando Git:
 
-- Configure the top-level `parserOptions` property like this:
+    ```bash
+    git clone https://github.com/Schugu/portfolio.git
+    ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. Navega al directorio del proyecto clonado:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+    ```bash
+    cd porfolio
+    ```
+
+
+3. Instala las dependencias del front end utilizando npm o yarn:
+
+    ```bash
+    npm install
+    # o
+    yarn
+    ```
+
+4. Inicia el servidor de desarrollo del proyecto utilizando npm:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Una vez que el servidor de desarrollo del proyecto esté en funcionamiento, abre tu navegador web y navega a la dirección local para ver el proyecto en acción.
+
+### Personalización y comprensión del proyecto 🎨🧠
+
+Para personalizar y comprender el proyecto, sigue estas instrucciones:
+
+- Si deseas modificar o entender cómo funciona el proyecto, te recomiendo revisar los archivos y carpetas dentro de `src`. La lógica y la apariencia de las páginas se encuentra en la carpeta `pages` y la de los componentes individuales se encuentra en la carpeta `components`. Y el sistema de rutas se encuentra en el archivo `App.tsx`.
+
+### Capturas de pantalla 📸
+<img src='public/CapturaDePantalla1.png' alt='CapturaDePantalla1'>
