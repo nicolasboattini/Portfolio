@@ -44,8 +44,8 @@ export default function Projects() {
                       </article>
 
                       <article className="w-1/12 flex flex-col items-center gap-2">
-                        <Link data-tooltip-id="my-tooltip" data-tooltip-content="Ver más" to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-AMARILLO"></span></Link>
-                        <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AMARILLO"></span></a>
+                        <Link data-tooltip-id="my-tooltip" data-tooltip-content="Ver más" to={`/projects/${project.id}`}><span className="w-8 h-8 icon-[bi--plus-circle-fill] hover:text-AZUL-dark dark:hover:text-AMARILLO"></span></Link>
+                        <a data-tooltip-id="my-tooltip" data-tooltip-content="Github" href={project.linkGithub} target="_blank"><span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AZUL-dark dark:hover:text-AMARILLO"></span></a>
                         <Tooltip id="my-tooltip" />
                       </article>
                     </section>
