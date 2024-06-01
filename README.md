@@ -170,8 +170,8 @@ Si no aparecen las tecnologías, habilidades o redes sociales como iconos, es po
 
 
 
-### Capturas de pantalla 📸
-#### Celular
+## Capturas de pantalla 📸
+## 📱 Celular 📱
 <table width="100%">
   <tr>
     <td width="50%">
@@ -232,7 +232,7 @@ Si no aparecen las tecnologías, habilidades o redes sociales como iconos, es po
   </tr>
 </table>
 
-#### PC
+## 💻 Computadora 💻
 <table width="100%">
   <tr>
     <td width="50%">
