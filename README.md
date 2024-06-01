@@ -50,6 +50,9 @@ Para personalizar y comprender el proyecto, sigue estas instrucciones:
 
 <br><br>
 ## Usar este proyecto como template 📄
+Es importante respetar el nombre de las variables, así como el nombre y la ubicación de los archivos para garantizar el correcto funcionamiento del proyecto. Los cambios en estos aspectos pueden causar errores en el código y afectar la funcionalidad del proyecto en su conjunto. Mantener una consistencia en la nomenclatura y la organización de los archivos facilita la comprensión y el mantenimiento del código, además de evitar posibles conflictos y confusiones durante el desarrollo.
+
+
 ### Personalización del perfil 🧑‍💻
 
 He creado un archivo que se puede editar para agregar información personalizada al portafolio. Este archivo se encuentra en la carpeta `data` y se llama `dataProfile.ts`. A continuación se muestra un ejemplo genérico de cómo debería estructurarse este archivo para que puedas incluir tu propia información:
@@ -97,7 +100,13 @@ const dataProfile: Profile = {
 export default dataProfile;
 ```
 
-Puedes reemplazar los valores de ejemplo con tu propia información para personalizar tu portafolio.
+También debes reemplazar estos archivos. Si deseas cambiarles el nombre, asegúrate de hacerlo primero en el archivo `dataProfile.ts`.
+```
+public
+└── profile
+    ├── CV.pdf
+    └── fotoDePerfil.png
+```
 
 ### Personalización del Proyectos 🚀
 
