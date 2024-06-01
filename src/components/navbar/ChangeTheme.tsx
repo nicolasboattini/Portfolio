@@ -1,13 +1,23 @@
 import { useTheme } from '../../context/ThemeContext.tsx';
 import Cookies from 'js-cookie';
 
+type Theme = 'light' | 'dark';
+
+interface ThemeContextType {
+  theme: Theme;
+  setTheme: (theme: Theme | ((prevTheme: Theme) => Theme)) => void;
+}
+
 export default function ChangeTheme() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme() as ThemeContextType;
 
   const handleChangeTheme = () => {
-    setTheme(prevTheme => {
-      const newTheme = prevTheme === 'light' ? 'dark' : 'light';
-      document.querySelector('html').classList.toggle('dark', newTheme === 'dark');
+    setTheme((prevTheme: Theme) => {
+      const newTheme: Theme = prevTheme === 'light' ? 'dark' : 'light';
+      const htmlElement = document.querySelector('html');
+      if (htmlElement) {
+        htmlElement.classList.toggle('dark', newTheme === 'dark');
+      }
       Cookies.set('theme', newTheme, { expires: 365 });
       return newTheme;
     });
@@ -16,11 +26,17 @@ export default function ChangeTheme() {
   return (
     <div
       tabIndex={2}
-      aria-label={`Cambiar de tema, tema actual: ${theme}`} 
+      aria-label={`Cambiar de tema, tema actual: ${theme}`}
       onClick={handleChangeTheme}
-      className="cursor-pointer select-none text-3xl border-2 border-solid border-transparent hover:border-L-D-P rounded-full px-1 py-1.5 hover:bg-L-D-P hover:bg-opacity-15"
+      className="cursor-pointer select-none flex justify-center items-center"
     >
-      <span aria-hidden='true'>{theme === 'light' ? '☀️' : '🌙'}</span>
+      <span
+        aria-hidden='true'
+        className={`w-8 h-8
+        ${theme === 'light'
+            ? 'icon-[tdesign--mode-light]'
+            : 'icon-[tdesign--mode-dark]'}
+        `}></span>
     </div>
   );
 }
