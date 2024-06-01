@@ -28,7 +28,7 @@ export default function Home() {
             >
 
               <div className="w-48 h-48 md:min-w-80 md:h-80 rounded-full overflow-hidden border-2 border-solid border-AZUL dark:border-AMARILLO">
-                <img className="w-full h-full object-cover object-center" src="FotoCVSinFondo.png" alt="Foto de perfil" />
+                <img className="w-full h-full object-cover object-center" src={dataProfile.profilePicture} alt="Foto de perfil" />
               </div>
 
               <div className="md:w-full flex flex-col gap-5 md:gap-10">

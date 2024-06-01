@@ -37,7 +37,7 @@ const dataProfile: Profile = {
     dataBase: ['MongoDb', 'Firebase'],
     versionControl: ['Git', 'GitHub']
   },
-  profilePicture: 'FotoCVSinFondo.png'
+  profilePicture: 'fotoDePerfil.png'
 };
 
 export default dataProfile;
