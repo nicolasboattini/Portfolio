@@ -4,6 +4,8 @@
 
 🎯 **Objetivo:** Desarrollar una aplicación Portfolio para mostrar proyectos personales.
 
+Este proyecto ha sido desarrollado con el objetivo de exhibir mis proyectos personales. No obstante, también se proporciona como una plantilla que puede ser utilizada por otros para mostrar sus propios trabajos, bajo la condición de que se me mencione como el autor original y se respeten mis derechos de autor.
+
 ### Instalación y ejecución del proyecto (React) 🛠️💻
 
 1. Abre la consola en la ubicación deseada para clonar el repositorio.
