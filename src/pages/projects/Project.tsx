@@ -118,7 +118,7 @@ export default function Project() {
                       ${device === 'desktop' ? 'w-full sm:w-1/2' : ''}
                       `}>
                         <img
-                          className='w-full h-auto border-2 border-AZUL'
+                          className='w-full h-auto border-2 border-AMARILLO dark:border-AZUL'
 
                           src={`/projects/${project.id}/screenshots/${device}/${index + 1}.png`}
                           alt={`Screenshot ${index + 1}`}
