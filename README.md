@@ -13,13 +13,13 @@ Este proyecto ha sido desarrollado con el objetivo de exhibir mis proyectos pers
 2. Clona este repositorio en tu máquina local utilizando Git:
 
     ```bash
-    git clone https://github.com/Schugu/portfolio.git
+    git clone https://github.com/Schugu/Portfolio.git
     ```
 
 3. Navega al directorio del proyecto clonado:
 
     ```bash
-    cd portfolio
+    cd Portfolio
     ```
 
 4. Instala las dependencias del front end utilizando npm o yarn:
