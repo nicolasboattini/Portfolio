@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Navbar from "../../components/navbar/Navbar";
 import { TagOpen, TagClose } from "../../components/TagsSection";
 import dataProjects from '../../data/dataProjects';
@@ -47,15 +47,24 @@ export default function Project() {
                 <article className="w-full flex flex-wrap justify-center gap-4 p-4 rounded-lg
                 dark:bg-gray-800 bg-AZUL bg-opacity-10">
                   <div className='w-full flex flex-col'>
-                    <section className="w-full flex justify-end">
+                    <section className="w-full flex justify-between">
+                      <Link to='/projects'
+                        data-tooltip-id="my-tooltip"
+                        data-tooltip-content="Atrás"
+                        aria-label="Atrás"
+                        tabIndex={6}
+                      >
+                        <span className="w-9 h-9 icon-[iconoir--undo-circle-solid] hover:text-AZUL-dark dark:hover:text-AMARILLO" />
+                      </Link>
+
                       <a data-tooltip-id="my-tooltip"
                         data-tooltip-content="Github"
                         href={project.linkGithub}
                         target="_blank"
                         aria-label="Ver proyecto en github"
-                        tabIndex={6}
+                        tabIndex={7}
                       >
-                        <span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AMARILLO"></span>
+                        <span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AZUL-dark dark:hover:text-AMARILLO"></span>
                       </a>
                       <Tooltip id="my-tooltip" />
                     </section>
@@ -63,21 +72,21 @@ export default function Project() {
                     <section className='w-full flex flex-col gap-2'>
                       <p
                         className="w-full text-center text-xl md:text-3xl border-b-2 border-AZUL-dark dark:border-AMARILLO mb-2"
-                        tabIndex={7}
+                        tabIndex={8}
                       >{project.title}</p>
-                      <p tabIndex={8} className="indent-4 text-lg md:text-xl">{project.description}</p>
+                      <p tabIndex={9} className="indent-4 text-lg md:text-xl">{project.description}</p>
                       {
                         project.moreInfo.map((paragraph, index) => (
-                          <p tabIndex={index + 8}
-                          key={index} className='indent-4 text-base md:text-xl'>{paragraph}</p>
+                          <p tabIndex={index + 9}
+                            key={index} className='indent-4 text-base md:text-xl'>{paragraph}</p>
                         ))
                       }
                     </section>
                   </div>
 
                   <section className='w-full flex flex-col gap-4'>
-                    <p tabIndex={20} 
-                    className="w-full text-center text-xl md:text-2xl text-AZUL-dark dark:text-AMARILLO">Tecnologías:</p>
+                    <p tabIndex={20}
+                      className="w-full text-center text-xl md:text-2xl text-AZUL-dark dark:text-AMARILLO">Tecnologías:</p>
                     <article className="flex gap-2 flex-wrap justify-center">
                       {project.techs.map((tech, index) => (
                         <Techs key={tech} tech={tech} tabIndex={index + 20} />
