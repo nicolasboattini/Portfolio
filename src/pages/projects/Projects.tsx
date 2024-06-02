@@ -17,7 +17,7 @@ export default function Projects() {
       rounded-md border-2 shadow 
       bg-LIGHT-BG-dark border-AZUL shadow-AZUL
       dark:bg-DARK-BG-dark dark:border-DARK-BORDER-light dark:shadow-DARK-BORDER-light">
-        <TagOpen section={"proyectos"} />
+        <TagOpen section={"Proyectos"} />
 
         <div className="flex w-full justify-center md:gap-4">
           <section className="w-full flex flex-col gap-3 p-2 md:py-5 md:pl-[5vw]">
