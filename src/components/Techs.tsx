@@ -48,6 +48,10 @@ export default function Techs({ tech, tabIndex }: TechsProps) {
       src = "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white";
       alt = "TypeScript";
       break;
+    case 'Firebase':
+      src = "https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black";
+      alt = "Firebase";
+      break;
     default:
       return (
         <div>Unknown technology: {tech}</div>
