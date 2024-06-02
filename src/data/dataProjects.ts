@@ -75,6 +75,21 @@ const dataProjects: Project[] = [
       desktop: 5,
     }
   },
+  {
+    id: '5',
+    title: 'Portfolio 💼🖥️',
+    description: 'Portfolio para mostrar proyectos personales.',
+    moreInfo:[
+      'Este proyecto ha sido desarrollado con el objetivo de exhibir mis proyectos personales. No obstante, también se proporciona como una plantilla que puede ser utilizada por otros para mostrar sus propios trabajos, bajo la condición de que se me mencione como el autor original y se respeten mis derechos de autor.',
+    ],
+    techs: ['TypeScript', 'React', 'Tailwind'],
+    linkGithub: 'https://github.com/Schugu/portfolio',
+    cantScreenshots: {
+      cellphone: 0,
+      tablet: 0,
+      desktop: 0,
+    }
+  },
 ];
 
 export default dataProjects;
