@@ -44,9 +44,9 @@ export default function Techs({ tech, tabIndex }: TechsProps) {
       src = "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white";
       alt = "MongoDB";
       break;
-    case 'Firebase':
-      src = "https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black";
-      alt = "Firebase";
+    case 'TypeScript':
+      src = "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white";
+      alt = "TypeScript";
       break;
     default:
       return (
