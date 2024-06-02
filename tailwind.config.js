@@ -51,7 +51,6 @@ const config = {
           DEFAULT: '#55657E',
           dark: '#16202F',
         },  
-
         'LIGHT': {
           AzulClaro: '#55657E',
           AzulOscuro: '#16202F',
