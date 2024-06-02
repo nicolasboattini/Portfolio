@@ -1,11 +1,21 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import Cookies from 'js-cookie';
 
-// Crear el contexto
-const ThemeContext = createContext();
+// Definir el tipo para el contexto
+interface ThemeContextType {
+  theme: string;
+  setTheme: (theme: string) => void;
+}
 
-export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
+// Crear el contexto con un valor inicial indefinido
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+interface ThemeProviderProps {
+  children: ReactNode;
+}
+
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+  const [theme, setTheme] = useState<string>(() => {
     const savedTheme = Cookies.get('theme');
     if (savedTheme) {
       return savedTheme;
@@ -17,11 +27,14 @@ export const ThemeProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    const applyTheme = (currentTheme) => {
-      if (currentTheme === 'dark') {
-        document.querySelector('html').classList.add('dark');
-      } else {
-        document.querySelector('html').classList.remove('dark');
+    const applyTheme = (currentTheme: string) => {
+      const htmlElement = document.querySelector('html');
+      if (htmlElement) {
+        if (currentTheme === 'dark') {
+          htmlElement.classList.add('dark');
+        } else {
+          htmlElement.classList.remove('dark');
+        }
       }
     };
 
@@ -34,16 +47,17 @@ export const ThemeProvider = ({ children }) => {
       applyTheme(theme);
     }
 
-    const handleThemeChange = (e) => {
+    const handleThemeChange = (e: MediaQueryListEvent) => {
       const newTheme = e.matches ? 'dark' : 'light';
       setTheme(newTheme);
       applyTheme(newTheme);
     };
 
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleThemeChange);
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    mediaQuery.addEventListener('change', handleThemeChange);
 
     return () => {
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', handleThemeChange);
+      mediaQuery.removeEventListener('change', handleThemeChange);
     };
   }, [theme]);
 
@@ -54,4 +68,10 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = (): ThemeContextType => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+};
