@@ -3,6 +3,7 @@ import { Subtitle, Flag } from "../../components/profile/Subtitle.tsx";
 import dataProfile from "../../data/dataProfile.ts";
 import SocialNetworkIcon from "../../components/SocialNetworkIcon.tsx";
 import IconosTechs from "../../components/IconosTechs.tsx";
+import Tooltip from "../../components/tooltip/Tooltip.tsx";
 
 export default function Home() {
   return (
@@ -36,13 +37,15 @@ export default function Home() {
                 <section className="w-full flex gap-5 flex-wrap justify-center items-center text-base md:text-2xl">
                   <Subtitle string={dataProfile.dev} tabIndex={8} />
                   <Subtitle string={dataProfile.years} tabIndex={9} />
-                  <Flag nationality={dataProfile.nationality} tabIndex={10} />
+                  <Tooltip text={dataProfile.nationality.toUpperCase()}>
+                    <Flag nationality={dataProfile.nationality} tabIndex={10} />
+                  </Tooltip>
                 </section>
 
                 {
                   dataProfile.descript && <p className="text-base md:text-xl text-balance text-center">{dataProfile.descript}</p>
                 }
-                
+
                 <section className="flex flex-wrap gap-0.5 md:gap-4 justify-center items-center">
                   {
                     Object.entries(dataProfile.linksSocialNetworks).map(([network, link], index) => (
