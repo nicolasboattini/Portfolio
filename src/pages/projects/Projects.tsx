@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import dataProjects from "../../data/dataProjects.ts";
 import Techs from "../../components/Techs.tsx";
 import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
-import { Tooltip } from 'react-tooltip';
-import 'react-tooltip/dist/react-tooltip.css'
 export default function Projects() {
 
   return (
@@ -43,8 +41,6 @@ export default function Projects() {
 
                       <article className="w-1/12 flex flex-col items-center gap-2">
                         <Link
-                          data-tooltip-id="my-tooltip"
-                          data-tooltip-content="Ver más"
                           to={`/projects/${project.id}`}
                           tabIndex={parseInt(`${index + 1}04`)}
                           aria-label="Ver más"
@@ -53,15 +49,12 @@ export default function Projects() {
                         </Link>
 
                         <a
-                          data-tooltip-id="my-tooltip"
-                          data-tooltip-content="Github"
                           href={project.linkGithub} target="_blank"
                           tabIndex={parseInt(`${index + 1}05`)}
                           aria-label="Ver proyecto en github"
                         >
                           <span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AZUL-dark dark:hover:text-AMARILLO"></span>
                         </a>
-                        <Tooltip id="my-tooltip" />
                       </article>
                     </section>
 
