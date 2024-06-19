@@ -30,7 +30,8 @@ export default function Home() {
               <div className="md:w-full flex flex-col gap-5 md:gap-10">
                 <p className="text-center text-lg md:text-4xl text-AZUL dark:text-AMARILLO"
                   tabIndex={7}
-                >{dataProfile.fullname}</p>
+                >{dataProfile.fullname}
+                </p>
 
                 <section className="w-full flex gap-5 flex-wrap justify-center items-center text-base md:text-2xl">
                   <Subtitle string={dataProfile.dev} tabIndex={8} />
@@ -38,6 +39,10 @@ export default function Home() {
                   <Flag nationality={dataProfile.nationality} tabIndex={10} />
                 </section>
 
+                {
+                  dataProfile.descript && <p className="text-base md:text-xl text-balance text-center">{dataProfile.descript}</p>
+                }
+                
                 <section className="flex flex-wrap gap-0.5 md:gap-4 justify-center items-center">
                   {
                     Object.entries(dataProfile.linksSocialNetworks).map(([network, link], index) => (
@@ -69,7 +74,7 @@ export default function Home() {
                         tabIndex={100}
                       >Base de datos:</p>
                       {dataProfile.skills.dataBase.map((tech, index) => (
-                        <IconosTechs key={tech} tech={tech} tabIndex={101 + index}/>
+                        <IconosTechs key={tech} tech={tech} tabIndex={101 + index} />
                       ))}
                     </div>
 
