@@ -7,8 +7,7 @@ import 'react-tooltip/dist/react-tooltip.css'
 export default function Projects() {
 
   return (
-    <section className="w-full min-h-screen flex flex-col items-center 
-    bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-LIGHT-AzulOscuro">
+    <section className="w-full min-h-screen flex flex-col items-center">
 
       <article className="mx-0 my-6 w-full h-auto md:h-auto md:w-11/12 md:pt-4 md:pr-4 md:pb-6 md:pl-7 p-2 
       rounded-md border-2 shadow 
