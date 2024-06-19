@@ -37,8 +37,8 @@ export default function Home() {
                 <section className="w-full flex gap-5 flex-wrap justify-center items-center text-base md:text-2xl">
                   <Subtitle string={dataProfile.dev} tabIndex={8} />
                   <Subtitle string={dataProfile.years} tabIndex={9} />
-                  <Tooltip text={dataProfile.nationality.toUpperCase()}>
-                    <Flag nationality={dataProfile.nationality} tabIndex={10} />
+                  <Tooltip text={dataProfile.nationality}>
+                    <Flag nationality={dataProfile.nationality.toLowerCase()} tabIndex={10} />
                   </Tooltip>
                 </section>
 
@@ -49,7 +49,9 @@ export default function Home() {
                 <section className="flex flex-wrap gap-0.5 md:gap-4 justify-center items-center">
                   {
                     Object.entries(dataProfile.linksSocialNetworks).map(([network, link], index) => (
-                      <SocialNetworkIcon key={network} socialNetwork={network} link={link} tabIndex={10 + index} />
+                      <Tooltip text={network}>
+                        <SocialNetworkIcon key={network} socialNetwork={network} link={link} tabIndex={10 + index} />
+                      </Tooltip>
                     ))
                   }
                 </section>
@@ -67,7 +69,9 @@ export default function Home() {
                       >Desarrollo Front-end:</p>
 
                       {dataProfile.skills.frontEnd.map((tech, index) => (
-                        <IconosTechs key={tech} tech={tech} tabIndex={51 + index} />
+                        <Tooltip text={tech}>
+                          <IconosTechs key={tech} tech={tech} tabIndex={51 + index} />
+                        </Tooltip>
                       ))}
                     </div>
 
@@ -77,7 +81,9 @@ export default function Home() {
                         tabIndex={100}
                       >Base de datos:</p>
                       {dataProfile.skills.dataBase.map((tech, index) => (
-                        <IconosTechs key={tech} tech={tech} tabIndex={101 + index} />
+                        <Tooltip text={tech}>
+                          <IconosTechs key={tech} tech={tech} tabIndex={101 + index} />
+                        </Tooltip>
                       ))}
                     </div>
 
@@ -87,7 +93,9 @@ export default function Home() {
                         tabIndex={150}
                       >Control de versiones:</p>
                       {dataProfile.skills.versionControl.map((tech, index) => (
-                        <IconosTechs key={tech} tech={tech} tabIndex={151 + index} />
+                        <Tooltip text={tech}>
+                          <IconosTechs key={tech} tech={tech} tabIndex={151 + index} />
+                        </Tooltip>
                       ))}
                     </div>
                   </article>
@@ -105,6 +113,6 @@ export default function Home() {
         <TagClose />
       </article>
 
-    </section>
+    </section >
   )
 }
