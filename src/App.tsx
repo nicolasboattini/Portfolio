@@ -5,6 +5,7 @@ import Project from "./pages/projects/Project.tsx";
 import Cv from "./pages/cv/Cv.tsx";
 import { ThemeProvider } from "./context/ThemeContext.tsx";
 import Navbar from "./components/navbar/Navbar.tsx";
+import Footer from "./components/footer/Footer.tsx";
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider>
-        <main className='flex flex-col min-h-screen'>
+        <main className='flex flex-col min-h-screen bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-LIGHT-AzulOscuro'>
           <Navbar />
 
           <section className='flex-grow'>
@@ -25,7 +26,7 @@ function App() {
             </Routes>
           </section>
 
-
+          <Footer />
         </main>
       </ThemeProvider>
     </BrowserRouter>
