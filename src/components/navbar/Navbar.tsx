@@ -1,6 +1,7 @@
 import ChangeTheme from "./ChangeTheme.tsx";
 import dataProfile from "../../data/dataProfile.ts";
 import LinkTo from "./LinkTo.tsx";
+import Tooltip from "../../components/tooltip/Tooltip.tsx";
 
 export default function Navbar() {
 
@@ -16,8 +17,9 @@ export default function Navbar() {
         <LinkTo to="/cv" label="Curriculum vitae" tabIndex={4} />
       </article>
 
-
-      <ChangeTheme />
+      <Tooltip text="Cambiar tema" position="left">
+        <ChangeTheme />
+      </Tooltip>
     </section>
   )
 }
