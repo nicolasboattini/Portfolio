@@ -1,5 +1,4 @@
 import { useParams, Link } from 'react-router-dom';
-import Navbar from "../../components/navbar/Navbar";
 import { TagOpen, TagClose } from "../../components/TagsSection";
 import dataProjects from '../../data/dataProjects';
 import Techs from "../../components/Techs";
@@ -25,7 +24,6 @@ export default function Project() {
     <section className="w-full min-h-screen flex flex-col items-center 
     bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-LIGHT-AzulOscuro">
 
-      <Navbar />
       <article className="mx-0 my-6 w-full h-auto md:h-auto md:w-11/12 md:pt-4 md:pr-4 md:pb-6 md:pl-7 p-2 
       rounded-md border-2 shadow 
       bg-LIGHT-BG-dark border-AZUL shadow-AZUL

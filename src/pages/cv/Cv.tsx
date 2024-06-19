@@ -1,4 +1,3 @@
-import Navbar from "../../components/navbar/Navbar.tsx";
 import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
 import dataProfile from "../../data/dataProfile.ts";
 
@@ -6,8 +5,6 @@ export default function Project() {
   return (
     <section className="w-full min-h-screen flex flex-col items-center 
     bg-LIGHT-BG dark:bg-DARK-BG dark:text-CREMA text-LIGHT-AzulOscuro">
-
-      <Navbar />
 
       <article className="mx-0 my-6 w-full h-auto md:h-auto md:w-11/12 md:pt-4 md:pr-4 md:pb-6 md:pl-7 p-2 
       rounded-md border-2 shadow 
