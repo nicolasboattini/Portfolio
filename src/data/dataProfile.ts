@@ -5,12 +5,12 @@ interface Profile {
   years: string;
   nationality: string;
   linksSocialNetworks: {
-    github: string;
-    linkedin: string;
-    instagram: string;
-    freecodecamp: string;
-    email: string;
-    cv: string;
+    Github: string;
+    Linkedin: string;
+    Instagram: string;
+    FreeCodeCamp: string;
+    Email: string;
+    CV: string;
   };
   skills: {
     frontEnd: string[];
@@ -25,14 +25,14 @@ const dataProfile: Profile = {
   descript: '¡Hola a todos! Soy Leandro Daniel Schugurensky, tengo 23 años y cuento con experiencia en roles administrativos. Me destaco en tareas tecnológicas y como programador Front-End, especializado en HTML, CSS, JavaScript, React, Next.js, TailwindCSS, Git y GitHub. También tengo experiencia en el manejo de bases de datos como MongoDB y Firebase.',
   dev: 'Front-end Developer',
   years: '23 años',
-  nationality: 'argentina',
+  nationality: 'Argentina',
   linksSocialNetworks: {
-    github: "https://github.com/Schugu",
-    linkedin: "https://www.linkedin.com/in/leandrodanielschugurensky/",
-    instagram: "https://www.instagram.com/leanschugu/",
-    freecodecamp: "https://www.freecodecamp.org/certification/Schugu/responsive-web-design",
-    email: "mailto:leo.schugu@gmail.com",
-    cv: "/profile/CV.pdf"
+    Github: "https://github.com/Schugu",
+    Linkedin: "https://www.linkedin.com/in/leandrodanielschugurensky/",
+    Instagram: "https://www.instagram.com/leanschugu/",
+    FreeCodeCamp: "https://www.freecodecamp.org/certification/Schugu/responsive-web-design",
+    Email: "mailto:leo.schugu@gmail.com",
+    CV: "/profile/CV.pdf"
   },
   skills: {
     frontEnd: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind'],

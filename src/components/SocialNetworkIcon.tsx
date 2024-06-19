@@ -11,22 +11,22 @@ const SocialNetworkIcon = ({ socialNetwork, link, tabIndex }: SocialNetworkProps
 
   useEffect(() => {
     switch (socialNetwork) {
-      case 'github':
+      case 'Github':
         setIcono('icon-[mdi--github]');
         break;
-      case 'linkedin':
+      case 'Linkedin':
         setIcono('icon-[mdi--linkedin]');
         break;
-      case 'instagram':
+      case 'Instagram':
         setIcono('icon-[ph--instagram-logo]');
         break;
-      case 'freecodecamp':
+      case 'FreeCodeCamp':
         setIcono('icon-[simple-icons--freecodecamp]');
         break;
-      case 'email':
+      case 'Email':
         setIcono('icon-[mdi--email-outline]');
         break;
-      case 'cv':
+      case 'CV':
         setIcono('icon-[academicons--cv]');
         break;
       default:
