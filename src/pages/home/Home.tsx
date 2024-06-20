@@ -54,7 +54,7 @@ export default function Home() {
                   }
                 </section>
 
-                <section className="w-full flex flex-col gap-2 items-center ">
+                <section className="w-full flex flex-col gap-2 items-center">
                   <p
                     className="text-LIGHT-AzulOscuro dark:text-AZUL text-base md:text-2xl"
                     tabIndex={50}
@@ -98,11 +98,11 @@ export default function Home() {
                     </div>
                   </article>
                 </section>
-                
+
                 {
                   dataProfile.descript && <p className="text-base md:text-xl text-balance text-center">{dataProfile.descript}</p>
                 }
-                
+
               </div>
 
             </article>

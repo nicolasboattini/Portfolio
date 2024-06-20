@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Project } from '../../data/dataProjects';
 import { Link } from 'react-router-dom';
+import IconosTechs from "../../components/IconosTechs.tsx";
+import Tooltip from "../../components/tooltip/Tooltip.tsx";
 
 type CardProps = {
   project: Project;
@@ -38,9 +40,16 @@ export default function Card({ project, index }: CardProps) {
           transition-all duration-500 ${isVisible ? 'bg-opacity-50 opacity-100' : 'bg-opacity-0 opacity-0'}`}
       >
         <p className="w-full text-center font-bold text-xl md:text-2xl border-b-2 border-AZUL dark:border-AMARILLO">
-            {project.title}
-          </p>
+          {project.title}
+        </p>
 
+        <section className='w-full flex justify-center flex-wrap gap-2'>
+          {project.techs.map((tech, index) => (
+            <Tooltip text={tech}>
+              <IconosTechs key={tech} tech={tech} tabIndex={51 + index} color='text-CREMA'/>
+            </Tooltip>
+          ))}
+        </section>
         <Link
           to={`/projects/${project.id}`}
           tabIndex={parseInt(`${index + 1}04`)}
