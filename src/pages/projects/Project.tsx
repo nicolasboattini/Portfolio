@@ -87,64 +87,75 @@ export default function Project() {
                   </section>
                 </article>
 
+                {
+                  (project.cantScreenshots.cellphone > 0 || project.cantScreenshots.tablet > 0 || project.cantScreenshots.desktop > 0)
+                  && <article className='w-full flex flex-col gap-4 items-center'>
+                    <p tabIndex={100} className='text-xl md:text-2xl'>Capturas de pantalla:</p>
 
-                <article className='w-full flex flex-col gap-4 items-center'>
-                  <p tabIndex={100} className='text-xl md:text-2xl'>Capturas de pantalla:</p>
+                    <div className='flex justify-center flex-wrap gap-6'>
+                      {project.cantScreenshots.desktop > 0 &&
+                        <SelectResolution
+                          onClick={() => setDevice('desktop')}
+                          device={device} resolution="desktop"
+                          tabIndex={101}
+                        >
+                          <span
+                            className="w-16 h-10 icon-[ion--ios-desktop]"
+                          />
+                          <p>PC</p>
+                        </SelectResolution>
+                      }
 
-                  <div className='flex justify-center flex-wrap gap-6'>
-                    <SelectResolution
-                      onClick={() => setDevice('desktop')}
-                      device={device} resolution="desktop"
-                      tabIndex={101}
-                    >
-                      <span
-                        className="w-16 h-10 icon-[ion--ios-desktop]"
-                      />
-                      <p>PC</p>
-                    </SelectResolution>
+                      {
+                        project.cantScreenshots.tablet > 0 &&
+                        <SelectResolution
+                          onClick={() => setDevice('tablet')}
+                          device={device} resolution="tablet"
+                          tabIndex={102}
+                        >
+                          <span
+                            className="w-9 h-9 icon-[ion--tablet-portrait-sharp]"
+                          />
+                          <p>Tablet</p>
+                        </SelectResolution>
+                      }
 
-                    <SelectResolution
-                      onClick={() => setDevice('tablet')}
-                      device={device} resolution="tablet"
-                      tabIndex={102}
-                    >
-                      <span
-                        className="w-9 h-9 icon-[ion--tablet-portrait-sharp]"
-                      />
-                      <p>Tablet</p>
-                    </SelectResolution>
+                      {
+                         project.cantScreenshots.cellphone > 0 &&
+                        <SelectResolution
+                          onClick={() => setDevice('cellphone')}
+                          device={device} resolution="cellphone"
+                          tabIndex={103}
+                        >
+                          <span
+                            className="w-9 h-9 icon-[ion--phone-portrait-sharp]"
+                          />
+                          <p>Celular</p>
+                        </SelectResolution>
+                      }
+                    </div>
 
-                    <SelectResolution
-                      onClick={() => setDevice('cellphone')}
-                      device={device} resolution="cellphone"
-                      tabIndex={103}
-                    >
-                      <span
-                        className="w-9 h-9 icon-[ion--phone-portrait-sharp]"
-                      />
-                      <p>Celular</p>
-                    </SelectResolution>
-                  </div>
+                    <div className='w-full flex flex-wrap justify-center items-center'>
+                      {[...Array(project.cantScreenshots[device])].map((_, index) => (
 
-                  <div className='w-full flex flex-wrap justify-center items-center'>
-                    {[...Array(project.cantScreenshots[device])].map((_, index) => (
-
-                      <section key={index} tabIndex={index + 104} className={`p-1
+                        <section key={index} tabIndex={index + 104} className={`p-1
                       ${device === 'cellphone' ? 'w-full sm:w-1/4' : ''}
                       ${device === 'tablet' ? 'w-full sm:w-1/3' : ''}
                       ${device === 'desktop' ? 'w-full sm:w-1/2' : ''}
                       `}>
-                        <img
-                          className='w-full h-auto border-2 border-AMARILLO dark:border-AZUL'
+                          <img
+                            className='w-full h-auto border-2 border-AMARILLO dark:border-AZUL'
 
-                          src={`/projects/${project.id}/screenshots/${device}/${index + 1}.png`}
-                          alt={`Screenshot ${index + 1}`}
-                        />
-                      </section>
+                            src={`/projects/${project.id}/screenshots/${device}/${index + 1}.png`}
+                            alt={`Screenshot ${index + 1}`}
+                          />
+                        </section>
 
-                    ))}
-                  </div>
-                </article>
+                      ))}
+                    </div>
+                  </article>
+                }
+
 
               </section>
             </div>
