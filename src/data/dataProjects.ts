@@ -85,9 +85,9 @@ const dataProjects: Project[] = [
     techs: ['TypeScript', 'React', 'Tailwind'],
     linkGithub: 'https://github.com/Schugu/portfolio',
     cantScreenshots: {
-      cellphone: 0,
+      cellphone: 6,
       tablet: 0,
-      desktop: 0,
+      desktop: 5,
     }
   },
 ];
