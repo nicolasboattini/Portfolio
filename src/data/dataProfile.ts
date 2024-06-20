@@ -36,7 +36,7 @@ const dataProfile: Profile = {
   },
   skills: {
     frontEnd: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind'],
-    dataBase: ['MongoDb', 'Firebase'],
+    dataBase: ['MongoDB', 'Firebase'],
     versionControl: ['Git', 'GitHub']
   },
   profilePicture: '/profile/fotoDePerfil.png'
