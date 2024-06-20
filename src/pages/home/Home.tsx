@@ -42,9 +42,7 @@ export default function Home() {
                   </Tooltip>
                 </section>
 
-                {
-                  dataProfile.descript && <p className="text-base md:text-xl text-balance text-center">{dataProfile.descript}</p>
-                }
+
 
                 <section className="flex flex-wrap gap-0.5 md:gap-4 justify-center items-center">
                   {
@@ -100,6 +98,11 @@ export default function Home() {
                     </div>
                   </article>
                 </section>
+                
+                {
+                  dataProfile.descript && <p className="text-base md:text-xl text-balance text-center">{dataProfile.descript}</p>
+                }
+                
               </div>
 
             </article>
