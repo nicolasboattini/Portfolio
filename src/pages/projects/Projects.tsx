@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import dataProjects from "../../data/dataProjects.ts";
 import Techs from "../../components/Techs.tsx";
 import { TagOpen, TagClose } from "../../components/TagsSection.tsx";
+import Card from "./Card.tsx";
+
+
 export default function Projects() {
 
   return (
@@ -19,7 +22,7 @@ export default function Projects() {
             w-full gap-[4vw]
             grid grid-cols-1 sm:grid-cols-2"
             >
-              {dataProjects.map((project, index) => (
+              {/* {dataProjects.map((project, index) => (
                 <article className="w-full h-full flex flex-col gap-2 p-2 rounded-lg
                  border-2 shadow
                  bg-AZUL bg-opacity-10  border-AZUL-dark shadow-AZUL-dark
@@ -69,9 +72,47 @@ export default function Projects() {
                     </section>
                   </div>
                 </article>
-              ))}
+              ))} */}
 
+              {
+                dataProjects.map((project, index) => (
+                  <Card index={index} project={project}/>
+
+                //   <div className="relative group rounded-lg 
+                //  border-2 shadow overflow-hidden w-full h-full
+                //  bg-AZUL bg-opacity-10  border-AZUL-dark shadow-AZUL-dark
+                //  dark:bg-white dark:bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO">
+                //     <img
+                //       src={`/projects/${project.id}/frontPage.png`}
+                //       alt="Card Image"
+                //       className="block w-full h-auto rounded-lg transition duration-[0.3s] ease-in-out transform group-hover:scale-125"
+                //     />
+                //     <div className="hover:bg-black hover:bg-opacity-30 absolute inset-0 rounded-lg overflow-hidden group-hover:backdrop-blur-md transition duration-300 ease-in-out flex items-center justify-center">
+                //       <div className="flex flex-col items-center w-full gap-2
+                //       text-white text-center p-4 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                //         <p className="w-full text-center font-bold text-xl md:text-2xl border-b-2 border-AZUL dark:border-AMARILLO">{project.title}</p>
+                //         <p className="indent-4 text-balance">{project.description}</p>
+                //         <Link
+                //           to={`/projects/${project.id}`}
+                //           tabIndex={parseInt(`${index + 1}04`)}
+                //           aria-label="Ver más"
+                //           className="flex justify-center items-center p-1 rounded-2xl w-1/2
+                //                       border-2 shadow
+                //                       transition-colors duration-100 ease-in-out
+
+                //                     border-AZUL shadow-AZUL hover:bg-AZUL hover:bg-opacity-30 bg-AZUL bg-opacity-10
+                //                     dark:border-AMARILLO dark:shadow-AMARILLO dark:bg-AMARILLO dark:bg-opacity-10 dark:hover:bg-AMARILLO dark:hover:bg-opacity-20"
+                //         >
+                //           Ver más
+                //         </Link>
+                //       </div>
+                //     </div>
+                //   </div>
+                ))
+              }
             </section>
+
+
           </section>
 
           <section className="min-h-full w-auto my-auto">
