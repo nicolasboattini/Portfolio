@@ -5,6 +5,7 @@ import Techs from "../../components/Techs";
 import { useState } from 'react';
 import SelectResolution from "./SelectResolution.tsx";
 import ProjectNotFound from "./ProjectNotFound.tsx";
+import Tooltip from "../../components/tooltip/Tooltip.tsx";
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 
@@ -44,20 +45,31 @@ export default function Project() {
                 dark:bg-gray-800 bg-AZUL bg-opacity-10">
                   <div className='w-full flex flex-col'>
                     <section className="w-full flex justify-between">
-                      <Link to='/projects'
-                        aria-label="Atrás"
-                        tabIndex={6}
-                      >
-                        <span className="w-9 h-9 icon-[iconoir--undo-circle-solid] hover:text-AZUL-dark dark:hover:text-AMARILLO" />
-                      </Link>
 
-                      <a data-tooltip-id="my-tooltip"
+                      <Tooltip text='Atrás' position='right'>
+                        <Link to='/projects'
+                          aria-label="Atrás"
+                          tabIndex={6}
+                        >
+                          <span className="w-9 h-9 icon-[iconoir--undo-circle-solid] hover:text-AZUL-dark dark:hover:text-AMARILLO" />
+                        </Link>
+                      </Tooltip>
+
+                      <a
+                        className='flex flex-wrap gap-1 justify-center items-center rounded
+                        border-2 py-1 px-1.5
+                        hover:text-AZUL-dark border-DARK-BG-light hover:border-AZUL-dark 
+                        hover:bg-AZUL hover:bg-opacity-10
+                        dark:border-CREMA dark:hover:border-AMARILLO dark:hover:text-AMARILLO
+                        dark:hover:bg-AMARILLO dark:hover:bg-opacity-10'
+                         
                         href={project.linkGithub}
                         target="_blank"
                         aria-label="Ver proyecto en github"
                         tabIndex={7}
                       >
-                        <span className="w-9 h-9 icon-[iconoir--github-circle] hover:text-AZUL-dark dark:hover:text-AMARILLO"></span>
+                        <p className='text-xl'>Ver código</p>
+                        <span className="w-9 h-9 icon-[iconoir--github-circle] "></span>
                       </a>
                     </section>
 
@@ -121,7 +133,7 @@ export default function Project() {
                       }
 
                       {
-                         project.cantScreenshots.cellphone > 0 &&
+                        project.cantScreenshots.cellphone > 0 &&
                         <SelectResolution
                           onClick={() => setDevice('cellphone')}
                           device={device} resolution="cellphone"
