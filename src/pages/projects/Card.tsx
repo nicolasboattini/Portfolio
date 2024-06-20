@@ -1,46 +1,55 @@
-import { useState } from "react";
-import { Project } from "../../data/dataProjects.ts";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Project } from '../../data/dataProjects';
+import { Link } from 'react-router-dom';
 
-type cardProps = {
+type CardProps = {
   project: Project;
   index: number;
-}
+};
 
-export default function Card({ project, index }: cardProps) {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+export default function Card({ project, index }: CardProps) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setTimeout(() => setIsVisible(true), 100);
+  };
+
+  const handleMouseLeave = () => {
+    setTimeout(() => setIsVisible(false), 100);
+  };
+
   return (
-    <article
-      onClick={() => setIsVisible(!isVisible)}
-      className={`w-full h-full flex flex-col gap-2 p-2 rounded-lg
-                  border-2 shadow
-                  border-AZUL-dark shadow-AZUL-dark dark:border-AMARILLO dark:shadow-AMARILLO
-                  cursor-pointer`}
+    <div
+      className="overflow-hidden relative w-full h-auto border-2 shadow 
+      bg-AZUL bg-opacity-10 border-AZUL shadow-AZUL 
+      dark:bg-white dark:bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <img
-        className={`w-full h-full  inset-0 bg-cover bg-center transition-opacity duration-300 ${isVisible ? 'opacity-60' : 'opacity-100'}`}
         src={`/projects/${project.id}/frontPage.png`}
+        alt="Portada del proyecto"
+        className={`w-full h-auto object-cover transition-all duration-[0.3s] ${isVisible ? 'blur-lg transform scale-125' : ''}`}
       />
 
-      {
-        isVisible && <div className="relative z-10 flex flex-col items-center w-full gap-2 text-white text-center p-4">
-          <p className="w-full text-center font-bold text-xl md:text-2xl border-b-2 border-AZUL dark:border-AMARILLO">
+      <div
+        className={`absolute inset-0 w-full h-full flex flex-col items-center justify-center gap-4 p-2
+          bg-black text-CREMA
+          transition-all duration-500 ${isVisible ? 'bg-opacity-50 opacity-100' : 'bg-opacity-0 opacity-0'}`}
+      >
+        <p className="w-full text-center font-bold text-xl md:text-2xl border-b-2 border-AZUL dark:border-AMARILLO">
             {project.title}
           </p>
-          <p className="indent-4 text-balance">{project.description}</p>
-          <Link
-            to={`/projects/${project.id}`}
-            tabIndex={parseInt(`${index + 1}04`)}
-            aria-label="Ver más"
-            className="flex justify-center items-center p-1 rounded-2xl w-1/2 border-2 shadow transition-colors duration-100 ease-in-out
-                     border-AZUL shadow-AZUL hover:bg-AZUL hover:bg-opacity-30 bg-AZUL bg-opacity-10
-                     dark:border-AMARILLO dark:shadow-AMARILLO dark:bg-AMARILLO dark:bg-opacity-10 dark:hover:bg-AMARILLO dark:hover:bg-opacity-20"
-          >
-            Ver más
-          </Link>
-        </div>
-      }
 
-    </article>
-  )
+        <Link
+          to={`/projects/${project.id}`}
+          tabIndex={parseInt(`${index + 1}04`)}
+          aria-label="Ver más"
+          className="flex justify-center items-center p-1 rounded-2xl w-1/2 border-2 shadow transition-colors duration-100 ease-in-out border-AZUL shadow-AZUL hover:bg-AZUL hover:bg-opacity-30 bg-AZUL bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO dark:bg-AMARILLO dark:bg-opacity-10 dark:hover:bg-AMARILLO dark:hover:bg-opacity-20"
+        >
+          Ver más
+        </Link>
+      </div>
+    </div>
+  );
 }
