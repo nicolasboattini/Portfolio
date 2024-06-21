@@ -19,6 +19,7 @@ const config = {
           dark: '#ab9f92',
         },
         'AMARILLO': {
+          light: '#ffdd8b',
           DEFAULT: '#ffcc50',
           dark: '#cca340',
         },
