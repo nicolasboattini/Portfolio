@@ -50,10 +50,10 @@ const dataProfile: Profile = {
   workExperience: [
     {
       title: "Administrativo",
-      company: "Dirección General de Discapacidad e Inclusión Social de la Municipalidad de la Ciudad de Corrientes",
+      company: "Subsecretaria de la Familia de la Municipalidad de la Ciudad de Corrientes",
       date: "Nov. 2023 - Jun. 2024 · 8 meses",
       description: "Pasantía laboral (8 meses) en el marco del programa E.T.P (Entrenamiento Para el Trabajo Público). Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras.",
-      linkDescription: "HOL",
+      linkDescription: "",
     },
     {
       title: "Administrativo",

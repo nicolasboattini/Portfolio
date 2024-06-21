@@ -24,7 +24,7 @@ const TimelineItem = ({ title, company, date, description, linkDescription }: Ti
         </span>
 
         <section className="w-full flex flex-col md:flex-row md:justify-start gap-4 md:gap-14">
-          <article className="w-full md:w-5/12">
+          <article className="w-full md:w-4/12">
             <p className="flex justify-between text-lg font-semibold 
             text-AZUL-dark dark:text-AZUL">
               {title}
@@ -33,8 +33,8 @@ const TimelineItem = ({ title, company, date, description, linkDescription }: Ti
             <time className="text-sm font-normal leading-none text-AZUL dark:text-CREMA">{date}</time>
 
           </article>
-          <article className="w-full flex flex-col gap-2">
-            <p className="w-full text-base font-normal text-AZUL-dark dark:text-CREMA">{description}</p>
+          <article className="w-full md:w-6/12 flex flex-col gap-2">
+            <p className="w-full text-balance text-base font-normal text-AZUL-dark dark:text-CREMA">{description}</p>
             {
               linkDescription &&
               <a href={linkDescription} className="w-fit text-xl hover:border-b-2 transition-colors duration-100 ease-in-out
