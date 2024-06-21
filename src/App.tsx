@@ -6,6 +6,7 @@ import Cv from "./pages/cv/Cv.tsx";
 import { ThemeProvider } from "./context/ThemeContext.tsx";
 import Navbar from "./components/navbar/Navbar.tsx";
 import Footer from "./components/footer/Footer.tsx";
+import Experience from "./pages/experience/Experience.tsx";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route path='/projects' element={<Projects />} />
               <Route path='/projects/:projectId' element={<Project />} />
               <Route path='/cv' element={<Cv />} />
+              <Route path='/experience' element={<Experience />} />
             </Routes>
           </section>
 

@@ -18,6 +18,13 @@ interface Profile {
     versionControl: string[];
   };
   profilePicture: string;
+  workExperience: {
+    title: string;
+    company: string;
+    date: string;
+    description: string;
+    linkDescription: string;
+  }[];
 }
 
 const dataProfile: Profile = {
@@ -39,7 +46,23 @@ const dataProfile: Profile = {
     dataBase: ['MongoDB', 'Firebase'],
     versionControl: ['Git', 'GitHub']
   },
-  profilePicture: '/profile/fotoDePerfil.png'
+  profilePicture: '/profile/fotoDePerfil.png',
+  workExperience: [
+    {
+      title: "Administrativo",
+      company: "Dirección General de Discapacidad e Inclusión Social de la Municipalidad de la Ciudad de Corrientes",
+      date: "Nov. 2023 - Jun. 2024 · 8 meses",
+      description: "Pasantía laboral (8 meses) en el marco del programa E.T.P (Entrenamiento Para el Trabajo Público). Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras.",
+      linkDescription: "HOL",
+    },
+    {
+      title: "Administrativo",
+      company: "Dirección General de Discapacidad e Inclusión Social de la Municipalidad de la Ciudad de Corrientes",
+      date: "Jun. 2022 - Ene. 2023 · 8 meses",
+      description: "Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras.",
+      linkDescription: "",
+    },
+  ]
 };
 
 export default dataProfile;

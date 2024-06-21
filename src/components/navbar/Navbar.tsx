@@ -15,6 +15,7 @@ export default function Navbar() {
         <LinkTo to="/home" label="Inicio" tabIndex={2} />
         <LinkTo to="/projects" label="Proyectos" tabIndex={3} />
         <LinkTo to="/cv" label="Curriculum vitae" tabIndex={4} />
+        <LinkTo to="/experience" label="Experiencia" tabIndex={5} />
       </article>
 
       <Tooltip text="Cambiar tema" position="left">
