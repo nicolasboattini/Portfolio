@@ -25,6 +25,7 @@ interface Profile {
     description: string;
     linkDescription: string;
   }[];
+  certificates: string[];
 }
 
 const dataProfile: Profile = {
@@ -62,7 +63,15 @@ const dataProfile: Profile = {
       description: "Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras.",
       linkDescription: "",
     },
-  ]
+  ],
+  certificates: [
+    'https://www.freecodecamp.org/certification/Schugu/responsive-web-design',
+    'https://www.udemy.com/certificate/UC-9609612f-f35d-4839-91f0-394373d2c884/',
+    'https://www.udemy.com/certificate/UC-b167edef-443e-481f-91fd-9fc64b04a8ca/',
+    'https://www.udemy.com/certificate/UC-0093498b-eb62-4522-95e5-847afcf2d80c/',
+    'https://www.udemy.com/certificate/UC-294ca089-e6e2-4c1a-86e5-57a1f7e01f69/',
+    'https://www.udemy.com/certificate/UC-4ca8e86d-e5e7-4696-be4b-aa738bc426fd/',
+  ],
 };
 
 export default dataProfile;

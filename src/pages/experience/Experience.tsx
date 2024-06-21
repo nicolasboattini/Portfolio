@@ -11,7 +11,7 @@ export default function Experience() {
       bg-LIGHT-BG-dark border-AZUL shadow-AZUL
       dark:bg-DARK-BG-dark dark:border-DARK-BORDER-light dark:shadow-DARK-BORDER-light">
 
-        <TagOpen section={`Experiencia`} />
+        <TagOpen section={`Experiencia Laboral`} />
 
         <section className="flex w-full">
           <article className="w-full flex flex-col gap-3 py-2 md:py-2 md:pl-[5vw]">
