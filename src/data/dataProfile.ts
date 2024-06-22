@@ -18,14 +18,14 @@ interface Profile {
     versionControl: string[];
   };
   profilePicture: string;
-  workExperience: {
+  workExperience?: {
     title: string;
     company: string;
     date: string;
     description: string;
     linkDescription: string;
   }[];
-  certificates: string[];
+  certificates?: string[];
 }
 
 const dataProfile: Profile = {

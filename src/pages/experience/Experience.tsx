@@ -8,7 +8,7 @@ export default function Experience() {
       <div className="w-full flex flex-col justify-start items-start"
       >
         {
-          dataProfile.workExperience.map(exp => (
+          dataProfile.workExperience?.map(exp => (
             <TimeLineItem
               title={exp.title}
               company={exp.company}
