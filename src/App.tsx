@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar.tsx";
 import Footer from "./components/footer/Footer.tsx";
 import Experience from "./pages/experience/Experience.tsx";
 import Education from "./pages/education/Education.tsx";
+import Contact from "./pages/contact/Contact.tsx";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               <Route path='/cv' element={<Cv />} />
               <Route path='/experience' element={<Experience />} />
               <Route path='/education' element={<Education />} />
+              <Route path='/contact' element={<Contact />} />
             </Routes>
           </section>
 
