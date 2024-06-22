@@ -11,7 +11,8 @@ export default function Home() {
       <article className="w-full flex flex-col justify-center items-center
                           md:flex-row md:justify-evenly md:items-center gap-2">
 
-        <div className="w-48 h-48 md:min-w-80 md:h-80 rounded-full overflow-hidden border-2 border-solid border-AZUL dark:border-AMARILLO">
+        <div className="w-48 h-48 md:min-w-80 md:h-80 rounded-full overflow-hidden border-2 border-solid border-AZUL
+        bg-gradient-to-b  from-AZUL to-AMARILLO">
           <img className="w-full h-full object-cover object-center" src={dataProfile.profilePicture} alt="Foto de perfil" />
         </div>
 
