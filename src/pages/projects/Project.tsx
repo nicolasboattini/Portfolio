@@ -27,14 +27,17 @@ export default function Project() {
         <section className="w-full flex flex-wrap justify-center gap-4 p-4 rounded-lg
                 dark:bg-gray-800 bg-AZUL bg-opacity-10">
           <article className='w-full flex flex-col'>
-            <div className="w-full flex justify-between">
+            <div className="w-full flex justify-between items-center">
 
               <Tooltip text='Atrás' position='right'>
                 <Link to='/projects'
                   aria-label="Atrás"
                   tabIndex={6}
+                  className='flex justify-center items-center border-2 border-transparent py-1 px-1.5 rounded
+                   hover:text-AZUL-dark hover:border-AZUL-dark hover:bg-AZUL hover:bg-opacity-10
+                  dark:hover:border-AMARILLO dark:hover:text-AMARILLO dark:hover:bg-AMARILLO dark:hover:bg-opacity-10'
                 >
-                  <span className="w-9 h-9 icon-[iconoir--undo-circle-solid] hover:text-AZUL-dark dark:hover:text-AMARILLO" />
+                  <span className="w-9 h-9 icon-[tdesign--enter]" />
                 </Link>
               </Tooltip>
 
@@ -51,7 +54,7 @@ export default function Project() {
                 aria-label="Ver proyecto en github"
                 tabIndex={7}
               >
-                <p className='text-xl'>Ver código</p>
+                <p className='text-xl'>Ver Repositorio</p>
                 <span className="w-9 h-9 icon-[iconoir--github-circle] "></span>
               </a>
             </div>
