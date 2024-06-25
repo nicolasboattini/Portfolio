@@ -140,7 +140,7 @@ export default function Contact() {
         </form>
 
         <article className='w-1/2 flex flex-col gap-2'>
-          <p className='text-center text-2xl'>¡Contáctame para Contratarme!</p>
+          <p className='text-center text-2xl text-AZUL dark:text-AMARILLO'>¡Contáctame para Contratarme!</p>
 
           <p className='text-balance'>¿Estás buscando a alguien con habilidades y experiencia para un nuevo proyecto o puesto? Estoy disponible para nuevas oportunidades y estaría encantado de escuchar sobre tu propuesta. Si crees que mi perfil encaja con lo que necesitas, no dudes en ponerte en contacto conmigo. Por favor, completa el siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
 
