@@ -12,11 +12,14 @@ export default function LinkTo({ to, label, tabIndex }: LinkToProps) {
     <Link
       tabIndex={tabIndex}
       to={to}
-      className={`border-b-2   
+      className={`rounded px-1 py-0.5 text-base border-2 
           ${location.pathname === to
-          ? 'border-AZUL text-AZUL dark:border-CREMA dark:text-CREMA'
-          : 'border-LIGHT-AzulClaro text-LIGHT-AzulClaro  dark:border-DARK-BORDER-light '}
-          hover:border-AZUL hover:text-AZUL dark:hover:border-CREMA dark:hover:text-CREMA
+          ? 'dark:border-AMARILLO dark:text-AMARILLO border-AZUL text-AZUL'
+          : 'border-transparent dark:text-CREMA text-AZUL-dark'}
+          hover:border-AZUL hover:text-AZUL
+          dark:hover:border-AMARILLO dark:hover:text-AMARILLO
+
+          
           transition-colors duration-300 ease-in-out
     `}>{label}</Link>
   )

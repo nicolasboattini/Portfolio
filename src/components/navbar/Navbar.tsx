@@ -11,12 +11,17 @@ export default function Navbar() {
       <p tabIndex={1} className="text-center">{dataProfile.fullname}</p>
 
       <article className="flex flex-wrap justify-center gap-2 
-        text-LIGHT-AzulClaro dark:text-DARK-BORDER-light md:text-2xl select-none">
+        text-LIGHT-AzulClaro dark:text-white md:text-2xl select-none">
         <LinkTo to="/home" label="Inicio" tabIndex={2} />
+        <p>/</p>
         <LinkTo to="/projects" label="Proyectos" tabIndex={3} />
+        <p>/</p>
         <LinkTo to="/cv" label="Curriculum vitae" tabIndex={4} />
+        <p>/</p>
         <LinkTo to="/experience" label="Experiencia" tabIndex={5} />
-        <LinkTo to="/education" label="Educación" tabIndex={6} />
+        <p>/</p>
+        <LinkTo to="/education" label="Diplomas y certificados" tabIndex={6} />
+        <p>/</p>
         <LinkTo to="/contact" label="Contacto" tabIndex={7} />
       </article>
 
