@@ -3,8 +3,8 @@ import Cookies from 'js-cookie';
 
 // Definir el tipo para el contexto
 interface ThemeContextType {
-  theme: string;
-  setTheme: (theme: string) => void;
+  theme: 'dark' | 'light'; // Definir el tipo específico para theme
+  setTheme: (theme: 'dark' | 'light') => void; // Ajustar también setTheme
 }
 
 // Crear el contexto con un valor inicial indefinido
@@ -15,10 +15,10 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState<string>(() => {
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     const savedTheme = Cookies.get('theme');
-    if (savedTheme) {
-      return savedTheme;
+    if (savedTheme && (savedTheme === 'dark' || savedTheme === 'light')) {
+      return savedTheme as 'dark' | 'light'; // Asegurarse de que savedTheme sea del tipo correcto
     }
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
@@ -27,7 +27,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   });
 
   useEffect(() => {
-    const applyTheme = (currentTheme: string) => {
+    const applyTheme = (currentTheme: 'dark' | 'light') => {
       const htmlElement = document.querySelector('html');
       if (htmlElement) {
         if (currentTheme === 'dark') {
@@ -40,9 +40,9 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
     // Aplicar el tema basado en la cookie o el preferido del sistema
     const savedTheme = Cookies.get('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-      applyTheme(savedTheme);
+    if (savedTheme && (savedTheme === 'dark' || savedTheme === 'light')) {
+      setTheme(savedTheme as 'dark' | 'light');
+      applyTheme(savedTheme as 'dark' | 'light');
     } else {
       applyTheme(theme);
     }
