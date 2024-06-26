@@ -2,8 +2,11 @@ import ChangeTheme from "./ChangeTheme.tsx";
 import dataProfile from "../../data/dataProfile.ts";
 import LinkTo from "./LinkTo.tsx";
 import Tooltip from "../../components/tooltip/Tooltip.tsx";
+import { useTranslation } from "react-i18next";
+import ChangeLanguage from "./ChangeLanguage.tsx";
 
 export default function Navbar() {
+  const [t] = useTranslation("global")
 
   return (
     <section className="w-full min-h-12 p-2 gap-2 flex flex-wrap items-center justify-center sm:justify-between 
@@ -12,7 +15,7 @@ export default function Navbar() {
 
       <article className="flex flex-wrap justify-center gap-2 
         text-LIGHT-AzulClaro dark:text-white md:text-2xl select-none">
-        <LinkTo to="/home" label="Inicio" tabIndex={2} />
+        <LinkTo to="/home" label={t("navbar.home")} tabIndex={2} />
         <p>/</p>
         <LinkTo to="/projects" label="Proyectos" tabIndex={3} />
         <p>/</p>
@@ -24,6 +27,9 @@ export default function Navbar() {
         <p>/</p>
         <LinkTo to="/contact" label="Contacto" tabIndex={7} />
       </article>
+
+
+      <ChangeLanguage />
 
       <Tooltip text="Cambiar tema" position="left">
         <ChangeTheme />
