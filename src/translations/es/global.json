@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "cv": "Currículum Vitae",
+    "experience": "Experiencia",
+    "education": "Diplomas y Certificados",
+    "contact": "Contacto"
+  }
+}
