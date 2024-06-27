@@ -3,6 +3,7 @@ import { Project } from '../../data/dataProjects';
 import { Link } from 'react-router-dom';
 import IconosTechs from "../../components/IconosTechs.tsx";
 import Tooltip from "../../components/tooltip/Tooltip.tsx";
+import { useTranslation } from 'react-i18next';
 
 type CardProps = {
   project: Project;
@@ -11,7 +12,8 @@ type CardProps = {
 
 export default function Card({ project, index }: CardProps) {
   const [isVisible, setIsVisible] = useState(false);
-
+  const { t } = useTranslation(['global', 'profile', 'projects']);
+  
   const handleMouseEnter = () => {
     setTimeout(() => setIsVisible(true), 100);
   };
@@ -53,10 +55,10 @@ export default function Card({ project, index }: CardProps) {
         <Link
           to={`/projects/${project.id}`}
           tabIndex={parseInt(`${index + 1}04`)}
-          aria-label="Ver más"
+          aria-label={t("global:projects.showMore")}
           className="flex justify-center items-center p-1 rounded-2xl w-1/2 border-2 shadow transition-colors duration-100 ease-in-out border-AZUL shadow-AZUL hover:bg-AZUL hover:bg-opacity-30 bg-AZUL bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO dark:bg-AMARILLO dark:bg-opacity-10 dark:hover:bg-AMARILLO dark:hover:bg-opacity-20"
         >
-          Ver más
+          {t("global:projects.showMore")}
         </Link>
       </div>
     </div>

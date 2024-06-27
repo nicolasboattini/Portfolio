@@ -1,17 +1,26 @@
-import SectionCard from "../../components/SectionCard.tsx";
-import Card from "./Card.tsx";
-import dataProjects from "../../data/dataProjects.ts";
+import React from 'react';
+import SectionCard from "../../components/SectionCard";
+import Card from "./Card";
+import { useProfile } from "../../context/ProfileContext";
+import { useTranslation } from 'react-i18next';
 
-export default function Projects() {
+const Projects: React.FC = () => {
+  const { t } = useTranslation(['global', 'profile', 'projects']);
+  const { dataProjects } = useProfile();
+
+  if (!dataProjects) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <SectionCard sectionTitle="Proyectos">
+    <SectionCard sectionTitle={t("global:projects.section")}>
       <article className="w-full gap-[4vw] grid grid-cols-1 sm:grid-cols-2">
-        {
-          dataProjects.map((project, index) => (
-            <Card index={index} project={project} />
-          ))
-        }
+        {dataProjects.map((project) => (
+          <Card index={project.id} project={project} />
+        ))}
       </article>
     </SectionCard>
-  )
-}
+  );
+};
+
+export default Projects;
