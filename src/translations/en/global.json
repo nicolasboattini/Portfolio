@@ -28,6 +28,9 @@
       "tablet": "Tablet"
     }
   },
+  "cv":{
+    "section":"Curriculum Vitae"
+  },
   "footer": {
     "template": "Template made by"
   }
