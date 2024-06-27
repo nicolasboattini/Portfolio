@@ -96,7 +96,7 @@ export default function Home() {
           </section>
 
           {
-            dataProfile.descript && <p className="text-base md:text-xl text-balance text-center md:text-left">{dataProfile.descript}</p>
+            dataProfile.descript && <p className="text-base md:text-xl text-balance text-center md:text-left">{t("profile:descript")}</p>
           }
 
         </div>
