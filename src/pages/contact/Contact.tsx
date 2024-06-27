@@ -144,7 +144,7 @@ export default function Contact() {
         <article className='w-1/2 flex flex-col gap-2'>
           <p className='text-center text-2xl text-AZUL dark:text-AMARILLO'>{t("global:contact.titleText")}</p>
 
-          <p className='text-balance'>
+          <p className='indent-8 text-justify'>
             {t("global:contact.text")}
           </p>
 
