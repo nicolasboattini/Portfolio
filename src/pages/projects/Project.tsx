@@ -5,22 +5,31 @@ import SelectResolution from "./SelectResolution.tsx";
 import ProjectNotFound from "./ProjectNotFound.tsx";
 import Techs from "../../components/Techs";
 import Tooltip from "../../components/tooltip/Tooltip.tsx";
-import dataProjects from '../../data/dataProjects';
+import { useProfile } from "../../context/ProfileContext.tsx";
+import { useTranslation } from 'react-i18next';
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 
 export default function Project() {
+  const { t } = useTranslation(['global', 'profile', 'projects']);
+
+  const { dataProjects } = useProfile();
+
   const { projectId } = useParams<{ projectId: string }>();
   const [device, setDevice] = useState<DeviceType>('desktop');
 
-  const project = dataProjects.find(p => p.id === projectId);
+  if (!projectId || !dataProjects) {
+    return <ProjectNotFound />;
+  }
+
+  const project = dataProjects.find(p => p.id === parseInt(projectId));
 
   if (!project) {
     return <ProjectNotFound />;
   }
 
   return (
-    <SectionCard sectionTitle={`Proyectos["${project.title}"]`}>
+    <SectionCard sectionTitle={`${t("global:projects.section")}["${project.title}"]`}>
       <div className="w-full h-full flex flex-col gap-2 p-2"
       >
 
@@ -29,9 +38,9 @@ export default function Project() {
           <article className='w-full flex flex-col'>
             <div className="w-full flex justify-between items-center">
 
-              <Tooltip text='Atrás' position='right'>
+              <Tooltip text={t("global:projects.back")} position='right'>
                 <Link to='/projects'
-                  aria-label="Atrás"
+                  aria-label={t("global:projects.back")}
                   tabIndex={6}
                   className='flex justify-center items-center border-2 border-transparent py-1 px-1.5 rounded
                    hover:text-AZUL-dark hover:border-AZUL-dark hover:bg-AZUL hover:bg-opacity-10
@@ -51,10 +60,10 @@ export default function Project() {
 
                 href={project.linkGithub}
                 target="_blank"
-                aria-label="Ver proyecto en github"
+                aria-label={t("global:projects.viewRepository")}
                 tabIndex={7}
               >
-                <p className='text-xl'>Ver Repositorio</p>
+                <p className='text-xl'>{t("global:projects.viewRepository")}</p>
                 <span className="w-9 h-9 icon-[iconoir--github-circle] "></span>
               </a>
             </div>
@@ -64,13 +73,13 @@ export default function Project() {
                 className="w-full text-center text-xl md:text-3xl border-b-2 border-AZUL-dark dark:border-AMARILLO mb-2"
                 tabIndex={8}
               >{project.title}</p>
-              <p tabIndex={9} className="indent-4 text-lg md:text-xl">{project.description}</p>
-              {
-                project.moreInfo.map((paragraph, index) => (
-                  <p tabIndex={index + 9}
-                    key={index} className='indent-4 text-base md:text-xl'>{paragraph}</p>
-                ))
-              }
+              <p tabIndex={9} className="indent-4 text-lg md:text-xl">{t(`projects:${parseInt(projectId) - 1}.description`)}</p>
+
+              {project.moreInfo.map((_, index) => (
+                <p tabIndex={index + 9} key={index} className='indent-4 text-base md:text-xl'>
+                  {t(`projects:${parseInt(projectId) - 1}.moreInfo.${index}`)}
+                </p>
+              ))}
             </div>
           </article>
 

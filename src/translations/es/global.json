@@ -6,8 +6,7 @@
     "experience": "Experiencia",
     "education": "Diplomas y Certificados",
     "contact": "Contacto",
-
-    "changeTheme": "Cambiar tema" 
+    "changeTheme": "Cambiar tema"
   },
   "homePage": {
     "section": "Presentación",
@@ -15,6 +14,12 @@
     "frontEnd": "Desarrollo Front-End",
     "dataBase": "Base de datos",
     "versionControl": "Control de verisones"
+  },
+  "projects": {
+    "section": "Proyectos",
+    "showMore": "Ver más",
+    "back": "Atrás",
+    "viewRepository": "Ver repositorio"
   },
   "footer": {
     "template": "Template hecho por"

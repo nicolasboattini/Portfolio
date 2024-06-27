@@ -15,7 +15,12 @@
     "dataBase": "Banco de dados",
     "versionControl": "Controle de versões"
   },
-
+  "projects": {
+    "section": "Projetos",
+    "showMore": "Ver mais",
+    "back": "Voltar",
+    "viewRepository": "Ver repositório"
+  },
   "footer": {
     "template": "Template feito por"
   }

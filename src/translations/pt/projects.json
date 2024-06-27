@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "title": "BalanceApp 💰",
     "description": "Aplicação web tipo Wallet virtual para registrar entradas e saídas financeiras com sistema de contas e base de dados.",
     "moreInfo": [
@@ -16,7 +16,7 @@
     }
   },
   {
-    "id": "2",
+    "id": 2,
     "title": "Star Wars Page 🌌🚀",
     "description": "Aplicação web com dados dos filmes de Star Wars obtidos da SWAPI.",
     "moreInfo": [
@@ -32,7 +32,7 @@
     }
   },
   {
-    "id": "3",
+    "id": 3,
     "title": "Subscriptions Tracker 📋",
     "description": "Aplicação web para rastrear assinaturas.",
     "moreInfo": [
@@ -47,7 +47,7 @@
     }
   },
   {
-    "id": "4",
+    "id": 4,
     "title": "Braille Page 📖🧑‍🦯♿️",
     "description": "Página para aprender Braille.",
     "moreInfo": [
@@ -62,7 +62,7 @@
     }
   },
   {
-    "id": "5",
+    "id": 5,
     "title": "Portfolio 💼🖥️",
     "description": "Portfolio para mostrar projetos pessoais.",
     "moreInfo": [

@@ -15,7 +15,12 @@
     "dataBase": "Database",
     "versionControl": "Version Control"
   },
-
+  "projects": {
+    "section": "Projects",
+    "showMore": "View more",
+    "back": "Back",
+    "viewRepository": "View Repository"
+  },
   "footer": {
     "template": "Template made by"
   }
