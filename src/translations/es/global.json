@@ -5,6 +5,15 @@
     "cv": "Currículum Vitae",
     "experience": "Experiencia",
     "education": "Diplomas y Certificados",
-    "contact": "Contacto"
+    "contact": "Contacto",
+
+    "changeTheme": "Cambiar tema" 
+  },
+  "homePage": {
+    "section": "Presentación",
+    "skills": "Habilidades",
+    "frontEnd": "Desarrollo Front-End",
+    "dataBase": "Base de datos",
+    "versionControl": "Control de verisones"
   }
 }

@@ -5,6 +5,14 @@
     "cv": "Curriculum Vitae",
     "experience": "Experience",
     "education": "Education",
-    "contact": "Contact"
+    "contact": "Contact",
+    "changeTheme": "Change theme"
+  },
+  "homePage": {
+    "section": "Presentation",
+    "skills": "Skills",
+    "frontEnd": "Front-End Development",
+    "dataBase": "Database",
+    "versionControl": "Version Control"
   }
 }

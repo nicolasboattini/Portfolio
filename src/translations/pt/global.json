@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "home": "Início",
+    "projects": "Projetos",
+    "cv": "Currículo",
+    "experience": "Experiência",
+    "education": "Educação",
+    "contact": "Contato",
+    "changeTheme": "Mudar tema"
+  },
+  "homePage": {
+    "section": "Apresentação",
+    "skills": "Habilidades",
+    "frontEnd": "Desenvolvimento Front-End",
+    "dataBase": "Banco de dados",
+    "versionControl": "Controle de versões"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "fullname": "Leandro Daniel Schugurensky",
+  "dev": "Front-end Developer",
+  "years": "23 years",
+  "nationality": "Argentina",
+  "linksSocialNetworks": {
+    "Github": "https://github.com/Schugu",
+    "Linkedin": "https://www.linkedin.com/in/leandrodanielschugurensky/",
+    "Instagram": "https://www.instagram.com/leanschugu/",
+    "FreeCodeCamp": "https://www.freecodecamp.org/certification/Schugu/responsive-web-design",
+    "Email": "mailto:leo.schugu@gmail.com",
+    "CV": "/profile/CV.pdf"
+  },
+  "skills": {
+    "frontEnd": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind"],
+    "dataBase": ["MongoDB", "Firebase"],
+    "versionControl": ["Git", "GitHub"]
+  },
+  "profilePicture": "/profile/fotoDePerfil.png",
+  "workExperience": [
+    {
+      "title": "Administrative",
+      "company": "Subsecretariat of the Family of the Municipality of the City of Corrientes",
+      "date": "Nov. 2023 - Jun. 2024 · 8 months",
+      "description": "Work placement (8 months) under the E.T.P (Work Training Program). Administrative tasks: loading and digitization of records, database entry, among others.",
+      "linkDescription": ""
+    },
+    {
+      "title": "Administrative",
+      "company": "General Directorate of Disability and Social Inclusion of the Municipality of the City of Corrientes",
+      "date": "Jun. 2022 - Jan. 2023 · 8 months",
+      "description": "Administrative tasks: loading and digitization of records, database entry, among others.",
+      "linkDescription": ""
+    }
+  ],
+  "certificates": [
+    "https://www.freecodecamp.org/certification/Schugu/responsive-web-design",
+    "https://www.udemy.com/certificate/UC-9609612f-f35d-4839-91f0-394373d2c884/",
+    "https://www.udemy.com/certificate/UC-b167edef-443e-481f-91fd-9fc64b04a8ca/",
+    "https://www.udemy.com/certificate/UC-0093498b-eb62-4522-95e5-847afcf2d80c/",
+    "https://www.udemy.com/certificate/UC-294ca089-e6e2-4c1a-86e5-57a1f7e01f69/",
+    "https://www.udemy.com/certificate/UC-4ca8e86d-e5e7-4696-be4b-aa738bc426fd/"
+  ]
+}

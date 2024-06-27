@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "title": "BalanceApp 💰",
+    "description": "Aplicação web tipo Wallet virtual para registrar entradas e saídas financeiras com sistema de contas e base de dados.",
+    "moreInfo": [
+      "Esta ideia de projeto é baseada em um projeto anterior no qual aprendi a criar um sistema de usuários com banco de dados MongoDB e um CRUD.",
+      "Este aplicativo permite que você se registre e faça login com suas credenciais, com validações tanto no frontend quanto no backend. Após o login, você é levado ao painel, onde pode adicionar receitas e registrar despesas. O sistema de receitas simula a ação de receber dinheiro, permitindo que você especifique o valor e o título da transação. Da mesma forma, no sistema de despesas, você pode registrar suas saídas, indicando o valor e uma breve descrição. Ambos os sistemas têm validações no frontend e realizam o cálculo correspondente para manter o saldo atualizado. É importante destacar que este aplicativo é apenas para fins práticos e de aprendizagem, portanto não é tão específico ou complexo como um aplicativo financeiro real."
+    ],
+    "techs": ["JavaScript", "React", "Tailwind", "Node.js", "Express.js", "MongoDB", "Firebase"],
+    "linkGithub": "https://github.com/Schugu/BalanceApp",
+    "cantScreenshots": {
+      "cellphone": 7,
+      "tablet": 7,
+      "desktop": 7
+    }
+  },
+  {
+    "id": "2",
+    "title": "Star Wars Page 🌌🚀",
+    "description": "Aplicação web com dados dos filmes de Star Wars obtidos da SWAPI.",
+    "moreInfo": [
+      "O aplicativo se conecta à SWAPI para obter informações sobre os 6 filmes de Star Wars. É criada uma landing page que permite a navegação entre as seções de filmes e personagens. A página de filmes exibe o nome, imagem genérica e número do episódio de cada filme. Para a página de detalhes do filme, são mostradas informações adicionais como o diretor e uma lista de personagens relacionados. A página de personagens exibe o nome, imagem genérica, cor dos olhos e gênero de cada personagem, com opções de paginação ou scroll infinito. São implementados filtros por cor dos olhos e gênero que se aplicam a todos os personagens. Por fim, é criada uma página de detalhes do personagem que mostra informações detalhadas, omitindo propriedades com valores 'n/a' ou 'unknown'.",
+      "O aplicativo utiliza Tailwind CSS para estilos e Next.js para desenvolvimento web, atendendo aos requisitos estabelecidos. Aproveita-se a API fornecida pelo Next.js e é desenvolvido em JavaScript. A navegação entre páginas é feita através do sistema de rotas do framework. As informações da SWAPI são adaptadas para a visualização requerida sem usar sua biblioteca. Além disso, o aplicativo é responsivo como um diferencial."
+    ],
+    "techs": ["JavaScript", "Next.js", "Tailwind"],
+    "linkGithub": "https://github.com/Schugu/prueba-tecnica-neowyze",
+    "cantScreenshots": {
+      "cellphone": 6,
+      "tablet": 6,
+      "desktop": 6
+    }
+  },
+  {
+    "id": "3",
+    "title": "Subscriptions Tracker 📋",
+    "description": "Aplicação web para rastrear assinaturas.",
+    "moreInfo": [
+      "Esta ideia de projeto é inspirada no vídeo 'Subscriptions Tracker - Suscripciones App - Streaming - React Js - JavaScript - ECMA6' de Black code. Embora eu tenha seguido a ideia apresentada no vídeo, desenvolvi esta página à minha maneira, adicionando meus próprios enfoques e personalizações."
+    ],
+    "techs": ["HTML", "CSS", "JavaScript", "React"],
+    "linkGithub": "https://github.com/Schugu/SubscriptionsTracker",
+    "cantScreenshots": {
+      "cellphone": 3,
+      "tablet": 2,
+      "desktop": 2
+    }
+  },
+  {
+    "id": "4",
+    "title": "Braille Page 📖🧑‍🦯♿️",
+    "description": "Página para aprender Braille.",
+    "moreInfo": [
+      "Oferece uma introdução acessível e compreensível ao sistema de leitura tátil Braille, permitindo que aqueles que podem ver adquiram conhecimentos sobre este valioso método de comunicação. Através de recursos educativos e práticos, esta página oferece a oportunidade de explorar e compreender o Braille, promovendo assim a inclusão das pessoas cegas."
+    ],
+    "techs": ["HTML", "CSS", "JavaScript"],
+    "linkGithub": "https://github.com/Schugu/BraillePage",
+    "cantScreenshots": {
+      "cellphone": 6,
+      "tablet": 4,
+      "desktop": 5
+    }
+  },
+  {
+    "id": "5",
+    "title": "Portfolio 💼🖥️",
+    "description": "Portfolio para mostrar projetos pessoais.",
+    "moreInfo": [
+      "Este projeto foi desenvolvido com o objetivo de exibir meus projetos pessoais. No entanto, também é fornecido como um modelo que pode ser usado por outros para mostrar seus próprios trabalhos, desde que eu seja mencionado como o autor original e meus direitos autorais sejam respeitados."
+    ],
+    "techs": ["TypeScript", "React", "Tailwind"],
+    "linkGithub": "https://github.com/Schugu/portfolio",
+    "cantScreenshots": {
+      "cellphone": 6,
+      "tablet": 0,
+      "desktop": 5
+    }
+  }
+]

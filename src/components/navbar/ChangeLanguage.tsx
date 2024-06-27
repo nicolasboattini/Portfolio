@@ -24,7 +24,7 @@ const ChangeLanguage: React.FC = () => {
   const options: OptionType[] = [
     { value: 'es', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p>ES</p><span className="w-5 h-5 icon-[openmoji--flag-argentina]" /></div> },
     { value: 'en', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p>EN</p><span className="w-5 h-5 icon-[openmoji--flag-united-states]" /></div> },
-    { value: 'PT', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p>PT</p><span className="w-5 h-5 icon-[openmoji--flag-brazil]" /></div> }
+    { value: 'pt', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p>PT</p><span className="w-5 h-5 icon-[openmoji--flag-brazil]" /></div> }
   ];
 
   const customStyles: StylesConfig<OptionType, false> = {
