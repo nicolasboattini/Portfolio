@@ -73,10 +73,10 @@ export default function Project() {
                 className="w-full text-center text-xl md:text-3xl border-b-2 border-AZUL-dark dark:border-AMARILLO mb-2"
                 tabIndex={8}
               >{project.title}</p>
-              <p tabIndex={9} className="indent-4 text-lg md:text-xl">{t(`projects:${parseInt(projectId) - 1}.description`)}</p>
+              <p tabIndex={9} className="indent-8 text-lg md:text-xl">{t(`projects:${parseInt(projectId) - 1}.description`)}</p>
 
               {project.moreInfo.map((_, index) => (
-                <p tabIndex={index + 9} key={index} className='indent-4 text-base md:text-xl'>
+                <p tabIndex={index + 9} key={index} className='indent-8 text-base md:text-xl'>
                   {t(`projects:${parseInt(projectId) - 1}.moreInfo.${index}`)}
                 </p>
               ))}
