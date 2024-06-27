@@ -1,13 +1,13 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { Profile, Project } from "./ProfileContextTypes.ts";
+import { Profile, Project } from "./ProfileContextTypes"; 
 
 interface CombinedData {
   dataProfile: Profile | null;
-  dataProjects: Project | null;
+  dataProjects: Project[] | null; 
 }
+
 const ProfileContext = createContext<CombinedData | null>(null);
 
-// Hook para usar el contexto de perfil y proyectos
 export const useProfile = () => {
   const context = useContext(ProfileContext);
   if (!context) {
@@ -20,7 +20,6 @@ interface ProfileProviderProps {
   children: React.ReactNode;
 }
 
-// Proveedor de contexto que realiza el fetch de los datos y los proporciona a los hijos
 export const ProfileProvider: React.FC<ProfileProviderProps> = ({ children }) => {
   const [combinedData, setCombinedData] = useState<CombinedData | null>(null);
 

@@ -1,5 +1,5 @@
 export interface Project {
-  id: string;
+  id: number;
   title: string;
   description: string;
   moreInfo: string[];
@@ -14,7 +14,7 @@ export interface Project {
 
 const dataProjects: Project[] = [
   {
-    id: '1',
+    id: 1,
     title: 'BalanceApp 💰',
     description: 'Aplicación web tipo Wallet virtual para ingresar ingresos y egresos económicos con sistema de cuentas y base de datos.',
     moreInfo:[
@@ -30,7 +30,7 @@ const dataProjects: Project[] = [
     }
   },
   {
-    id: '2',
+    id: 2,
     title: 'Star Wars Page 🌌🚀',
     description: 'Aplicación web con datos de las películas de Star Wars obtenidos de SWAPI.',
     moreInfo:[
@@ -46,7 +46,7 @@ const dataProjects: Project[] = [
     }
   },
   {
-    id: '3',
+    id: 3,
     title: 'Subscriptions Tracker 📋',
     description: 'Aplicación web para trackear subscripciones.',
     moreInfo:[
@@ -61,7 +61,7 @@ const dataProjects: Project[] = [
     }
   },
   {
-    id: '4',
+    id: 4,
     title: 'Braille Page 📖🧑‍🦯♿️',
     description: 'Página para aprender Braille.',
     moreInfo:[
@@ -76,7 +76,7 @@ const dataProjects: Project[] = [
     }
   },
   {
-    id: '5',
+    id: 5,
     title: 'Portfolio 💼🖥️',
     description: 'Portfolio para mostrar proyectos personales.',
     moreInfo:[
