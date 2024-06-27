@@ -28,11 +28,29 @@
       "tablet": "Tablet"
     }
   },
-  "cv":{
-    "section":"Curriculum Vitae"
+  "cv": {
+    "section": "Curriculum Vitae"
   },
   "workExperience": {
     "section": "Experiencia laboral"
+  },
+  "education": {
+    "section": "Diplomas y certificados"
+  },
+  "contact": {
+    "section": "Contacto",
+    "fullname": "Nombre completo",
+    "fullnameError": "* El nombre completo es requerido.",
+    "email": "Correo electrónico",
+    "emailError": "* El email es requerido.",
+    "message": "Mensaje",
+    "messageError": "* El mensaje es requerido.",
+    "messagePlaceholder": "Escriba su mensaje...",
+    "button": "Enviar",
+    "sending": "Enviando...",
+    "sent": "Enviado correctamente.",
+    "titleText": "¡Contáctame para Contratarme!",
+    "text": "¿Estás buscando a alguien con habilidades y experiencia para un nuevo proyecto o puesto? Estoy disponible para nuevas oportunidades y estaría encantado de escuchar sobre tu propuesta. Si crees que mi perfil encaja con lo que necesitas, no dudes en ponerte en contacto conmigo. Por favor, completa el siguiente formulario y me pondré en contacto contigo lo antes posible."
   },
   "footer": {
     "template": "Template hecho por"

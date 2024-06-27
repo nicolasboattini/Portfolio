@@ -1,12 +1,16 @@
-import dataProfile from "../../data/dataProfile.ts";
 import SectionCard from "../../components/SectionCard.tsx";
+import { useProfile } from "../../context/ProfileContext.tsx";
+import { useTranslation } from 'react-i18next';
 
 export default function Education() {
+  const { dataProfile } = useProfile();
+  const { t } = useTranslation('global');
+
   return (
-    <SectionCard sectionTitle="Experiencia">
+    <SectionCard sectionTitle={t("global:education.section")}>
       <article className="w-full gap-[4vw] grid grid-cols-2 sm:grid-cols-4">
         {
-          dataProfile.certificates?.map((certificate, index) => (
+          dataProfile?.certificates?.map((certificate, index) => (
             <a href={certificate} target="_blank"
               className="w-full">
               <img

@@ -4,7 +4,7 @@
     "projects": "Projects",
     "cv": "Curriculum Vitae",
     "experience": "Experience",
-    "education": "Education",
+    "education": "Diplomas and Certificates",
     "contact": "Contact",
     "changeTheme": "Change theme"
   },
@@ -33,6 +33,24 @@
   },
   "workExperience": {
     "section": "Work Experience"
+  },
+  "education": {
+    "section": "Diplomas and Certificates"
+  },
+  "contact": {
+    "section": "Contact",
+    "fullname": "Full Name",
+    "fullnameError": "* Full name is required.",
+    "email": "Email",
+    "emailError": "* Email is required.",
+    "message": "Message",
+    "messageError": "* Message is required.",
+    "messagePlaceholder": "Write your message...",
+    "button": "Send",
+    "sending": "Sending...",
+    "sent": "Sent successfully.",
+    "titleText": "Contact Me to Hire Me!",
+    "text": "Are you looking for someone with skills and experience for a new project or position? I'm available for new opportunities and would love to hear about your proposal. If you think my profile fits what you need, feel free to get in touch. Please fill out the form below, and I'll get back to you as soon as possible."
   },
   "footer": {
     "template": "Template made by"

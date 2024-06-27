@@ -3,12 +3,14 @@ import emailjs from '@emailjs/browser';
 import SectionCard from "../../components/SectionCard.tsx";
 import { emailJsConfig } from "./emailJsConfig.ts";
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const formRef = useRef<HTMLFormElement>(null);
   const [submitting, setSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const { t } = useTranslation(['global', 'profile', 'projects']);
 
   const onSubmit = handleSubmit(data => {
     setSubmitting(true);
@@ -32,7 +34,7 @@ export default function Contact() {
   });
 
   return (
-    <SectionCard sectionTitle='Contacto'>
+    <SectionCard sectionTitle={t("global:contact.section")}>
       <section className='flex gap-8'>
         <form ref={formRef} onSubmit={onSubmit}
           className="w-1/2 flex flex-col gap-6 justify-start items-center">
@@ -41,7 +43,7 @@ export default function Contact() {
               htmlFor="website-admin"
               className="text-xl font-medium text-AZUL-dark dark:text-AMARILLO"
             >
-              Nombre Completo
+              {t("global:contact.fullname")}
             </label>
 
             <div className={`flex ${errors.user_name ? "border-red-500" : " border-gray-400 dark:border-gray-600"} border-2 rounded overflow-hidden`}>
@@ -65,7 +67,7 @@ export default function Contact() {
 
             {
               errors.user_name && (
-                <p tabIndex={6} className="text-sm text-red-600">* El nombre completo es requerido.</p>
+                <p tabIndex={6} className="text-sm text-red-600">{t("global:contact.fullnameError")}</p>
               )
             }
           </section>
@@ -74,7 +76,7 @@ export default function Contact() {
             <label htmlFor="email-address-icon"
               className="text-xl font-medium text-AZUL-dark dark:text-AMARILLO"
             >
-              Email
+              {t("global:contact.email")}
             </label>
             <div className={`flex ${errors.user_email ? "border-red-500" : " border-gray-400 dark:border-gray-600"} border-2 rounded overflow-hidden`}>
               <span className="inline-flex items-center px-3 text-sm 
@@ -98,7 +100,7 @@ export default function Contact() {
 
             {
               errors.user_email && (
-                <p tabIndex={6} className="text-sm text-red-600">* El email es requerido.</p>
+                <p tabIndex={6} className="text-sm text-red-600">{t("global:contact.emailError")}</p>
               )
             }
           </section>
@@ -108,14 +110,14 @@ export default function Contact() {
               htmlFor="message"
               className="text-xl font-medium text-AZUL-dark dark:text-AMARILLO"
             >
-              Mensaje
+              {t("global:contact.message")}
             </label>
             <textarea
               {...register('message', { required: true, maxLength: 600 })}
               id="message"
               name="message"
               rows={4}
-              placeholder="Escriba su mensaje"
+              placeholder={t("global:contact.messagePlaceholder")}
               className={`w-full h-52 resize-none text-sm p-2.5 rounded outline-none ring-0 border-2
               ${errors.message ? "border-red-500" : "border-gray-400 dark:border-gray-600 "}
               bg-gray-50  dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400
@@ -124,7 +126,7 @@ export default function Contact() {
             />
             {
               errors.message && (
-                <p tabIndex={6} className="text-sm text-red-600">* El mensaje es requerido.</p>
+                <p tabIndex={6} className="text-sm text-red-600">{t("global:contact.messageError")}</p>
               )
             }
           </section>
@@ -135,14 +137,16 @@ export default function Contact() {
             ${submitSuccess ? 'bg-green-500' : 'bg-AZUL hover:bg-AZUL-light dark:bg-AMARILLO dark:hover:bg-AMARILLO-dark'}`}
             disabled={submitting}
           >
-            {submitting ? 'Enviando...' : (submitSuccess ? 'Mensaje enviado' : 'Enviar')}
+            {submitting ? t("global:contact.sending") : (submitSuccess ? t("global:contact.sent") : t("global:contact.button"))}
           </button>
         </form>
 
         <article className='w-1/2 flex flex-col gap-2'>
-          <p className='text-center text-2xl text-AZUL dark:text-AMARILLO'>¡Contáctame para Contratarme!</p>
+          <p className='text-center text-2xl text-AZUL dark:text-AMARILLO'>{t("global:contact.titleText")}</p>
 
-          <p className='text-balance'>¿Estás buscando a alguien con habilidades y experiencia para un nuevo proyecto o puesto? Estoy disponible para nuevas oportunidades y estaría encantado de escuchar sobre tu propuesta. Si crees que mi perfil encaja con lo que necesitas, no dudes en ponerte en contacto conmigo. Por favor, completa el siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
+          <p className='text-balance'>
+            {t("global:contact.text")}
+          </p>
 
         </article>
       </section>
