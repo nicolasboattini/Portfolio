@@ -15,5 +15,8 @@
     "frontEnd": "Desarrollo Front-End",
     "dataBase": "Base de datos",
     "versionControl": "Control de verisones"
+  },
+  "footer": {
+    "template": "Template hecho por"
   }
 }
