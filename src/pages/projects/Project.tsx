@@ -85,7 +85,9 @@ export default function Project() {
 
           <article className='w-full flex flex-col gap-4'>
             <p tabIndex={20}
-              className="w-full text-center text-xl md:text-2xl text-AZUL-dark dark:text-AMARILLO">Tecnologías:</p>
+              className="w-full text-center text-xl md:text-2xl text-AZUL-dark dark:text-AMARILLO">
+              {t("global:projects.technologies")}:
+            </p>
             <div className="flex gap-2 flex-wrap justify-center">
               {project.techs.map((tech, index) => (
                 <Techs key={tech} tech={tech} tabIndex={index + 20} />
@@ -97,7 +99,7 @@ export default function Project() {
         {
           (project.cantScreenshots.cellphone > 0 || project.cantScreenshots.tablet > 0 || project.cantScreenshots.desktop > 0)
           && <section className='w-full flex flex-col gap-4 items-center'>
-            <p tabIndex={100} className='text-xl md:text-2xl'>Capturas de pantalla:</p>
+            <p tabIndex={100} className='text-xl md:text-2xl'>{t("global:projects.screenshots")}:</p>
 
             <article className='flex justify-center flex-wrap gap-6'>
               {project.cantScreenshots.desktop > 0 &&
@@ -109,7 +111,7 @@ export default function Project() {
                   <span
                     className="w-16 h-10 icon-[ion--ios-desktop]"
                   />
-                  <p>PC</p>
+                  <p>{t("global:projects.device.desktop")}</p>
                 </SelectResolution>
               }
 
@@ -123,7 +125,7 @@ export default function Project() {
                   <span
                     className="w-9 h-9 icon-[ion--tablet-portrait-sharp]"
                   />
-                  <p>Tablet</p>
+                  <p>{t("global:projects.device.tablet")}</p>
                 </SelectResolution>
               }
 
@@ -137,7 +139,7 @@ export default function Project() {
                   <span
                     className="w-9 h-9 icon-[ion--phone-portrait-sharp]"
                   />
-                  <p>Celular</p>
+                  <p>{t("global:projects.device.cellphone")}</p>
                 </SelectResolution>
               }
             </article>

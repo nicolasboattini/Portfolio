@@ -19,7 +19,14 @@
     "section": "Projects",
     "showMore": "View more",
     "back": "Back",
-    "viewRepository": "View Repository"
+    "viewRepository": "View Repository",
+    "technologies": "Technologies",
+    "screenshots": "Screenshots",
+    "device": {
+      "desktop": "Desktop",
+      "cellphone": "Mobile",
+      "tablet": "Tablet"
+    }
   },
   "footer": {
     "template": "Template made by"

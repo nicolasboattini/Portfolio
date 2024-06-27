@@ -19,7 +19,14 @@
     "section": "Proyectos",
     "showMore": "Ver más",
     "back": "Atrás",
-    "viewRepository": "Ver repositorio"
+    "viewRepository": "Ver repositorio",
+    "technologies": "Tecnologias",
+    "screenshots": "Capturas de pantalla",
+    "device": {
+      "desktop": "PC",
+      "cellphone": "Celular",
+      "tablet": "Tablet"
+    }
   },
   "footer": {
     "template": "Template hecho por"
