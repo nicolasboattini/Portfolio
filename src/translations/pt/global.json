@@ -31,6 +31,9 @@
   "cv":{
     "section":"Currículo"
   },
+  "workExperience": {
+    "section": "Experiência Profissional"
+  },
   "footer": {
     "template": "Template feito por"
   }
