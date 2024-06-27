@@ -1,13 +1,21 @@
 import SectionCard from "../../components/SectionCard.tsx";
 import Tooltip from "../../components/tooltip/Tooltip.tsx";
-import dataProfile from "../../data/dataProfile.ts";
 import { Subtitle, Flag } from "../../components/profile/Subtitle.tsx";
 import SocialNetworkIcon from "../../components/SocialNetworkIcon.tsx";
 import IconosTechs from "../../components/IconosTechs.tsx";
+import { useProfile } from "../../context/ProfileContext.tsx";
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+  const { t } = useTranslation(['global', 'profile', 'projects']);
+  const { dataProfile } = useProfile();
+
+  if (!dataProfile) {
+    return <div>Loading...</div>; 
+  }
+
   return (
-    <SectionCard sectionTitle="Presentación">
+    <SectionCard sectionTitle={t("global:homePage.section")}>
       <article className="w-full flex flex-col justify-center items-center
                           md:flex-row md:justify-center md:items-center gap-[4vw]">
 
@@ -19,12 +27,12 @@ export default function Home() {
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start gap-5 md:gap-10">
           <p className="text-lg md:text-4xl text-AZUL dark:text-AMARILLO"
             tabIndex={7}
-          >{dataProfile.fullname}
+          >{dataProfile?.fullname}
           </p>
 
           <section className="w-full flex gap-5 flex-wrap justify-center md:justify-start items-center text-base md:text-2xl">
-            <Subtitle string={dataProfile.dev} tabIndex={8} />
-            <Subtitle string={dataProfile.years} tabIndex={9} />
+            <Subtitle string={t("profile:dev")} tabIndex={8} />
+            <Subtitle string={t("profile:years")} tabIndex={9} />
             <Tooltip text={dataProfile.nationality}>
               <Flag nationality={dataProfile.nationality.toLowerCase()} tabIndex={10} />
             </Tooltip>
@@ -46,13 +54,13 @@ export default function Home() {
             <p
               className="text-LIGHT-AzulOscuro dark:text-AZUL text-base md:text-2xl text-center"
               tabIndex={50}
-            >SKILLS</p>
+            >{t("global:homePage.skills")}</p>
             <article className="w-4/6 md:w-full flex flex-col items-start gap-4">
               <div className="flex flex-wrap gap-x-4 gap-y-1">
                 <p
                   className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl"
                   tabIndex={51}
-                >Desarrollo Front-end:</p>
+                >{t("global:homePage.frontEnd")}:</p>
 
                 {dataProfile.skills.frontEnd.map((tech, index) => (
                   <Tooltip text={tech}>
@@ -65,7 +73,7 @@ export default function Home() {
                 <p
                   className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl"
                   tabIndex={100}
-                >Base de datos:</p>
+                >{t("global:homePage.dataBase")}:</p>
                 {dataProfile.skills.dataBase.map((tech, index) => (
                   <Tooltip text={tech}>
                     <IconosTechs key={tech} tech={tech} tabIndex={101 + index} />
@@ -77,7 +85,7 @@ export default function Home() {
                 <p
                   className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl"
                   tabIndex={150}
-                >Control de versiones:</p>
+                >{t("global:homePage.versionControl")}:</p>
                 {dataProfile.skills.versionControl.map((tech, index) => (
                   <Tooltip text={tech}>
                     <IconosTechs key={tech} tech={tech} tabIndex={151 + index} />
