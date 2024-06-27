@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import SectionCard from "../../components/SectionCard.tsx";
-import { emailJsConfig } from "./emailJsConfig.ts";
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
@@ -16,7 +15,7 @@ export default function Contact() {
     setSubmitting(true);
 
     if (data && formRef.current) {
-      emailjs.sendForm(emailJsConfig.SERVICE_ID, emailJsConfig.TEMPLATE_ID, formRef.current, emailJsConfig.PUBLIC_KEY)
+      emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, formRef.current, import.meta.env.VITE_PUBLIC_KEY)
         .then((result) => {
           console.log(result.text);
           formRef.current?.reset();
