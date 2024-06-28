@@ -11,7 +11,7 @@ export default function Home() {
   const { dataProfile } = useProfile();
 
   if (!dataProfile) {
-    return <div>Loading...</div>; 
+    return <div>Loading...</div>;
   }
 
   return (
@@ -98,6 +98,14 @@ export default function Home() {
           {
             dataProfile.descript && <p className="text-base md:text-xl text-balance text-center md:text-left">{t("profile:descript")}</p>
           }
+          <section className="w-full flex flex-col items-left gap-2">
+            {
+              dataProfile.hobbies && <p className="text-LIGHT-AzulOscuro dark:text-AZUL text-base md:text-2xl">{t("global:homePage.hobbies")}</p>
+            }
+            {
+              dataProfile.hobbies && <p className="text-base md:text-xl text-balance text-center md:text-left">{t("profile:hobbies")}</p>
+            }
+          </section>
 
         </div>
 

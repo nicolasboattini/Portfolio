@@ -1,6 +1,7 @@
 export interface Profile {
   fullname: string;
   descript?: string;
+  hobbies?: string;
   dev: string;
   years: string;
   nationality: string;

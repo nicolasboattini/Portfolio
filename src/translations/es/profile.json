@@ -1,6 +1,7 @@
 {
   "fullname": "Leandro Daniel Schugurensky",
   "descript": "",
+  "hobbies": "",
   "dev": "Desarollador Front-end",
   "years": "23 años",
   "nationality": "Argentina",
@@ -13,9 +14,23 @@
     "CV": "/profile/CV.pdf"
   },
   "skills": {
-    "frontEnd": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind"],
-    "dataBase": ["MongoDB", "Firebase"],
-    "versionControl": ["Git", "GitHub"]
+    "frontEnd": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind"
+    ],
+    "dataBase": [
+      "MongoDB",
+      "Firebase"
+    ],
+    "versionControl": [
+      "Git",
+      "GitHub"
+    ]
   },
   "profilePicture": "/profile/fotoDePerfil.png",
   "workExperience": [

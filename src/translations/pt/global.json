@@ -13,7 +13,8 @@
     "skills": "Habilidades",
     "frontEnd": "Desenvolvimento Front-End",
     "dataBase": "Base de Dados",
-    "versionControl": "Controle de versões"
+    "versionControl": "Controle de versões",
+    "hobbies": "Passatempos"
   },
   "projects": {
     "section": "Projetos",

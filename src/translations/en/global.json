@@ -13,7 +13,8 @@
     "skills": "Skills",
     "frontEnd": "Front-End Development",
     "dataBase": "Database",
-    "versionControl": "Version Control"
+    "versionControl": "Version Control",
+    "hobbies": "Hobbies"
   },
   "projects": {
     "section": "Projects",
