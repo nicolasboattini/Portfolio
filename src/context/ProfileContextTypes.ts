@@ -23,6 +23,9 @@ export interface Profile {
     title: string;
     company: string;
     date: string;
+    modality: string;
+    workplace: string;
+    country: string;
     description: string;
     linkDescription: string;
   }[];

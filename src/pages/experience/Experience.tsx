@@ -12,11 +12,14 @@ export default function Experience() {
       <div className="w-full flex flex-col justify-start items-start"
       >
         {
-          dataProfile?.workExperience?.map((_, index) => (
+          dataProfile?.workExperience?.map((work, index) => (
             <TimeLineItem
               title={t(`profile:workExperience.${index}.title`)}
               company={t(`profile:workExperience.${index}.company`)}
               date={t(`profile:workExperience.${index}.date`)}
+              modality={t(`profile:workExperience.${index}.modality`)}
+              workplace={t(`profile:workExperience.${index}.workplace`)}
+              country={work.country}
               description={t(`profile:workExperience.${index}.description`)}
               linkDescription={t(`profile:workExperience.${index}.linkDescription`)}
             />

@@ -68,7 +68,7 @@ export default function Project() {
               </a>
             </div>
 
-            <div className='w-full flex flex-col gap-2'>
+            <div className='w-full flex flex-col gap-6'>
               <p
                 className="w-full text-center text-xl md:text-3xl border-b-2 border-AZUL-dark dark:border-AMARILLO mb-2"
                 tabIndex={8}

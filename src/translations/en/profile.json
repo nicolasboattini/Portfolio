@@ -14,9 +14,22 @@
     "CV": "/profile/CV.pdf"
   },
   "skills": {
-    "frontEnd": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind"],
-    "dataBase": ["MongoDB", "Firebase"],
-    "versionControl": ["Git", "GitHub"]
+    "frontEnd": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Tailwind"
+    ],
+    "dataBase": [
+      "MongoDB",
+      "Firebase"
+    ],
+    "versionControl": [
+      "Git",
+      "GitHub"
+    ]
   },
   "profilePicture": "/profile/fotoDePerfil.png",
   "workExperience": [
@@ -24,6 +37,9 @@
       "title": "Administrative",
       "company": "Subsecretariat of the Family of the Municipality of the City of Corrientes",
       "date": "Nov. 2023 - Jun. 2024 · 8 months",
+      "modality": "In-person",
+      "workplace": "Corrientes, Argentina",
+      "country": "Argentina",
       "description": "Work placement (8 months) under the E.T.P (Work Training Program). Administrative tasks: loading and digitization of records, database entry, among others.",
       "linkDescription": ""
     },
@@ -31,6 +47,9 @@
       "title": "Administrative",
       "company": "General Directorate of Disability and Social Inclusion of the Municipality of the City of Corrientes",
       "date": "Jun. 2022 - Jan. 2023 · 8 months",
+      "modality": "In-person",
+      "workplace": "Corrientes, Argentina",
+      "country": "Peru",
       "description": "Administrative tasks: loading and digitization of records, database entry, among others.",
       "linkDescription": ""
     }

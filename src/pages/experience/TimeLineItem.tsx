@@ -1,13 +1,17 @@
+import Flag from "../../components/Flag.tsx";
 
 interface TimelineItemProps {
   title: string;
   company: string;
   date: string;
+  modality: string;
+  workplace: string;
+  country: string;
   description: string
   linkDescription?: string;
 }
 
-const TimelineItem = ({ title, company, date, description, linkDescription }: TimelineItemProps) => {
+const TimelineItem = ({ title, company, date, modality, workplace, country, description, linkDescription }: TimelineItemProps) => {
   return (
     <section className="ml-7 md:ml-0 relative border-s 
     border-AZUL-dark 
@@ -31,6 +35,12 @@ const TimelineItem = ({ title, company, date, description, linkDescription }: Ti
             </p>
             <p className="text-base font-medium text-gray-600 dark:text-white">{company}</p>
             <time className="text-sm font-normal leading-none text-AZUL dark:text-CREMA">{date}</time>
+            <div className="flex items-center gap-2 dark:text-AMARILLO text-AZUL-dark">
+              <p className="text-base font-medium ">
+                {modality} - {workplace}.
+              </p>
+              <Flag country={country} width={8} height={8} />
+            </div>
 
           </article>
           <article className="w-full md:w-6/12 flex flex-col gap-2">
