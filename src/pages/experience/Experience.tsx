@@ -20,8 +20,9 @@ export default function Experience() {
               modality={t(`profile:workExperience.${index}.modality`)}
               workplace={t(`profile:workExperience.${index}.workplace`)}
               country={work.country}
-              description={t(`profile:workExperience.${index}.description`)}
+              description={work.description}
               linkDescription={t(`profile:workExperience.${index}.linkDescription`)}
+              index={index}
             />
           ))
         }

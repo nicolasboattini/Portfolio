@@ -1,4 +1,5 @@
 import Flag from "../../components/Flag.tsx";
+import { useTranslation } from 'react-i18next';
 
 interface TimelineItemProps {
   title: string;
@@ -7,11 +8,14 @@ interface TimelineItemProps {
   modality: string;
   workplace: string;
   country: string;
-  description: string
+  description: string[];
   linkDescription?: string;
+  index: number;
 }
 
-const TimelineItem = ({ title, company, date, modality, workplace, country, description, linkDescription }: TimelineItemProps) => {
+const TimelineItem = ({ title, company, date, modality, workplace, country, description, linkDescription, index }: TimelineItemProps) => {
+  const { t } = useTranslation(['global', 'profile', 'projects']);
+
   return (
     <section className="ml-7 md:ml-0 relative border-s 
     border-AZUL-dark 
@@ -44,7 +48,11 @@ const TimelineItem = ({ title, company, date, modality, workplace, country, desc
 
           </article>
           <article className="w-full md:w-6/12 flex flex-col gap-2">
-            <p className="w-full text-balance text-base font-normal text-AZUL-dark dark:text-CREMA">{description}</p>
+            {
+              description.map((_, pIndex) => (
+                <p className="w-full text-balance text-base font-normal text-AZUL-dark dark:text-CREMA">{t(`profile:workExperience.${index}.description.${pIndex}`)}</p>
+              ))
+            }
             {
               linkDescription &&
               <a href={linkDescription} className="w-fit text-xl hover:border-b-2 transition-colors duration-100 ease-in-out

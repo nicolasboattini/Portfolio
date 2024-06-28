@@ -26,7 +26,7 @@ export interface Profile {
     modality: string;
     workplace: string;
     country: string;
-    description: string;
+    description: string[];
     linkDescription: string;
   }[];
   certificates?: string[];
