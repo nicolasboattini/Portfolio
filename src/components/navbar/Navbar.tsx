@@ -9,14 +9,12 @@ export default function Navbar() {
   const { dataProfile } = useProfile();
   const { t } = useTranslation(['global', 'profile', 'projects']);
 
-  if (!dataProfile) {
-    return <div>Loading...</div>;
-  }
+
 
   return (
     <section className="w-full min-h-12 p-2 gap-2 flex flex-wrap items-center justify-center sm:justify-between 
     bg-LIGHT-BG-dark dark:bg-DARK-BG-dark dark:text-CREMA text-LIGHT-AzulOscuro">
-      <p tabIndex={1} className="text-center">{dataProfile.fullname}</p>
+      <p tabIndex={1} className="text-center">{dataProfile?.fullname ?? 'Nombre no disponible'}</p>
 
       <article className="flex flex-wrap justify-center gap-2 
         text-LIGHT-AzulClaro dark:text-white md:text-2xl select-none">
@@ -26,13 +24,23 @@ export default function Navbar() {
         <p>/</p>
         <LinkTo to="/cv" label={t("global:navbar.cv")} tabIndex={4} />
         <p>/</p>
-        <LinkTo to="/experience" label={t("global:navbar.experience")} tabIndex={5} />
-        <p>/</p>
-        <LinkTo to="/education" label={t("global:navbar.education")} tabIndex={6} />
-        <p>/</p>
+        {
+          dataProfile?.workExperience &&
+          <>
+            <LinkTo to="/experience" label={t("global:navbar.experience")} tabIndex={5} />
+            <p>/</p>
+          </>
+        }
+        {
+          dataProfile?.certificates &&
+          <>
+            <LinkTo to="/education" label={t("global:navbar.education")} tabIndex={6} />
+            <p>/</p>
+          </>
+        }
+
         <LinkTo to="/contact" label={t("global:navbar.contact")} tabIndex={7} />
       </article>
-
 
       <ChangeLanguage />
 

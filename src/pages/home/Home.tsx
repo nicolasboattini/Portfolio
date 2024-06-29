@@ -27,7 +27,8 @@ export default function Home() {
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start gap-5 md:gap-10">
           <p className="text-lg md:text-4xl text-AZUL dark:text-AMARILLO"
             tabIndex={7}
-          >{dataProfile?.fullname}
+          >
+            {dataProfile?.fullname}
           </p>
 
           <section className="w-full flex gap-5 flex-wrap justify-center md:justify-start items-center text-base md:text-2xl">
