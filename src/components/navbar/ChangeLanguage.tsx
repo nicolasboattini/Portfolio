@@ -22,9 +22,9 @@ const ChangeLanguage: React.FC = () => {
   };
 
   const options: OptionType[] = [
-    { value: 'es', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p>ES</p><span className="w-5 h-5 icon-[openmoji--flag-argentina]" /></div> },
-    { value: 'en', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p>EN</p><span className="w-5 h-5 icon-[openmoji--flag-united-states]" /></div> },
-    { value: 'pt', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p>PT</p><span className="w-5 h-5 icon-[openmoji--flag-brazil]" /></div> }
+    { value: 'es', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p className='text-xl'>ES</p><span className="w-7 h-7 icon-[openmoji--flag-argentina]" /></div> },
+    { value: 'en', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p className='text-xl'>EN</p><span className="w-7 h-7 icon-[openmoji--flag-united-states]" /></div> },
+    { value: 'pt', label: <div className='text-LIGHT-T-dark dark:text-CREMA flex justify-start items-center gap-1'><p className='text-xl'>PT</p><span className="w-7 h-7 icon-[openmoji--flag-brazil]" /></div> }
   ];
 
   const customStyles: StylesConfig<OptionType, false> = {
@@ -33,6 +33,7 @@ const ChangeLanguage: React.FC = () => {
       cursor: 'pointer',
       backgroundColor: `${theme === 'dark' ? '#060e1c' : '#EBF1FB'}`,
       border: `2px solid ${state.isFocused ? theme === 'dark' ? '#ffcc50' : '#2196f3' : 'transparent'}`,
+      fontSize: '1.25rem',
       boxShadow: 'none',
       '&:hover': {
         backgroundColor: `${theme === 'dark' ? '#16202F' : '#D8E2F3'}`,
