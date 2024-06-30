@@ -12,31 +12,26 @@ export default function Navbar() {
 
 
   return (
-    <section className="w-full min-h-12 p-2 gap-2 flex flex-wrap items-center justify-center sm:justify-between 
+    <section className="w-full min-h-12 p-2 gap-2 
+    flex flex-wrap items-center justify-center sm:justify-around
     bg-LIGHT-BG-dark dark:bg-DARK-BG-dark dark:text-CREMA text-LIGHT-AzulOscuro">
       <p tabIndex={1} className="text-center">{dataProfile?.fullname ?? 'Nombre no disponible'}</p>
 
-      <article className="flex flex-wrap justify-center gap-2 
+      <article className="flex flex-wrap gap-4 
         text-LIGHT-AzulClaro dark:text-white md:text-2xl select-none">
         <LinkTo to="/home" label={t("global:navbar.home")} tabIndex={2} />
-        <p>/</p>
+
         <LinkTo to="/projects" label={t("global:navbar.projects")} tabIndex={3} />
-        <p>/</p>
+
         <LinkTo to="/cv" label={t("global:navbar.cv")} tabIndex={4} />
-        <p>/</p>
+
         {
           dataProfile?.workExperience &&
-          <>
-            <LinkTo to="/experience" label={t("global:navbar.experience")} tabIndex={5} />
-            <p>/</p>
-          </>
+          <LinkTo to="/experience" label={t("global:navbar.experience")} tabIndex={5} />
         }
         {
           dataProfile?.certificates &&
-          <>
-            <LinkTo to="/education" label={t("global:navbar.education")} tabIndex={6} />
-            <p>/</p>
-          </>
+          <LinkTo to="/education" label={t("global:navbar.education")} tabIndex={6} />
         }
 
         <LinkTo to="/contact" label={t("global:navbar.contact")} tabIndex={7} />
