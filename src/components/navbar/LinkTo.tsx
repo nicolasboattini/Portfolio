@@ -12,7 +12,7 @@ export default function LinkTo({ to, label, tabIndex }: LinkToProps) {
     <Link
       tabIndex={tabIndex}
       to={to}
-      className={`rounded px-1 py-0.5 text-base border-2 flex justify-center items-center gap-1
+      className={`rounded px-1 py-0.5 border-2 flex justify-center items-center gap-1
           ${location.pathname === to
           ? 'dark:border-AMARILLO dark:text-AMARILLO border-AZUL text-AZUL'
           : 'border-transparent dark:text-CREMA text-AZUL-dark'}
@@ -21,6 +21,6 @@ export default function LinkTo({ to, label, tabIndex }: LinkToProps) {
 
           
           transition-colors duration-300 ease-in-out
-    `}><p className="text-xl font-ubuntu font-thin dark:text-AMARILLO text-AZUL">#</p> {label}</Link>
+    `}><p className="text-2xl font-ubuntu font-thin dark:text-AMARILLO text-AZUL">#</p> {label}</Link>
   )
 }

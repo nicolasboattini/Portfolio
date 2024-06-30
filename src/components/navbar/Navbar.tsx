@@ -17,8 +17,8 @@ export default function Navbar() {
     bg-LIGHT-BG-dark dark:bg-DARK-BG-dark dark:text-CREMA text-LIGHT-AzulOscuro">
       <p tabIndex={1} className="text-center">{dataProfile?.fullname ?? 'Nombre no disponible'}</p>
 
-      <article className="flex flex-wrap gap-4 
-        text-LIGHT-AzulClaro dark:text-white md:text-2xl select-none">
+      <article className="flex flex-wrap gap-4 justify-center
+        text-LIGHT-AzulClaro dark:text-white md:text-xl select-none">
         <LinkTo to="/home" label={t("global:navbar.home")} tabIndex={2} />
 
         <LinkTo to="/projects" label={t("global:navbar.projects")} tabIndex={3} />
