@@ -5,6 +5,7 @@ import SocialNetworkIcon from "../../components/SocialNetworkIcon.tsx";
 import IconosTechs from "../../components/IconosTechs.tsx";
 import { useProfile } from "../../context/ProfileContext.tsx";
 import { useTranslation } from 'react-i18next';
+import ContImg from "./ContImg.tsx";
 
 export default function Home() {
   const { t } = useTranslation(['global', 'profile', 'projects']);
@@ -19,13 +20,13 @@ export default function Home() {
       <article className="w-full flex flex-col justify-center items-center
                           md:flex-row md:justify-center md:items-center gap-[4vw]">
 
-        <div className="w-48 h-48 md:min-w-80 md:h-80 xl:min-w-96 xl:h-96  rounded-full overflow-hidden border-2 border-solid border-AZUL dark:border-AMARILLO
-        bg-gradient-to-b  from-AZUL to-AMARILLO">
+        <ContImg shape="square">
           <img className="w-full h-full object-cover object-center" src={dataProfile.profilePicture} alt="Foto de perfil" />
-        </div>
+        </ContImg>
+        
 
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start gap-5 md:gap-10">
-          <p className="text-lg md:text-4xl text-AZUL dark:text-AMARILLO"
+          <p className="sm:text-left text-center text-lg md:text-4xl text-AZUL dark:text-AMARILLO"
             tabIndex={7}
           >
             {dataProfile?.fullname}
