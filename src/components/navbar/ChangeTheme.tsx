@@ -32,7 +32,7 @@ export default function ChangeTheme() {
     >
       <span
         aria-hidden='true'
-        className={`w-8 h-8 hover:text-AZUL dark:hover:text-AMARILLO
+        className={`w-6 h-6 md:w-8 md:h-8 hover:text-AZUL dark:hover:text-AMARILLO
         ${theme === 'light'
             ? 'icon-[tdesign--mode-light]'
             : 'icon-[tdesign--mode-dark] '}
