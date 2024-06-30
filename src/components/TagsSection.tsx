@@ -4,7 +4,7 @@ interface TagOpenProps {
 
 const TagOpen = ({ section }: TagOpenProps) => {
   return (
-    <div className="flex flex-col text-xl sm:text-2xl">
+    <div className="flex flex-col text-sm sm:text-2xl">
       <p className="text-AMARILLO-dark dark:text-AMARILLO">
         <span className="text-AZUL-dark dark:text-AZUL">const </span>
         <span tabIndex={6} className="text-AZUL-light dark:text-CREMA">{section}</span>

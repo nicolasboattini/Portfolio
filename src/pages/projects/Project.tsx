@@ -46,7 +46,7 @@ export default function Project() {
                    hover:text-AZUL-dark hover:border-AZUL-dark hover:bg-AZUL hover:bg-opacity-10
                   dark:hover:border-AMARILLO dark:hover:text-AMARILLO dark:hover:bg-AMARILLO dark:hover:bg-opacity-10'
                 >
-                  <span className="w-9 h-9 icon-[tdesign--enter]" />
+                  <span className="w-7 h-7 md:w-9 md:h-9 icon-[tdesign--enter]" />
                 </Link>
               </Tooltip>
 
@@ -63,8 +63,8 @@ export default function Project() {
                 aria-label={t("global:projects.viewRepository")}
                 tabIndex={7}
               >
-                <p className='text-xl'>{t("global:projects.viewRepository")}</p>
-                <span className="w-9 h-9 icon-[iconoir--github-circle] "></span>
+                <p className='hidden sm:inline-block text-sm md:text-xl'>{t("global:projects.viewRepository")}</p>
+                <span className="w-6 h-6 md:w-9 md:h-9 icon-[iconoir--github-circle] "></span>
               </a>
             </div>
 

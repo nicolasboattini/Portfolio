@@ -41,7 +41,7 @@ export default function Card({ project, index }: CardProps) {
           bg-black text-CREMA
           transition-all duration-500 ${isVisible ? 'bg-opacity-50 opacity-100' : 'bg-opacity-0 opacity-0'}`}
       >
-        <p className="w-full text-center font-bold text-xl md:text-2xl border-b-2 border-AZUL dark:border-AMARILLO">
+        <p className="w-full text-center font-bold text-2xl md:text-3xl border-b-2 border-AZUL dark:border-AMARILLO">
           {project.title}
         </p>
 
@@ -56,7 +56,9 @@ export default function Card({ project, index }: CardProps) {
           to={`/projects/${project.id}`}
           tabIndex={parseInt(`${index + 1}04`)}
           aria-label={t("global:projects.showMore")}
-          className="flex justify-center items-center p-1 rounded-2xl w-1/2 border-2 shadow transition-colors duration-100 ease-in-out border-AZUL shadow-AZUL hover:bg-AZUL hover:bg-opacity-30 bg-AZUL bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO dark:bg-AMARILLO dark:bg-opacity-10 dark:hover:bg-AMARILLO dark:hover:bg-opacity-20"
+          className="flex justify-center items-center text-xl p-1 rounded-2xl w-1/2 border-2 shadow transition-colors duration-100 ease-in-out 
+          border-AZUL shadow-AZUL hover:bg-AZUL hover:bg-opacity-30 bg-AZUL bg-opacity-10 
+          dark:border-AMARILLO dark:shadow-AMARILLO dark:bg-AMARILLO dark:bg-opacity-10 dark:hover:bg-AMARILLO dark:hover:bg-opacity-20"
         >
           {t("global:projects.showMore")}
         </Link>
