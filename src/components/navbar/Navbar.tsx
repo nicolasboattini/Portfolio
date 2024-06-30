@@ -15,7 +15,7 @@ export default function Navbar() {
     <section className="w-full min-h-12 p-2 gap-2 
     flex flex-wrap items-center justify-center sm:justify-around
     bg-LIGHT-BG-dark dark:bg-DARK-BG-dark dark:text-CREMA text-LIGHT-AzulOscuro">
-      <p tabIndex={1} className="text-center">{dataProfile?.fullname ?? 'Nombre no disponible'}</p>
+      <p tabIndex={1} className="text-center text-lg">{dataProfile?.fullname ?? 'Nombre no disponible'}</p>
 
       <article className="flex flex-wrap gap-4 justify-center
         text-LIGHT-AzulClaro dark:text-white md:text-xl select-none">
