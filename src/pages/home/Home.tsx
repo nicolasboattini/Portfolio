@@ -20,7 +20,7 @@ export default function Home() {
       <article className="w-full flex flex-col justify-center items-center
                           md:flex-row md:justify-center md:items-center gap-[4vw]">
 
-        <ContImg shape="square">
+        <ContImg shape="circle">
           <img className="w-full h-full object-cover object-center" src={dataProfile.profilePicture} alt="Foto de perfil" />
         </ContImg>
         

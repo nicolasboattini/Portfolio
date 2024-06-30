@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Project } from '../../data/dataProjects';
 import { Link } from 'react-router-dom';
 import IconosTechs from "../../components/IconosTechs.tsx";
 import Tooltip from "../../components/tooltip/Tooltip.tsx";
 import { useTranslation } from 'react-i18next';
+import { Project } from "../../context/ProfileContextTypes.ts";
 
 type CardProps = {
   project: Project;

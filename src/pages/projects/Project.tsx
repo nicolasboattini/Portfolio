@@ -49,23 +49,25 @@ export default function Project() {
                   <span className="w-7 h-7 md:w-9 md:h-9 icon-[tdesign--enter]" />
                 </Link>
               </Tooltip>
-
-              <a
-                className='flex flex-wrap gap-1 justify-center items-center rounded
+              {
+                project.linkGithub &&
+                <a
+                  className='flex flex-wrap gap-1 justify-center items-center rounded
                         border-2 py-1 px-1.5
                         hover:text-AZUL-dark border-DARK-BG-light hover:border-AZUL-dark 
                         hover:bg-AZUL hover:bg-opacity-10
                         dark:border-CREMA dark:hover:border-AMARILLO dark:hover:text-AMARILLO
                         dark:hover:bg-AMARILLO dark:hover:bg-opacity-10'
 
-                href={project.linkGithub}
-                target="_blank"
-                aria-label={t("global:projects.viewRepository")}
-                tabIndex={7}
-              >
-                <p className='hidden sm:inline-block text-sm md:text-xl'>{t("global:projects.viewRepository")}</p>
-                <span className="w-6 h-6 md:w-9 md:h-9 icon-[iconoir--github-circle] "></span>
-              </a>
+                  href={project.linkGithub}
+                  target="_blank"
+                  aria-label={t("global:projects.viewRepository")}
+                  tabIndex={7}
+                >
+                  <p className='hidden sm:inline-block text-sm md:text-xl'>{t("global:projects.viewRepository")}</p>
+                  <span className="w-6 h-6 md:w-9 md:h-9 icon-[iconoir--github-circle] "></span>
+                </a>
+              }
             </div>
 
             <div className='w-full flex flex-col gap-6'>

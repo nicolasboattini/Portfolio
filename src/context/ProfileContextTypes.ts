@@ -39,7 +39,7 @@ export interface Project {
   description: string;
   moreInfo: string[];
   techs: string[];
-  linkGithub : string;
+  linkGithub? : string;
   cantScreenshots: {
     cellphone: number;
     tablet: number;
