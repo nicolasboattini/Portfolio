@@ -21,6 +21,6 @@ export default function LinkTo({ to, label, tabIndex }: LinkToProps) {
 
           
           transition-colors duration-300 ease-in-out
-    `}><p className="text-2xl font-ubuntu font-thin dark:text-AMARILLO text-AZUL">#</p> {label}</Link>
+    `}><p className="text-lg md:text-2xl font-ubuntu font-thin dark:text-AMARILLO text-AZUL">#</p> {label}</Link>
   )
 }
