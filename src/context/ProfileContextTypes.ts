@@ -27,6 +27,7 @@ export interface Profile {
     workplace: string;
     country: string;
     description: string[];
+    tasks?: string[];
     linkDescription: string;
   }[];
   certificates?: string[];

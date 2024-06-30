@@ -9,11 +9,12 @@ interface TimelineItemProps {
   workplace: string;
   country: string;
   description: string[];
+  tasks?: string[];
   linkDescription?: string;
   index: number;
 }
 
-const TimelineItem = ({ title, company, date, modality, workplace, country, description, linkDescription, index }: TimelineItemProps) => {
+const TimelineItem = ({ title, company, date, modality, workplace, country, description, tasks, linkDescription, index }: TimelineItemProps) => {
   const { t } = useTranslation(['global', 'profile', 'projects']);
 
   return (
@@ -33,12 +34,11 @@ const TimelineItem = ({ title, company, date, modality, workplace, country, desc
 
         <section className="w-full flex flex-col md:flex-row md:justify-start gap-4 md:gap-14">
           <article className="w-full md:w-4/12">
-            <p className="flex justify-between text-lg font-semibold 
-            text-AZUL-dark dark:text-AZUL">
+            <p className="text-xl font-semibold text-AZUL-dark dark:text-AZUL">
               {title}
             </p>
-            <p className="text-base font-medium text-gray-600 dark:text-white">{company}</p>
-            <time className="text-sm font-normal leading-none text-AZUL dark:text-CREMA">{date}</time>
+            <p className="text-lg font-medium text-gray-600 dark:text-white">{company}</p>
+            <time className="text-base font-normal leading-none text-AZUL dark:text-CREMA">{date}</time>
             <div className="flex items-center gap-2 dark:text-AMARILLO text-AZUL-dark">
               <p className="text-base font-medium ">
                 {modality} - {workplace}.
@@ -50,8 +50,20 @@ const TimelineItem = ({ title, company, date, modality, workplace, country, desc
           <article className="w-full md:w-6/12 flex flex-col gap-2">
             {
               description.map((_, pIndex) => (
-                <p className="w-full text-balance text-base font-normal text-AZUL-dark dark:text-CREMA">{t(`profile:workExperience.${index}.description.${pIndex}`)}</p>
+                <p className="w-full text-balance text-xl font-normal text-AZUL-dark dark:text-CREMA">{t(`profile:workExperience.${index}.description.${pIndex}`)}</p>
               ))
+            }
+            {
+              tasks && (
+                <>
+                  <p className="text-xl text-AZUL-dark dark:text-AZUL">{t("global:workExperience.tasks")}</p>
+                  <ol className="list-inside list-disc">
+                    {tasks.map((_, taskIndex) => (
+                      <li className="w-full text-balance text-xl font-normal text-AZUL dark:text-white">{t(`profile:workExperience.${index}.tasks.${taskIndex}`)}</li>
+                    ))}
+                  </ol>
+                </>
+              )
             }
             {
               linkDescription &&
@@ -59,7 +71,7 @@ const TimelineItem = ({ title, company, date, modality, workplace, country, desc
               dark:text-AMARILLO dark:hover:border-AMARILLO 
               text-AZUL hover:border-AZUL 
               ">
-                Ver más
+                {t("global:workExperience.showMore")}
               </a>
             }
           </article>

@@ -33,7 +33,9 @@
     "section":"Curriculum Vitae"
   },
   "workExperience": {
-    "section": "Work Experience"
+    "section": "Work Experience",
+    "showMore": "View more",
+    "tasks": "Tasks"
   },
   "education": {
     "section": "Diplomas and Certificates"

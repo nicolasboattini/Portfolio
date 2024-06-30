@@ -21,6 +21,7 @@ export default function Experience() {
               workplace={t(`profile:workExperience.${index}.workplace`)}
               country={work.country}
               description={work.description}
+              tasks={work.tasks}
               linkDescription={t(`profile:workExperience.${index}.linkDescription`)}
               index={index}
             />
