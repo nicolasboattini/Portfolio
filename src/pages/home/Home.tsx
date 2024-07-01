@@ -52,45 +52,20 @@ export default function Home() {
                 <p className="text-LIGHT-AzulOscuro dark:text-AZUL text-base md:text-2xl text-center" tabIndex={50}>
                   {t("global:homePage.skills")}
                 </p>
+
                 <article className="w-4/6 md:w-full flex flex-col items-start gap-4">
-                  {dataProfile.skills.frontEnd &&
-                    <div className="flex flex-wrap gap-x-4 gap-y-1">
+                  {Object.entries(dataProfile.skills).map(([titleStack, stack], index) => (
+                    <div className="flex flex-wrap gap-x-4 gap-y-1" key={index}>
                       <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl" tabIndex={51}>
-                        {t("global:homePage.frontEnd")}:
+                        {titleStack}:
                       </p>
-                      {dataProfile.skills.frontEnd.map((tech, index) => (
+                      {stack.map((tech, stackindex) => (
                         <Tooltip text={tech} key={tech}>
-                          <IconosTechs tech={tech} tabIndex={51 + index} />
+                          <IconosTechs tech={tech} tabIndex={51 + stackindex} />
                         </Tooltip>
                       ))}
                     </div>
-                  }
-
-                  {dataProfile.skills.dataBase &&
-                    <div className="flex flex-wrap gap-x-4 gap-y-1">
-                      <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl" tabIndex={100}>
-                        {t("global:homePage.dataBase")}:
-                      </p>
-                      {dataProfile.skills.dataBase.map((tech, index) => (
-                        <Tooltip text={tech} key={tech}>
-                          <IconosTechs tech={tech} tabIndex={101 + index} />
-                        </Tooltip>
-                      ))}
-                    </div>
-                  }
-
-                  {dataProfile.skills.versionControl &&
-                    <div className="flex flex-wrap gap-x-4 gap-y-1">
-                      <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl" tabIndex={150}>
-                        {t("global:homePage.versionControl")}:
-                      </p>
-                      {dataProfile.skills.versionControl.map((tech, index) => (
-                        <Tooltip text={tech} key={tech}>
-                          <IconosTechs tech={tech} tabIndex={151 + index} />
-                        </Tooltip>
-                      ))}
-                    </div>
-                  }
+                  ))}
                 </article>
               </section>
             }
