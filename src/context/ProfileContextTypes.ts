@@ -5,7 +5,7 @@ export interface Profile {
   dev: string;
   years: string;
   nationality: string;
-  linksSocialNetworks: {
+  linksSocialNetworks?: {
     Github: string;
     Linkedin: string;
     Instagram: string;
@@ -13,7 +13,7 @@ export interface Profile {
     Email: string;
     CV: string;
   };
-  skills: {
+  skills?: {
     frontEnd: string[];
     dataBase: string[];
     versionControl: string[];
