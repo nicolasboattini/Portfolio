@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <SectionCard sectionTitle={t("global:homePage.section")}>
       {loading && <p>Cargando...</p>}
-      {!loading && !dataProfile && <p>No hay información disponible</p>}
+      {!loading && !dataProfile && <p>No hay información disponible.</p>}
 
       {!loading && dataProfile && (
         <article className="w-full flex flex-col justify-center items-center
