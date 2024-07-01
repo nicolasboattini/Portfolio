@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import Tooltip from "components/tooltip/Tooltip.tsx";
+import Tooltip from "@/components/tooltip/Tooltip.tsx";
 
 export default function Footer() {
   const { t } = useTranslation('global');

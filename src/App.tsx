@@ -1,21 +1,21 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-import { ProfileProvider } from "context/ProfileContext.tsx";
+import { ProfileProvider } from "@/context/ProfileContext.tsx";
 
-import { ThemeProvider } from "context/ThemeContext.tsx";
+import { ThemeProvider } from "@/context/ThemeContext.tsx";
 
 import { I18nextProvider } from 'react-i18next';
-import i18next from 'utils/i18n.ts';
+import i18next from '@/utils/i18n.ts';
 
-import Home from "pages/home/Home.tsx";
-import Projects from "pages/projects/Projects.tsx";
-import Project from "pages/projects/Project.tsx";
-import Cv from "pages/cv/Cv.tsx";
-import Navbar from "components/navbar/Navbar.tsx";
-import Footer from "components/footer/Footer.tsx";
-import Experience from "pages/experience/Experience.tsx";
-import Education from "pages/education/Education.tsx";
-import Contact from "pages/contact/Contact.tsx";
+import Home from "@/pages/home/Home.tsx";
+import Projects from "@/pages/projects/Projects.tsx";
+import Project from "@/pages/projects/Project.tsx";
+import Cv from "@/pages/cv/Cv.tsx";
+import Navbar from "@/components/navbar/Navbar.tsx";
+import Footer from "@/components/footer/Footer.tsx";
+import Experience from "@/pages/experience/Experience.tsx";
+import Education from "@/pages/education/Education.tsx";
+import Contact from "@/pages/contact/Contact.tsx";
 
 function App() {
 

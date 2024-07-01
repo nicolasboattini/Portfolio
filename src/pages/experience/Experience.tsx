@@ -1,6 +1,6 @@
-import SectionCard from "components/SectionCard.tsx";
+import SectionCard from "@/components/SectionCard.tsx";
 import TimeLineItem from "./TimeLineItem.tsx";
-import { useProfile } from "context/ProfileContext.tsx";
+import { useProfile } from "@/context/ProfileContext.tsx";
 import { useTranslation } from 'react-i18next';
 
 export default function Experience() {

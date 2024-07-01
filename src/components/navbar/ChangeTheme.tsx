@@ -1,4 +1,4 @@
-import { useTheme } from 'context/ThemeContext.tsx';
+import { useTheme } from '@/context/ThemeContext.tsx';
 import Cookies from 'js-cookie';
 
 type Theme = 'light' | 'dark';

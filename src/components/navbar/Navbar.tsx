@@ -1,9 +1,9 @@
 import ChangeTheme from "./ChangeTheme.tsx";
 import LinkTo from "./LinkTo.tsx";
-import Tooltip from "components/tooltip/Tooltip.tsx";
+import Tooltip from "@/components/tooltip/Tooltip.tsx";
 import { useTranslation } from "react-i18next";
 import ChangeLanguage from "./ChangeLanguage.tsx";
-import { useProfile } from "context/ProfileContext.tsx";
+import { useProfile } from "@/context/ProfileContext.tsx";
 
 export default function Navbar() {
   const { dataProfile } = useProfile();

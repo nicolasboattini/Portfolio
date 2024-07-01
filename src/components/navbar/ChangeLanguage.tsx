@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Select, { StylesConfig } from 'react-select';
-import { useTheme } from "context/ThemeContext.tsx";
+import { useTheme } from "@/context/ThemeContext.tsx";
 
 type OptionType = {
   value: string;

@@ -2,17 +2,17 @@ import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 // Importa los archivos de traducción
-import global_es from "translations/es/global.json";
-import profile_es from "translations/es/profile.json";
-import projects_es from "translations/es/projects.json";
+import global_es from "@/translations/es/global.json";
+import profile_es from "@/translations/es/profile.json";
+import projects_es from "@/translations/es/projects.json";
 
-import global_en from "translations/en/global.json";
-import profile_en from "translations/en/profile.json";
-import projects_en from "translations/en/projects.json";
+import global_en from "@/translations/en/global.json";
+import profile_en from "@/translations/en/profile.json";
+import projects_en from "@/translations/en/projects.json";
 
-import global_pt from "translations/pt/global.json";
-import profile_pt from "translations/pt/profile.json";
-import projects_pt from "translations/pt/projects.json";
+import global_pt from "@/translations/pt/global.json";
+import profile_pt from "@/translations/pt/profile.json";
+import projects_pt from "@/translations/pt/projects.json";
 
 // Obtener el idioma guardado en localStorage o usar 'es' como predeterminado
 const savedLanguage = localStorage.getItem('language') || 'es';

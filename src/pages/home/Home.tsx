@@ -1,9 +1,9 @@
-import SectionCard from "components/SectionCard.tsx";
-import Tooltip from "components/tooltip/Tooltip.tsx";
-import { Subtitle, Flag } from "components/profile/Subtitle.tsx";
-import SocialNetworkIcon from "components/SocialNetworkIcon.tsx";
-import IconosTechs from "components/IconosTechs.tsx";
-import { useProfile } from "context/ProfileContext.tsx";
+import SectionCard from "@/components/SectionCard.tsx";
+import Tooltip from "@/components/tooltip/Tooltip.tsx";
+import { Subtitle, Flag } from "@/components/profile/Subtitle.tsx";
+import SocialNetworkIcon from "@/components/SocialNetworkIcon.tsx";
+import IconosTechs from "@/components/IconosTechs.tsx";
+import { useProfile } from "@/context/ProfileContext.tsx";
 import { useTranslation } from 'react-i18next';
 import ContImg from "./ContImg.tsx";
 
