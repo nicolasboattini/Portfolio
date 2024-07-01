@@ -1,4 +1,4 @@
-import { TagOpen, TagClose } from "../components/TagsSection.tsx";
+import { TagOpen, TagClose } from "components/TagsSection.tsx";
 
 type SectionCardProps = {
   sectionTitle: string;

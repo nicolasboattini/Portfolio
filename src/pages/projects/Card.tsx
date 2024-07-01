@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import IconosTechs from "../../components/IconosTechs.tsx";
-import Tooltip from "../../components/tooltip/Tooltip.tsx";
+import IconosTechs from "components/IconosTechs.tsx";
+import Tooltip from "components/tooltip/Tooltip.tsx";
 import { useTranslation } from 'react-i18next';
 import { ProjectType } from "types/ProfileContextTypes.ts";
 

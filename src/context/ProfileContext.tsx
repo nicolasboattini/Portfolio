@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { ProfileType, ProjectType } from "../types/ProfileContextTypes"; 
+import { ProfileType, ProjectType } from "types/ProfileContextTypes"; 
 
 interface CombinedData {
   dataProfile: ProfileType | null;
