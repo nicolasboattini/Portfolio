@@ -28,7 +28,8 @@
       "cellphone": "Celular",
       "tablet": "Tablet"
     },
-    "projectNotFound" : "Proyecto no encontrado."
+    "projectNotFound" : "Proyecto no encontrado.",
+    "projectLoading" : "Cargando..."
   },
   "cv": {
     "section": "Curriculum Vitae"
