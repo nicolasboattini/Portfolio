@@ -1,4 +1,4 @@
-export interface Profile {
+export interface ProfileType {
   fullname: string;
   descript?: string;
   hobbies?: string;
@@ -33,7 +33,7 @@ export interface Profile {
   certificates?: string[];
 }
 
-export interface Project {
+export interface ProjectType {
   id: number;
   title: string;
   description: string;
