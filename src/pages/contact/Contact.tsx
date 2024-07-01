@@ -34,7 +34,7 @@ export default function Contact() {
 
   return (
     <SectionCard sectionTitle={t("global:contact.section")}>
-      <section className='flex gap-8'>
+      <section className='flex gap-10'>
         <form ref={formRef} onSubmit={onSubmit}
           className="w-1/2 flex flex-col gap-6 justify-start items-center">
           <section className="w-full flex flex-col gap-1">
@@ -57,7 +57,7 @@ export default function Contact() {
                 type="text"
                 name="user_name"
                 id="website-admin"
-                className="w-full text-sm p-2.5 
+                className="w-full text-base p-2.5 
               bg-gray-50  dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400
               outline-none ring-0 border-2 border-transparent focus:border-AZUL-dark dark:focus:border-AMARILLO"
                 placeholder="Jon Doe"
@@ -90,7 +90,7 @@ export default function Contact() {
                 {...register('user_email', { required: true, pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ })}
                 type="text"
                 name="user_email"
-                className="w-full text-sm p-2.5 
+                className="w-full text-base p-2.5 
               bg-gray-50  dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400
               outline-none ring-0 border-2 border-transparent focus:border-AZUL-dark dark:focus:border-AMARILLO"
                 placeholder="Jon@doe.com"
@@ -117,7 +117,7 @@ export default function Contact() {
               name="message"
               rows={4}
               placeholder={t("global:contact.messagePlaceholder")}
-              className={`w-full h-52 resize-none text-sm p-2.5 rounded outline-none ring-0 border-2
+              className={`w-full h-52 resize-none text-base p-2.5 rounded outline-none ring-0 border-2
               ${errors.message ? "border-red-500" : "border-gray-400 dark:border-gray-600 "}
               bg-gray-50  dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400
               focus:border-AZUL-dark dark:focus:border-AMARILLO
@@ -143,7 +143,7 @@ export default function Contact() {
         <article className='w-1/2 flex flex-col gap-2'>
           <p className='text-center text-2xl text-AZUL dark:text-AMARILLO'>{t("global:contact.titleText")}</p>
 
-          <p className='indent-8 text-justify'>
+          <p className='text-balance text-xl'>
             {t("global:contact.text")}
           </p>
 
