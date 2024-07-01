@@ -24,7 +24,7 @@ export default function Card({ project, index }: CardProps) {
 
   return (
     <div
-      className="overflow-hidden relative w-full h-auto border-2 shadow 
+      className="overflow-hidden relative w-full h-auto min-h-96 border-2 shadow 
       bg-AZUL bg-opacity-10 border-AZUL shadow-AZUL 
       dark:bg-white dark:bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO"
       onMouseEnter={handleMouseEnter}

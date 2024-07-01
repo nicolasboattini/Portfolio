@@ -27,7 +27,8 @@
       "desktop": "PC",
       "cellphone": "Celular",
       "tablet": "Tablet"
-    }
+    },
+    "projectNotFound" : "Proyecto no encontrado."
   },
   "cv": {
     "section": "Curriculum Vitae"

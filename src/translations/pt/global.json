@@ -27,7 +27,8 @@
       "desktop": "PC",
       "cellphone": "Móvei",
       "tablet": "Tablet"
-    }
+    },
+    "projectNotFound" : "Projeto não encontrado."
   },
   "cv":{
     "section":"Currículo"
