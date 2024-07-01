@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import SectionCard from "../../components/SectionCard.tsx";
+import SectionCard from "components/SectionCard.tsx";
 import SelectResolution from "./SelectResolution.tsx";
-import Techs from "../../components/Techs";
-import Tooltip from "../../components/tooltip/Tooltip.tsx";
-import { useProfile } from "../../context/ProfileContext.tsx";
+import Techs from "components/Techs";
+import Tooltip from "components/tooltip/Tooltip.tsx";
+import { useProfile } from "context/ProfileContext.tsx";
 import { useTranslation } from 'react-i18next';
-import { ProjectType } from '../../types/ProfileContextTypes.ts'; 
+import { ProjectType } from 'types/ProfileContextTypes.ts'; 
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 

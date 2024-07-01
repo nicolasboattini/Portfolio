@@ -1,4 +1,4 @@
-import Flag from "../../components/Flag.tsx";
+import Flag from "components/Flag.tsx";
 import { useTranslation } from 'react-i18next';
 
 interface TimelineItemProps {

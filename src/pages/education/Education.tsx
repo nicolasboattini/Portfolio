@@ -1,5 +1,5 @@
-import SectionCard from "../../components/SectionCard.tsx";
-import { useProfile } from "../../context/ProfileContext.tsx";
+import SectionCard from "components/SectionCard.tsx";
+import { useProfile } from "context/ProfileContext.tsx";
 import { useTranslation } from 'react-i18next';
 
 export default function Education() {

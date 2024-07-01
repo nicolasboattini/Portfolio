@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import SectionCard from "../../components/SectionCard.tsx";
+import SectionCard from "components/SectionCard.tsx";
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

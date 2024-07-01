@@ -1,6 +1,6 @@
-import SectionCard from "../../components/SectionCard";
+import SectionCard from "components/SectionCard";
 import Card from "./Card";
-import { useProfile } from "../../context/ProfileContext";
+import { useProfile } from "context/ProfileContext";
 import { useTranslation } from 'react-i18next';
 
 const Projects: React.FC = () => {

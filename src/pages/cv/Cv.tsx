@@ -1,6 +1,6 @@
-import SectionCard from "../../components/SectionCard.tsx";
+import SectionCard from "components/SectionCard.tsx";
 import { useTranslation } from 'react-i18next';
-import { useProfile } from "../../context/ProfileContext.tsx";
+import { useProfile } from "context/ProfileContext.tsx";
 
 export default function Cv() {
   const { dataProfile, loading } = useProfile();
