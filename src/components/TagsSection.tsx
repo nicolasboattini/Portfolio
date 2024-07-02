@@ -24,7 +24,7 @@ const TagOpen = ({ section }: TagOpenProps) => {
 
 const TagClose = () => {
   return (
-    <div className="flex flex-col text-sm sm:text-xl">
+    <div className="flex flex-col text-sm sm:text-2xl">
       <p className="indent-5 text-AZUL-light dark:text-CREMA">
         {`)`}
       </p>
