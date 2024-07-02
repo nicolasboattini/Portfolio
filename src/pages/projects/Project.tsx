@@ -6,7 +6,7 @@ import Techs from "@/components/Techs";
 import Tooltip from "@/components/tooltip/Tooltip.tsx";
 import { useProfile } from "@/context/ProfileContext.tsx";
 import { useTranslation } from 'react-i18next';
-import { ProjectType } from '@/types/ProfileContextTypes.ts'; 
+import { ProjectType } from '@/types/ProfileContextTypes.ts';
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 
@@ -14,16 +14,25 @@ export default function Project() {
   const { t } = useTranslation(['global', 'profile', 'projects']);
   const { dataProjects, loading } = useProfile();
   const { projectId } = useParams<{ projectId: string }>();
-  const [project, setProject] = useState<ProjectType | null>(null); 
-
+  const [project, setProject] = useState<ProjectType | null>(null);
   const [device, setDevice] = useState<DeviceType>('desktop');
 
   useEffect(() => {
-    if (dataProjects && projectId) {
-      const foundProject = dataProjects.find(p => p.id === parseInt(projectId));
-      setProject(foundProject || null);
+    if (dataProjects && dataProjects.approaches && projectId) {
+      Object.entries(dataProjects.approaches).forEach(([approach, projects]) => {
+        const foundProject = projects.find(p => p.id === parseInt(projectId));
+        if (foundProject) {
+          setProject({ ...foundProject, approach });
+          return;
+        }
+      });
+    } else {
+      setProject(null);
     }
   }, [dataProjects, projectId]);
+
+  
+
 
   if (loading) {
     return (
@@ -87,12 +96,13 @@ export default function Project() {
                 className="w-full text-center text-xl md:text-3xl border-b-2 border-AZUL-dark dark:border-AMARILLO mb-2"
                 tabIndex={8}
               >{project.title}</p>
-              <p tabIndex={9} className="indent-8 text-lg md:text-xl">{t(`projects:${parseInt(projectId) - 1}.description`)}</p>
+              <p tabIndex={9} className="indent-8 text-lg md:text-xl">{t(`projects:approaches.${project.approach}.${parseInt(projectId) - 1}.description`)}</p>
 
-              {project.moreInfo.map((_, index) => (
-                <p tabIndex={index + 9} key={index} className='indent-8 text-base md:text-xl'>
-                  {t(`projects:${parseInt(projectId) - 1}.moreInfo.${index}`)}
-                </p>
+              {project.moreInfo.map((_, pIndex) => (
+                <p tabIndex={pIndex + 9} key={pIndex} className='indent-8 text-base md:text-xl'>
+                  {/* ${project.approach}.${project.id}.moreInfo.${index} */}
+                  {t(`projects:approaches.${project.approach}.${projectId - 1}.moreInfo.${pIndex}`)}
+                  </p>
               ))}
             </div>
           </article>
