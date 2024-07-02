@@ -57,8 +57,7 @@
     "button": "Enviar",
     "sending": "Enviando...",
     "sent": "Enviado com sucesso.",
-    "titleText": "Entre em Contato para me Contratar!",
-    "text": "Você está procurando alguém com habilidades e experiência para um novo projeto ou posição? Estou disponível para novas oportunidades e ficaria feliz em ouvir sobre sua proposta. Se você acha que meu perfil se encaixa no que você precisa, sinta-se à vontade para entrar em contato. Por favor, preencha o formulário abaixo e entrarei em contato o mais breve possível."
+    "titleText": "Entre em Contato para me Contratar!"
   },
   "footer": {
     "template": "Template feito por"

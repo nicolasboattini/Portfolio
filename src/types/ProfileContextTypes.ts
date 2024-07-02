@@ -31,6 +31,7 @@ export interface ProfileType {
     linkDescription: string;
   }[];
   certificates?: string[];
+  textContact?: string[];
 }
 
 export interface ProjectType {

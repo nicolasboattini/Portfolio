@@ -57,8 +57,7 @@
     "button": "Enviar",
     "sending": "Enviando...",
     "sent": "Enviado correctamente.",
-    "titleText": "¡Contáctame para Contratarme!",
-    "text": "¿Estás buscando a alguien con habilidades y experiencia para un nuevo proyecto o puesto? Estoy disponible para nuevas oportunidades y estaría encantado de escuchar sobre tu propuesta. Si crees que mi perfil encaja con lo que necesitas, no dudes en ponerte en contacto conmigo. Por favor, completa el siguiente formulario y me pondré en contacto contigo lo antes posible."
+    "titleText": "¡Contáctame para Contratarme!"
   },
   "footer": {
     "template": "Template hecho por"

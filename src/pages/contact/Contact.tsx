@@ -3,8 +3,10 @@ import emailjs from '@emailjs/browser';
 import SectionCard from "@/components/SectionCard.tsx";
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
+import { useProfile } from "@/context/ProfileContext.tsx";
 
 export default function Contact() {
+  const { dataProfile, loading } = useProfile();
   const { register, handleSubmit, formState: { errors } } = useForm();
   const formRef = useRef<HTMLFormElement>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -140,13 +142,24 @@ export default function Contact() {
           </button>
         </form>
 
-        <article className='w-1/2 flex flex-col gap-2'>
-          <p className='text-center text-2xl text-AZUL dark:text-AMARILLO'>{t("global:contact.titleText")}</p>
+        <article className='w-1/2 flex flex-col items-center gap-2'>
+          <div className='flex flex-col items-center gap-2'>
+            <p className='text-center text-2xl text-AZUL dark:text-AMARILLO'>{t("global:contact.titleText")}</p>
 
-          <p className='text-balance text-xl'>
-            {t("global:contact.text")}
-          </p>
+            {loading && <p>Cargando...</p>}
+            {!loading && !dataProfile && <p>No hay información disponible.</p>}
 
+            {
+              !loading && dataProfile && (
+                dataProfile.textContact?.map((_, index) => (
+                  <p className='text-balance text-xl' key={"paragraph" + index}>
+                    {t(`profile:textContact.${index}`)}
+                  </p>
+                )))
+            }
+          </div>
+
+          <span className="w-36 h-36 icon-[tabler--message-chatbot-filled] text-AZUL dark:text-AMARILLO" />
         </article>
       </section>
     </SectionCard>
