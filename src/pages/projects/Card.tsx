@@ -7,10 +7,9 @@ import { ProjectType } from "@/types/ProfileContextTypes.ts";
 
 type CardProps = {
   project: ProjectType;
-  index: number;
 };
 
-export default function Card({ project, index }: CardProps) {
+export default function Card({ project }: CardProps) {
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation(['global', 'profile', 'projects']);
   
@@ -24,7 +23,8 @@ export default function Card({ project, index }: CardProps) {
 
   return (
     <div
-      className="overflow-hidden relative w-full h-auto min-h-96 border-2 shadow 
+      key={project.id}
+      className="overflow-hidden relative w-full h-auto border-2 shadow 
       bg-AZUL bg-opacity-10 border-AZUL shadow-AZUL 
       dark:bg-white dark:bg-opacity-10 dark:border-AMARILLO dark:shadow-AMARILLO"
       onMouseEnter={handleMouseEnter}
@@ -47,14 +47,14 @@ export default function Card({ project, index }: CardProps) {
 
         <section className='w-full flex justify-center flex-wrap gap-2'>
           {project.techs.map((tech, index) => (
-            <Tooltip text={tech}>
-              <IconosTechs key={tech} tech={tech} tabIndex={51 + index} color='text-CREMA'/>
+            <Tooltip text={tech} key={project.id + tech + index}>
+              <IconosTechs tech={tech} tabIndex={51 + index} color='text-CREMA'/>
             </Tooltip>
           ))}
         </section>
         <Link
           to={`/projects/${project.id}`}
-          tabIndex={parseInt(`${index + 1}04`)}
+          tabIndex={123}
           aria-label={t("global:projects.showMore")}
           className="flex justify-center items-center text-xl p-1 rounded-2xl w-1/2 border-2 shadow transition-colors duration-100 ease-in-out 
           border-AZUL shadow-AZUL hover:bg-AZUL hover:bg-opacity-30 bg-AZUL bg-opacity-10 

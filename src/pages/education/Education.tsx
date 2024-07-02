@@ -15,7 +15,7 @@ export default function Education() {
         <article className="w-full gap-[4vw] grid grid-cols-2 sm:grid-cols-4">
           {
             dataProfile.certificates.map((certificate, index) => (
-              <a href={certificate} target="_blank"
+              <a href={certificate} target="_blank" key={index}
                 className="w-full">
                 <img
                   className='transform  hover:scale-110 transition duration-300

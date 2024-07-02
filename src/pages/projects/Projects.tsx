@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
       {!loading && dataProjects && dataProjects.length > 0 &&
         <article className="w-full gap-[4vw] grid grid-cols-1 sm:grid-cols-2">
           {dataProjects.map((project) => (
-            <Card key={project.id} index={project.id} project={project} />
+            <Card key={project.id} project={project} />
           ))}
         </article>
       }

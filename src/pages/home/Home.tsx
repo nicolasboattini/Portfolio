@@ -40,7 +40,7 @@ export default function Home() {
             {dataProfile.linksSocialNetworks &&
               <section className="flex flex-wrap gap-0.5 md:gap-4 items-center md:items-start">
                 {Object.entries(dataProfile.linksSocialNetworks).map(([network, link], index) => (
-                  <Tooltip text={network} key={network}>
+                  <Tooltip text={network} key={network + index}>
                     <SocialNetworkIcon socialNetwork={network} link={link} tabIndex={10 + index} />
                   </Tooltip>
                 ))}
@@ -55,12 +55,12 @@ export default function Home() {
 
                 <article className="w-4/6 md:w-full flex flex-col items-start gap-4">
                   {Object.entries(dataProfile.skills).map(([titleStack, stack], index) => (
-                    <div className="flex flex-wrap gap-x-4 gap-y-1" key={index}>
+                    <div className="flex flex-wrap gap-x-4 gap-y-1" key={titleStack + index}>
                       <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl" tabIndex={51}>
                         {t(`global:homePage.skills.${titleStack}`)}:
                       </p>
                       {stack.map((tech, stackindex) => (
-                        <Tooltip text={tech} key={tech}>
+                        <Tooltip text={tech} key={titleStack + tech + stackindex}>
                           <IconosTechs tech={tech} tabIndex={51 + stackindex} />
                         </Tooltip>
                       ))}
