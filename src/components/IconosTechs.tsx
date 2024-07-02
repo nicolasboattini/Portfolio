@@ -11,56 +11,56 @@ const IconosTechs = ({ tech, tabIndex, color="text-LIGHT-AzulClaro dark:text-CRE
   const [iconoSize, setIconoSize] = useState('');
 
   useEffect(() => {
-    switch (tech) {
-      case 'HTML':
+    switch (tech.toLowerCase()) {
+      case 'html':
         setIcono('icon-[ri--html5-fill]');
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         break;
-      case 'CSS':
+      case 'css':
         setIcono('icon-[ri--css3-fill]');
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         break;
-      case 'Tailwind':
+      case 'tailwind':
         setIcono('icon-[ri--tailwind-css-fill]');
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         break;
-      case 'JavaScript':
+      case 'javascript':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[ri--javascript-fill]');
         break;
-      case 'React':
+      case 'react':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[ri--reactjs-fill]');
         break;
-      case 'Next.js':
+      case 'next.js':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[ri--nextjs-fill]');
         break;
-      case 'MongoDB':
+      case 'mongodb':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[simple-icons--mongodb]');
         break;
-      case 'Firebase':
+      case 'firebase':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[ri--firebase-fill]');
         break;
-      case 'Git':
+      case 'git':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[mdi--git]');
         break
-      case 'GitHub':
+      case 'github':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[ri--github-fill]');
         break
-      case 'TypeScript':
+      case 'typescript':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[bxl--typescript]');
         break
-      case 'Node.js':
+      case 'node.js':
         setIconoSize('w-6 h-6 md:w-8 md:h-8');
         setIcono('icon-[ri--nodejs-fill]');
         break
-      case 'Express.js':
+      case 'express.js':
         setIconoSize('w-5 h-5 md:w-8 md:h-8');
         setIcono('icon-[skill-icons--expressjs-light]');
         break
