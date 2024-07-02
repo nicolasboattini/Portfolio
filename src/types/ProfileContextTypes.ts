@@ -40,10 +40,18 @@ export interface ProjectType {
   description: string;
   moreInfo: string[];
   techs: string[];
-  linkGithub? : string;
+  linkGithub?: string;
   cantScreenshots: {
     cellphone: number;
     tablet: number;
     desktop: number;
   };
+}
+
+export interface Approaches {
+  [key: string]: ProjectType[];
+}
+
+export interface ProjectsType {
+  approaches: Approaches;
 }

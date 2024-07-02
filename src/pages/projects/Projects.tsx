@@ -10,12 +10,20 @@ const Projects: React.FC = () => {
   return (
     <SectionCard sectionTitle={t("global:projects.section")}>
       {loading && <div>Cargando...</div>}
-      {!loading && (!dataProjects || dataProjects.length === 0) && <div>No hay proyectos disponibles</div>}
+      {!loading && !dataProjects && <div>No hay proyectos disponibles</div>}
 
-      {!loading && dataProjects && dataProjects.length > 0 &&
-        <article className="w-full gap-[4vw] grid grid-cols-1 sm:grid-cols-2">
-          {dataProjects.map((project) => (
-            <Card key={project.id} project={project} />
+      {!loading && dataProjects && dataProjects.approaches && 
+      
+        <article className="flex flex-col gap-10">
+          {Object.entries(dataProjects.approaches).map(([approach, projects], index) => (
+            <div className="flex flex-col gap-2" key={approach + index}>
+              <p className="text-2xl text-AZUL dark:text-AMARILLO">{approach}</p>
+              <section className="w-full gap-[4vw] grid grid-cols-2 sm:grid-cols-3">
+                {projects.map((project) => (
+                  <Card key={"project" + project.id} project={project} />
+                ))}
+              </section>
+            </div>
           ))}
         </article>
       }

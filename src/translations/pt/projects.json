@@ -1,5 +1,6 @@
 [
   {
+    "category": "Full-Stack",
     "id": 1,
     "title": "BalanceApp 💰",
     "description": "Aplicativo web tipo Wallet virtual para registrar entradas e saídas financeiras com sistema de contas e base de dados.",
@@ -16,6 +17,7 @@
     }
   },
   {
+    "category": "Front-End",
     "id": 2,
     "title": "Star Wars Page 🌌🚀",
     "description": "Aplicação web com dados dos filmes de Star Wars obtidos por SWAPI.",
@@ -32,6 +34,7 @@
     }
   },
   {
+    "category": "Front-End",
     "id": 3,
     "title": "Subscriptions Tracker 📋",
     "description": "Aplicação web para rastrear assinaturas.",
@@ -47,6 +50,7 @@
     }
   },
   {
+    "category": "Front-End",
     "id": 4,
     "title": "Braille Page 📖🧑‍🦯♿️",
     "description": "Página para aprender Braille.",
@@ -62,6 +66,7 @@
     }
   },
   {
+    "category": "Front-End",
     "id": 5,
     "title": "Portfolio 💼🖥️",
     "description": "Portfolio para mostrar projetos pessoais.",
