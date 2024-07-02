@@ -17,16 +17,9 @@ export default function Experience() {
           {
             dataProfile.workExperience.map((work, index) => (
               <TimeLineItem
-                title={t(`profile:workExperience.${index}.title`)}
-                company={t(`profile:workExperience.${index}.company`)}
-                date={t(`profile:workExperience.${index}.date`)}
-                modality={t(`profile:workExperience.${index}.modality`)}
-                workplace={t(`profile:workExperience.${index}.workplace`)}
-                country={work.country}
-                description={work.description}
-                tasks={work.tasks}
-                linkDescription={t(`profile:workExperience.${index}.linkDescription`)}
+                key={"work" + index}
                 index={index}
+                work={work}
               />
             ))
           }

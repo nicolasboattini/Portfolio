@@ -1,7 +1,7 @@
 import Flag from "@/components/Flag.tsx";
 import { useTranslation } from 'react-i18next';
 
-interface TimelineItemProps {
+interface Work {
   title: string;
   company: string;
   date: string;
@@ -11,16 +11,22 @@ interface TimelineItemProps {
   description: string[];
   tasks?: string[];
   linkDescription?: string;
-  index: number;
 }
 
-const TimelineItem = ({ title, company, date, modality, workplace, country, description, tasks, linkDescription, index }: TimelineItemProps) => {
+interface TimelineItemProps {
+  index: string | number;
+  work: Work;
+}
+
+
+const TimelineItem = ({ work, index }: TimelineItemProps) => {
   const { t } = useTranslation(['global', 'profile', 'projects']);
 
   return (
     <section className="ml-7 md:ml-0 relative border-s 
     border-AZUL-dark 
-    dark:border-AMARILLO-dark">
+    dark:border-AMARILLO-dark"
+    key={"work" + index}>
 
       <div className="mb-16 ms-6">
         <span className="absolute flex items-center justify-center w-6 h-6 -start-3 ring-4 rounded-full
@@ -35,39 +41,39 @@ const TimelineItem = ({ title, company, date, modality, workplace, country, desc
         <section className="w-full flex flex-col md:flex-row md:justify-start gap-4 md:gap-14">
           <article className="w-full md:w-4/12">
             <p className="text-xl font-semibold text-AZUL-dark dark:text-AZUL">
-              {title}
+              {t(`profile:workExperience.${index}.title`)}
             </p>
-            <p className="text-lg font-medium text-gray-600 dark:text-white">{company}</p>
-            <time className="text-base font-normal leading-none text-AZUL dark:text-CREMA">{date}</time>
+            <p className="text-lg font-medium text-gray-600 dark:text-white">{t(`profile:workExperience.${index}.company`)}</p>
+            <time className="text-base font-normal leading-none text-AZUL dark:text-CREMA">{t(`profile:workExperience.${index}.date`)}</time>
             <div className="flex items-center gap-2 dark:text-AMARILLO text-AZUL-dark">
               <p className="text-base font-medium ">
-                {modality} - {workplace}.
+                {t(`profile:workExperience.${index}.modality`)} - {t(`profile:workExperience.${index}.workplace`)}.
               </p>
-              <Flag country={country} width={8} height={8} />
+              <Flag country={work.country} width={8} height={8} />
             </div>
 
           </article>
           <article className="w-full md:w-6/12 flex flex-col gap-2">
             {
-              description.map((_, pIndex) => (
-                <p className="w-full text-balance text-xl font-normal text-AZUL-dark dark:text-CREMA">{t(`profile:workExperience.${index}.description.${pIndex}`)}</p>
+              work.description.map((_, pIndex) => (
+                <p key={"work" + index + pIndex} className="w-full text-balance text-xl font-normal text-AZUL-dark dark:text-CREMA">{t(`profile:workExperience.${index}.description.${pIndex}`)}</p>
               ))
             }
             {
-              tasks && (
+              work.tasks && (
                 <>
                   <p className="text-xl text-AZUL-dark dark:text-AZUL">{t("global:workExperience.tasks")}</p>
                   <ol className="list-inside list-disc">
-                    {tasks.map((_, taskIndex) => (
-                      <li className="w-full text-balance text-xl font-normal text-AZUL dark:text-white">{t(`profile:workExperience.${index}.tasks.${taskIndex}`)}</li>
+                    {work.tasks.map((_, taskIndex) => (
+                      <li key={"work" + index + taskIndex} className="w-full text-balance text-xl font-normal text-AZUL dark:text-white">{t(`profile:workExperience.${index}.tasks.${taskIndex}`)}</li>
                     ))}
                   </ol>
                 </>
               )
             }
             {
-              linkDescription &&
-              <a href={linkDescription} className="w-fit text-xl hover:border-b-2 transition-colors duration-100 ease-in-out
+              work.linkDescription &&
+              <a href={work.linkDescription} className="w-fit text-xl hover:border-b-2 transition-colors duration-100 ease-in-out
               dark:text-AMARILLO dark:hover:border-AMARILLO 
               text-AZUL hover:border-AZUL 
               ">
