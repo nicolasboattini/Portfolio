@@ -14,9 +14,25 @@
     "CV": "/profile/CV.pdf"
   },
   "skills": {
-    "frontEnd": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind"],
-    "dataBase": ["MongoDB", "Firebase"],
-    "versionControl": ["Git", "GitHub"]
+    "frontEnd": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Tailwind"
+    ],
+    "dataBase": [
+      "MongoDB",
+      "Firebase"
+    ],
+    "versionControl": [
+      "Git",
+      "GitHub"
+    ],
+    "backEnd": [
+      "Node.js"
+    ]
   },
   "profilePicture": "/profile/fotoDePerfil.png",
   "workExperience": [
@@ -27,7 +43,9 @@
       "modality": "Presencial",
       "workplace": "Corrientes, Argentina",
       "country": "Argentina",
-      "description": ["Estágio (8 meses) no programa T.T.P (Treinamento para o Trabalho Público). Atividades administrativas: digitalização e carregamento de processos, entrada de dados na base, entre outras."],
+      "description": [
+        "Estágio (8 meses) no programa T.T.P (Treinamento para o Trabalho Público). Atividades administrativas: digitalização e carregamento de processos, entrada de dados na base, entre outras."
+      ],
       "tasks": "",
       "linkDescription": ""
     },
@@ -38,7 +56,9 @@
       "modality": "Presencial",
       "workplace": "Corrientes, Argentina",
       "country": "Argentina",
-      "description": ["Funções administrativas: digitalização e carregamento, entrada de dados no banco, entre outras."],
+      "description": [
+        "Funções administrativas: digitalização e carregamento, entrada de dados no banco, entre outras."
+      ],
       "tasks": "",
       "linkDescription": ""
     }

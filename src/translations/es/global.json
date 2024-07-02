@@ -10,10 +10,13 @@
   },
   "homePage": {
     "section": "Presentación",
-    "skills": "Habilidades",
-    "frontEnd": "Desarrollo Front-End",
-    "dataBase": "Base de datos",
-    "versionControl": "Control de verisones",
+    "skills": {
+      "title": "Habilidades",
+      "frontEnd": "Desarrollo Front-End",
+      "dataBase": "Base de datos",
+      "versionControl": "Control de verisones",
+      "backEnd": "Desarrollo Back-End"
+    },
     "hobbies": "Pasatiempos"
   },
   "projects": {
@@ -28,8 +31,8 @@
       "cellphone": "Celular",
       "tablet": "Tablet"
     },
-    "projectNotFound" : "Proyecto no encontrado.",
-    "projectLoading" : "Cargando..."
+    "projectNotFound": "Proyecto no encontrado.",
+    "projectLoading": "Cargando..."
   },
   "cv": {
     "section": "Curriculum Vitae"

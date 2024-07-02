@@ -29,6 +29,9 @@
     "versionControl": [
       "Git",
       "GitHub"
+    ],
+    "backEnd": [
+      "Node.js"
     ]
   },
   "profilePicture": "/profile/fotoDePerfil.png",
@@ -40,7 +43,9 @@
       "modality": "In-person",
       "workplace": "Corrientes, Argentina",
       "country": "Argentina",
-      "description": ["Work placement (8 months) under the E.T.P (Work Training Program). Administrative tasks: loading and digitization of records, database entry, among others."],
+      "description": [
+        "Work placement (8 months) under the E.T.P (Work Training Program). Administrative tasks: loading and digitization of records, database entry, among others."
+      ],
       "tasks": "",
       "linkDescription": ""
     },
@@ -51,7 +56,9 @@
       "modality": "In-person",
       "workplace": "Corrientes, Argentina",
       "country": "Peru",
-      "description": ["Administrative tasks: loading and digitization of records, database entry, among others."],
+      "description": [
+        "Administrative tasks: loading and digitization of records, database entry, among others."
+      ],
       "tasks": "",
       "linkDescription": ""
     }

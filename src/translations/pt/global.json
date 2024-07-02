@@ -10,10 +10,13 @@
   },
   "homePage": {
     "section": "Apresentação",
-    "skills": "Habilidades",
-    "frontEnd": "Desenvolvimento Front-End",
-    "dataBase": "Base de Dados",
-    "versionControl": "Controle de versões",
+    "skills": {
+      "title": "Habilidades",
+      "frontEnd": "Desenvolvimento Front-End",
+      "dataBase": "Base de Dados",
+      "versionControl": "Controle de versões",
+      "backEnd": "Desenvolvimento Back-End"
+    },
     "hobbies": "Passatempos"
   },
   "projects": {

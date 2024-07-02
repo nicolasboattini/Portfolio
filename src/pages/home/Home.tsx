@@ -50,14 +50,14 @@ export default function Home() {
             {dataProfile.skills &&
               <section className="w-full flex flex-col gap-2 items-center md:items-start">
                 <p className="text-LIGHT-AzulOscuro dark:text-AZUL text-base md:text-2xl text-center" tabIndex={50}>
-                  {t("global:homePage.skills")}
+                  {t("global:homePage.skills.title")}
                 </p>
 
                 <article className="w-4/6 md:w-full flex flex-col items-start gap-4">
                   {Object.entries(dataProfile.skills).map(([titleStack, stack], index) => (
                     <div className="flex flex-wrap gap-x-4 gap-y-1" key={index}>
                       <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl" tabIndex={51}>
-                        {titleStack}:
+                        {t(`global:homePage.skills.${titleStack}`)}:
                       </p>
                       {stack.map((tech, stackindex) => (
                         <Tooltip text={tech} key={tech}>

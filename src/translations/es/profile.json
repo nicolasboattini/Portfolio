@@ -30,6 +30,9 @@
     "versionControl": [
       "Git",
       "GitHub"
+    ],
+    "backEnd": [
+      "Node.js"
     ]
   },
   "profilePicture": "/profile/fotoDePerfil.png",
@@ -41,7 +44,9 @@
       "modality": "Presencial",
       "workplace": "Corrientes, Argentina",
       "country": "Argentina",
-      "description": ["Pasantía laboral (8 meses) en el marco del programa E.T.P (Entrenamiento Para el Trabajo Público). Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras."],
+      "description": [
+        "Pasantía laboral (8 meses) en el marco del programa E.T.P (Entrenamiento Para el Trabajo Público). Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras."
+      ],
       "tasks": "",
       "linkDescription": ""
     },
@@ -52,7 +57,9 @@
       "modality": "Presencial",
       "workplace": "Corrientes, Argentina",
       "country": "Argentina",
-      "description": ["Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras."],
+      "description": [
+        "Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras."
+      ],
       "tasks": "",
       "linkDescription": ""
     }

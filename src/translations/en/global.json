@@ -10,10 +10,13 @@
   },
   "homePage": {
     "section": "Presentation",
-    "skills": "Skills",
-    "frontEnd": "Front-End Development",
-    "dataBase": "Database",
-    "versionControl": "Version Control",
+    "skills": {
+      "title": "Skills",
+      "frontEnd": "Front-End Development",
+      "dataBase": "Database",
+      "versionControl": "Version Control",
+      "backEnd": "Back-End Development"
+    },
     "hobbies": "Hobbies"
   },
   "projects": {
@@ -28,11 +31,11 @@
       "cellphone": "Mobile",
       "tablet": "Tablet"
     },
-    "projectNotFound" : "Project not found.",
-    "projectLoading" : "Loading..."
+    "projectNotFound": "Project not found.",
+    "projectLoading": "Loading..."
   },
-  "cv":{
-    "section":"Curriculum Vitae"
+  "cv": {
+    "section": "Curriculum Vitae"
   },
   "workExperience": {
     "section": "Work Experience",
