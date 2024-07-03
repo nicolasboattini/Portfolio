@@ -174,15 +174,6 @@ const IconosTechs = ({ tech, tabIndex, color = "text-LIGHT-AzulClaro dark:text-C
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
         setIcono(<span className={`w-full h-full icon-[simple-icons--dialogflow]`}></span>);
         break
-      case 'jira':
-        setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono(<span className={`w-full h-full icon-[simple-icons--jira]`}></span>);
-        break
-      case 'jira':
-        setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono(<span className={`w-full h-full icon-[simple-icons--jira]`}></span>);
-        break
-      
 
       default:
         setIconoSize('w-5 h-5 md:w-8 md:h-8');

@@ -1,8 +1,8 @@
-import SectionCard from "@/components/SectionCard.tsx";
-import Tooltip from "@/components/tooltip/Tooltip.tsx";
-import { Subtitle, Flag } from "@/components/profile/Subtitle.tsx";
-import SocialNetworkIcon from "@/components/SocialNetworkIcon.tsx";
 import IconosTechs from "@/components/IconosTechs.tsx";
+import SectionCard from "@/components/SectionCard.tsx";
+import SocialNetworkIcon from "@/components/SocialNetworkIcon.tsx";
+import { Flag, Subtitle } from "@/components/profile/Subtitle.tsx";
+import Tooltip from "@/components/tooltip/Tooltip.tsx";
 import { useProfile } from "@/context/ProfileContext.tsx";
 import { useTranslation } from 'react-i18next';
 import ContImg from "./ContImg.tsx";
@@ -56,9 +56,9 @@ export default function Home() {
                   {t("global:homePage.skills.title")}
                 </p>
 
-                <article className="w-4/6 md:w-full flex flex-col items-start gap-4">
+                <article className="w-4/6 md:w-full flex flex-col items-start gap-6">
                   {Object.entries(dataProfile.skills).map(([titleStack, stack], index) => (
-                    <div className="flex items-center flex-wrap gap-x-4 gap-y-1" key={titleStack + index}>
+                    <div className="flex items-center flex-wrap gap-x-4 gap-y-2" key={titleStack + index}>
                       <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl" tabIndex={51}>
                         {t(`global:homePage.skills.${titleStack}`)}:
                       </p>
