@@ -16,7 +16,7 @@ const ChangeLanguage: React.FC = () => {
     if (selectedOption) {
       const selectedLanguage = selectedOption.value;
       i18n.changeLanguage(selectedLanguage);
-      localStorage.setItem('language', selectedLanguage); 
+      localStorage.setItem('language', selectedLanguage);
       setSelectedOption(selectedOption);
     }
   };
@@ -75,6 +75,7 @@ const ChangeLanguage: React.FC = () => {
       value={selectedOption}
       onChange={changeLanguage}
       aria-label="Select language"
+      className="w-fit"
     />
   );
 };
