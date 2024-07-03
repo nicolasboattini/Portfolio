@@ -75,7 +75,7 @@ const IconosTechs = ({ tech, tabIndex, color="text-LIGHT-AzulClaro dark:text-CRE
   return (
     <div
       tabIndex={tabIndex} aria-label={`${tech}`}
-      className={`${iconoSize} ${color}`}
+      className={`flex items-center justify-center${iconoSize} ${color}`}
     >
       <span className={`w-full h-full ${icono}`}></span>
     </div>
