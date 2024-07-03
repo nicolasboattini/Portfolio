@@ -1,5 +1,5 @@
+import { ProfileType, ProjectsType } from "@/types/ProfileContextTypes";
 import { createContext, useContext, useEffect, useState } from 'react';
-import { ProfileType, ProjectsType } from "@/types/ProfileContextTypes"; 
 
 // Define el tipo para los datos combinados que proveerá el contexto
 interface CombinedData {
@@ -41,13 +41,13 @@ export const ProfileProvider: React.FC<ProfileProviderProps> = ({ children }) =>
     ])
     .then(([dataProfile, dataProjects]) => {
       // Simulación de retraso para mostrar indicador de carga
-      setTimeout(() => {
+      //setTimeout(() => {
         setCombinedData({
           dataProfile,
           dataProjects,
           loading: false,
         });
-      }, 2000); // Ajusta este valor según tus necesidades
+      //}, 2000); // Ajusta este valor según tus necesidades
     })
     .catch(error => {
       console.error('Error fetching profile and project data:', error);

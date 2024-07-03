@@ -1,38 +1,58 @@
 {
-  "fullname": "Leandro Daniel Schugurensky",
+  "fullname": "Nicolas Boattini",
   "descript": "",
   "hobbies": "",
-  "dev": "Desarollador Front-end",
+  "dev": "Ingeniero en Sistemas de Información - Game Developer",
   "years": "23 años",
   "nationality": "Argentina",
   "linksSocialNetworks": {
-    "Github": "https://github.com/Schugu",
-    "Linkedin": "https://www.linkedin.com/in/leandrodanielschugurensky/",
-    "Instagram": "https://www.instagram.com/leanschugu/",
-    "FreeCodeCamp": "https://www.freecodecamp.org/certification/Schugu/responsive-web-design",
-    "Email": "mailto:leo.schugu@gmail.com",
+    "Github": "https://github.com/nicolasboattini",
+    "Linkedin": "https://www.linkedin.com/in/nicoboattini/",
+    "Instagram": "https://www.instagram.com/nicolasboattini/",
+    "Email": "mailto:nicoboattini@gmail.com",
     "CV": "/profile/CV.pdf"
   },
   "skills": {
-    "frontEnd": [
-      "HTML",
-      "CSS",
+    "lenguajes": [
+      "C#",
+      "C",
+      "C++",
+      ".NET",
+      "Python",
       "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Tailwind"
+      "HTML"
     ],
-    "dataBase": [
-      "MongoDB",
-      "Firebase"
+    "herramientas": [
+      "Google Suite",
+      "Microsoft Office",
+      "Jira",
+      "Trello",
+      "Slack",
+      "Illustrator",
+      "Photoshop"      
+    ],
+    "database": [
+      "SQL",
+      "MySQL",
+      "MariaDB",
+      "MongoDB"
+    ],
+    "ides": [
+      "Visual Studio Code",
+      "Visual Studio",
+      "Unity",
+      "Unreal",
+      "Dialogflow"
     ],
     "versionControl": [
       "Git",
-      "GitHub"
+      "Github"
     ],
-    "backEnd": [
-      "Node.js"
+    "3dDesign": [
+      "3D Builder",      
+      "MeshMixer",
+      "Ultimaker Cura",
+      "Prusa Slicer"
     ]
   },
   "profilePicture": "/profile/fotoDePerfil.png",
