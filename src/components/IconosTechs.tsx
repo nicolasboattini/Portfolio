@@ -62,7 +62,7 @@ const IconosTechs = ({ tech, tabIndex, color = "text-LIGHT-AzulClaro dark:text-C
         break
       case 'c#':
         setIconoSize('w-5 h-5 md:w-8 md:h-8');
-        setIcono('icon-[teenyicons--c-sharp-outline]');
+        setIcono(<span className={`w-full h-full icon-[teenyicons--c-sharp-outline]`}></span>)
         break
       case 'express.js':
         setIconoSize('w-5 h-5 md:w-8 md:h-8');
@@ -76,87 +76,87 @@ const IconosTechs = ({ tech, tabIndex, color = "text-LIGHT-AzulClaro dark:text-C
         break
       case 'c++':
         setIconoSize('w-5 h-5 md:w-8 md:h-8');
-        setIcono('icon-[nonicons--c-plusplus-16]');
+        setIcono(<span className={`w-full h-full icon-[nonicons--c-plusplus-16]`}></span>);
         break
       case 'c':
         setIconoSize('w-5 h-5 md:w-8 md:h-8');
-        setIcono('icon-[nonicons--c-16]');
+        setIcono(<span className={`w-full h-full icon-[nonicons--c-16]`}></span>);
         break
       case 'python':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[ant-design--python-outlined]');
+        setIcono(<span className={`w-full h-full icon-[ant-design--python-outlined]`}></span>);
         break
       case 'google suite':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[ph--google-drive-logo]');
+        setIcono(<span className={`w-full h-full icon-[ph--google-drive-logo]`}></span>);
         break
       case 'microsoft office':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[hugeicons--office-365]');
+        setIcono(<span className={`w-full h-full icon-[hugeicons--office-365]`}></span>);
         break
       case 'jira':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[simple-icons--jira]');
+        setIcono(<span className={`w-full h-full icon-[simple-icons--jira]`}></span>);
         break
       case 'trello':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[ri--trello-fill]');
+        setIcono(<span className={`w-full h-full icon-[ri--trello-fill]`}></span>);
         break
       case 'slack':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[mdi--slack]');
+        setIcono(<span className={`w-full h-full icon-[mdi--slack]`}></span>);
         break
       case 'illustrator':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[hugeicons--adobe-illustrator]');
+        setIcono(<span className={`w-full h-full icon-[hugeicons--adobe-illustrator]`}></span>);
         break
       case 'photoshop':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[hugeicons--adobe-photoshop]');
+        setIcono(<span className={`w-full h-full icon-[hugeicons--adobe-photoshop]`}></span>);
         break
       case 'sql':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[hugeicons--sql]');
+        setIcono(<span className={`w-full h-full icon-[hugeicons--sql]`}></span>);
         break
       case 'mysql':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[devicon-plain--mysql]');
+        setIcono(<span className={`w-full h-full icon-[devicon-plain--mysql]`}></span>);
         break
       case 'mariadb':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[simple-icons--mariadbfoundation]');
+        setIcono(<span className={`w-full h-full icon-[simple-icons--mariadbfoundation]`}></span>);
         break
       case 'visual studio code':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[codicon--vscode-insiders]');
+        setIcono(<span className={`w-full h-full icon-[codicon--vscode-insiders]`}></span>);
         break
       case 'visual studio':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[fontisto--visual-studio]');
+        setIcono(<span className={`w-full h-full icon-[fontisto--visual-studio]`}></span>);
         break
       case '.net':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[devicon-plain--dot-net]');
+        setIcono(<span className={`w-full h-full icon-[devicon-plain--dot-net]`}></span>);
         break
       case 'unity':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[cib--unity]');
+        setIcono(<span className={`w-full h-full icon-[cib--unity]`}></span>);
         break
       case 'unreal':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[mdi--unreal]');
+        setIcono(<span className={`w-full h-full icon-[mdi--unreal]`}></span>);
         break
       case 'dialogflow':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[simple-icons--dialogflow]');
+        setIcono(<span className={`w-full h-full icon-[simple-icons--dialogflow]`}></span>);
         break
       case 'jira':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[simple-icons--jira]');
+        setIcono(<span className={`w-full h-full icon-[simple-icons--jira]`}></span>);
         break
       case 'jira':
         setIconoSize('w-4 h-4 md:w-8 md:h-8');
-        setIcono('icon-[simple-icons--jira]');
+        setIcono(<span className={`w-full h-full icon-[simple-icons--jira]`}></span>);
         break
 
       default:
