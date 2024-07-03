@@ -10,11 +10,15 @@ import { ProjectType } from '@/types/ProfileContextTypes.ts';
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 
+type NewProjectType = ProjectType & {
+  approach?: string;
+}
+
 export default function Project() {
   const { t } = useTranslation(['global', 'profile', 'projects']);
   const { dataProjects, loading } = useProfile();
   const { projectId } = useParams<{ projectId: string }>();
-  const [project, setProject] = useState<ProjectType | null>(null);
+  const [project, setProject] = useState<NewProjectType | null>(null);
   const [projectIndex, setProjectIndex] = useState<number>(-1);
   const [device, setDevice] = useState<DeviceType>('desktop');
 
@@ -24,7 +28,7 @@ export default function Project() {
       const foundProject = allProjects.find(p => p.id === parseInt(projectId));
 
       if (foundProject) {
-        const approachEntry = Object.entries(dataProjects.approaches).find(([approach, projects]) => projects.includes(foundProject));
+        const approachEntry = Object.entries(dataProjects.approaches).find(([, projects]) => projects.includes(foundProject));
         const approach = approachEntry?.[0];
         const index = approachEntry ? approachEntry[1].indexOf(foundProject) : -1;
 
