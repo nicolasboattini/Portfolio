@@ -3,6 +3,7 @@ export interface ProfileType {
   descript?: string;
   hobbies?: string;
   dev: string;
+  titles?: string[];
   years: string;
   nationality: string;
   linksSocialNetworks?: {

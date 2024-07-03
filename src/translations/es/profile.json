@@ -3,6 +3,7 @@
   "descript": "",
   "hobbies": "",
   "dev": "Desarollador Front-end",
+  "titles": [],
   "years": "23 años",
   "nationality": "Argentina",
   "linksSocialNetworks": {
@@ -72,7 +73,7 @@
     "https://www.udemy.com/certificate/UC-294ca089-e6e2-4c1a-86e5-57a1f7e01f69/",
     "https://www.udemy.com/certificate/UC-4ca8e86d-e5e7-4696-be4b-aa738bc426fd/"
   ],
-  "textContact": [ 
+  "textContact": [
     "¿Estás buscando a alguien con habilidades y experiencia para un nuevo proyecto o puesto? Estoy disponible para nuevas oportunidades y estaría encantado de escuchar sobre tu propuesta. Si crees que mi perfil encaja con lo que necesitas, no dudes en ponerte en contacto conmigo. Por favor, completa el siguiente formulario y me pondré en contacto contigo lo antes posible."
   ]
 }

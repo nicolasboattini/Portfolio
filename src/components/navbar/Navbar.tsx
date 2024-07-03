@@ -28,9 +28,10 @@ export default function Navbar() {
           className="flex items-center text-AZUL dark:text-AMARILLO"
           onClick={toggleMenu}
         >
-          {isMenuOpen
-            ? (<span className="block h-8 w-8 icon-[iconamoon--menu-burger-horizontal-thin]" />)
-            : (<span className="block h-8 w-8 icon-[iconamoon--close-light]" />)
+          {
+            isMenuOpen
+              ? (<span className="block h-8 w-8 icon-[iconamoon--menu-burger-horizontal-thin]" />)
+              : (<span className="block h-8 w-8 icon-[iconamoon--close-light]" />)
           }
         </button>
       </div>
@@ -68,7 +69,7 @@ export default function Navbar() {
         <li>
           <LinkTo to="/contact" label={t("global:navbar.contact")} tabIndex={7} />
         </li>
-       
+
         <li className="flex items-center justify-between gap-2">
           <ChangeLanguage />
           <Tooltip text={t("global:navbar.changeTheme")} position="left">
