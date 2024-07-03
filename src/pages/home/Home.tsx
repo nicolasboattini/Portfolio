@@ -31,6 +31,9 @@ export default function Home() {
 
             <section className="w-full flex gap-5 flex-wrap justify-center md:justify-start items-center text-base md:text-2xl">
               <Subtitle string={t("profile:dev")} tabIndex={8} />
+              {dataProfile.titles?.map((_, index) => (
+                <Subtitle string={t(`profile:titles.${index}`)} tabIndex={9}/>
+              ))}
               <Subtitle string={t("profile:years")} tabIndex={9} />
               <Tooltip text={dataProfile.nationality}>
                 <Flag nationality={dataProfile.nationality.toLowerCase()} tabIndex={10} />
