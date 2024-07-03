@@ -56,7 +56,7 @@ export default function Home() {
                   {t("global:homePage.skills.title")}
                 </p>
 
-                <article className="w-4/6 md:w-full flex flex-col items-start gap-4">
+                <article className="w-4/6 md:w-full flex flex-col items-start gap-6">
                   {Object.entries(dataProfile.skills).map(([titleStack, stack], index) => (
                     <div className="flex items-center flex-wrap gap-x-4 gap-y-1" key={titleStack + index}>
                       <p className="text-AZUL-dark dark:text-AMARILLO text-md md:text-xl" tabIndex={51}>
