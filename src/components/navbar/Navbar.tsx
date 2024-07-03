@@ -30,8 +30,8 @@ export default function Navbar() {
         >
           {
             isMenuOpen
-              ? (<span className="block h-8 w-8 icon-[iconamoon--menu-burger-horizontal-thin]" />)
-              : (<span className="block h-8 w-8 icon-[iconamoon--close-light]" />)
+              ? (<span className="block h-8 w-8 icon-[iconamoon--close-light]" />)
+              : (<span className="block h-8 w-8 icon-[iconamoon--menu-burger-horizontal-thin]" />)
           }
         </button>
       </div>
