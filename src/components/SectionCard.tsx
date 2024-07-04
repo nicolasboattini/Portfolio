@@ -1,4 +1,4 @@
-import { TagOpen, TagClose } from "@/components/TagsSection.tsx";
+import { TagClose, TagOpen } from "@/components/TagsSection.tsx";
 
 type SectionCardProps = {
   sectionTitle: string;
@@ -12,7 +12,7 @@ export default function SectionCard({ sectionTitle, children }: SectionCardProps
       <article className="my-6 w-full md:w-11/12 md:pt-4 md:pr-4 md:pb-6 md:pl-7 p-2 
       rounded-md border-2 shadow 
       bg-LIGHT-BG-dark border-AZUL shadow-AZUL
-      dark:bg-DARK-BG-dark dark:border-DARK-BORDER-light dark:shadow-DARK-BORDER-light">
+      dark:bg-DARK-BG-dark dark:border-AZUL-dark dark:shadow-AZUL-light">
 
         <TagOpen section={sectionTitle} />
 

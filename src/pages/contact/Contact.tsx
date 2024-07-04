@@ -1,9 +1,9 @@
-import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 import SectionCard from "@/components/SectionCard.tsx";
+import { useProfile } from "@/context/ProfileContext.tsx";
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { useProfile } from "@/context/ProfileContext.tsx";
 
 export default function Contact() {
   const { dataProfile, loading } = useProfile();
@@ -47,10 +47,10 @@ export default function Contact() {
               {t("global:contact.fullname")}
             </label>
 
-            <div className={`flex ${errors.user_name ? "border-red-500" : " border-gray-400 dark:border-gray-600"} border-2 rounded overflow-hidden`}>
+            <div className={`flex ${errors.user_name ? "border-red-500" : " border-gray-400 dark:border-DARK-BG-light"} border-2 rounded overflow-hidden`}>
               <span className="inline-flex items-center px-3 text-sm 
-            text-gray-900 dark:text-gray-400 bg-gray-200 dark:bg-gray-600 
-            border-r-2 dark:border-gray-600 border-gray-400">              <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            text-gray-900 dark:text-gray-400 bg-gray-200 dark:bg-DARK-BG-dark
+            border-r-2 dark:border-DARK-BG-light border-gray-400">              <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
                 </svg>
               </span>
@@ -60,7 +60,7 @@ export default function Contact() {
                 name="user_name"
                 id="website-admin"
                 className="w-full text-base p-2.5 
-              bg-gray-50  dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400
+              bg-gray-50  dark:bg-DARK-BG text-gray-900 dark:text-white placeholder-gray-400
               outline-none ring-0 border-2 border-transparent focus:border-AZUL-dark dark:focus:border-AMARILLO"
                 placeholder="Jon Doe"
               />
@@ -79,10 +79,10 @@ export default function Contact() {
             >
               {t("global:contact.email")}
             </label>
-            <div className={`flex ${errors.user_email ? "border-red-500" : " border-gray-400 dark:border-gray-600"} border-2 rounded overflow-hidden`}>
+            <div className={`flex ${errors.user_email ? "border-red-500" : " border-gray-400 dark:border-DARK-BG-light"} border-2 rounded overflow-hidden`}>
               <span className="inline-flex items-center px-3 text-sm 
-            text-gray-900 dark:text-gray-400 bg-gray-200 dark:bg-gray-600 
-            border-r-2 dark:border-gray-600 border-gray-400">
+            text-gray-900 dark:text-gray-400 bg-gray-200 dark:bg-DARK-BG-dark
+            border-r-2 dark:border-DARK-BG-light border-gray-400">
                 <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
                   <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
                   <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
@@ -93,7 +93,7 @@ export default function Contact() {
                 type="text"
                 name="user_email"
                 className="w-full text-base p-2.5 
-              bg-gray-50  dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400
+              bg-gray-50  dark:bg-DARK-BG text-gray-900 dark:text-white placeholder-gray-400
               outline-none ring-0 border-2 border-transparent focus:border-AZUL-dark dark:focus:border-AMARILLO"
                 placeholder="Jon@doe.com"
               />
@@ -120,8 +120,8 @@ export default function Contact() {
               rows={4}
               placeholder={t("global:contact.messagePlaceholder")}
               className={`w-full h-52 resize-none text-base p-2.5 rounded outline-none ring-0 border-2
-              ${errors.message ? "border-red-500" : "border-gray-400 dark:border-gray-600 "}
-              bg-gray-50  dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400
+              ${errors.message ? "border-red-500" : " border-gray-400 dark:border-DARK-BG-light"}
+              bg-gray-50  dark:bg-DARK-BG text-gray-900 dark:text-white placeholder-gray-400
               focus:border-AZUL-dark dark:focus:border-AMARILLO
               `}
             />

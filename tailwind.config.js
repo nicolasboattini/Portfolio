@@ -19,21 +19,21 @@ const config = {
           dark: '#ab9f92',
         },
         'AMARILLO': {
-          light: '#ffdd8b',
-          DEFAULT: '#ffcc50',
-          dark: '#cca340',
+          light: '#82bd69',
+          DEFAULT: '#61a146',
+          dark: '#4c8435',
         },
         'AZUL': {
-          light: '#89c4f3',
-          DEFAULT: '#2196f3',
-          dark: '#145c96',
+          light: '#b7a3cf',
+          DEFAULT: '#7c5f9a',
+          dark: '#554068',
         },
 
         // Dark
         'DARK-BG': {
-          light: '#18263E',
-          DEFAULT: '#0E192B',
-          dark: '#060e1c',
+          light: '#454545',
+          DEFAULT: '#171717',
+          dark: '#0b0b0b',
         },
         'DARK-BORDER': {
           light: '#637591',

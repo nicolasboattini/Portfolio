@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
 import SectionCard from "@/components/SectionCard.tsx";
-import SelectResolution from "./SelectResolution.tsx";
 import Techs from "@/components/Techs";
 import Tooltip from "@/components/tooltip/Tooltip.tsx";
 import { useProfile } from "@/context/ProfileContext.tsx";
-import { useTranslation } from 'react-i18next';
 import { ProjectType } from '@/types/ProfileContextTypes.ts';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, useParams } from 'react-router-dom';
+import SelectResolution from "./SelectResolution.tsx";
 
 type DeviceType = 'cellphone' | 'tablet' | 'desktop';
 
@@ -63,7 +63,7 @@ export default function Project() {
   return (
     <SectionCard sectionTitle={`${t("global:projects.section")}["${project?.title ?? t("global:projects.projectNotFound")}"]`}>
       <div className="w-full h-full flex flex-col gap-2 p-2">
-        <section className="w-full flex flex-wrap justify-center gap-4 p-4 rounded-lg dark:bg-gray-800 bg-AZUL bg-opacity-10">
+        <section className="w-full flex flex-wrap justify-center gap-4 p-4 rounded-lg dark:bg-DARK-BG bg-AZUL bg-opacity-10">
           <article className='w-full flex flex-col'>
             <div className="w-full flex justify-between items-center">
               <Tooltip text={t("global:projects.back")} position='right'>

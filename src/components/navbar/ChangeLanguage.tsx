@@ -1,7 +1,7 @@
+import { useTheme } from "@/context/ThemeContext.tsx";
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Select, { StylesConfig } from 'react-select';
-import { useTheme } from "@/context/ThemeContext.tsx";
 
 type OptionType = {
   value: string;
@@ -31,36 +31,36 @@ const ChangeLanguage: React.FC = () => {
     control: (provided, state) => ({
       ...provided,
       cursor: 'pointer',
-      backgroundColor: `${theme === 'dark' ? '#060e1c' : '#EBF1FB'}`,
-      border: `2px solid ${state.isFocused ? theme === 'dark' ? '#ffcc50' : '#2196f3' : 'transparent'}`,
+      backgroundColor: `${theme === 'dark' ? '#0b0b0b' : '#EBF1FB'}`,
+      border: `2px solid ${state.isFocused ? theme === 'dark' ? '#61a146' : '#7c5f9a' : 'transparent'}`,
       fontSize: '1.25rem',
       boxShadow: 'none',
       '&:hover': {
-        backgroundColor: `${theme === 'dark' ? '#16202F' : '#D8E2F3'}`,
-        border: `2px solid ${theme === 'dark' ? '#ffcc50' : '#2196f3'}`,
+        backgroundColor: `${theme === 'dark' ? '#454545' : '#D8E2F3'}`,
+        border: `2px solid ${theme === 'dark' ? '#61a146' : '#7c5f9a'}`,
       }
     }),
     option: (provided, state) => ({
       ...provided,
       cursor: 'pointer',
       display: state.isSelected ? 'none' : 'block',
-      backgroundColor: state.isSelected ? theme === 'dark' ? '#16202F' : '#D8E2F3' : 'transparent',
-      color: `${theme === 'dark' ? '#f1e1cf' : '#16202F'}`,
+      backgroundColor: state.isSelected ? theme === 'dark' ? '#454545' : '#D8E2F3' : 'transparent',
+      color: `${theme === 'dark' ? '#f1e1cf' : '#454545'}`,
       '&:hover': {
-        backgroundColor: `${theme === 'dark' ? '#16202F' : '#D8E2F3'}`,
+        backgroundColor: `${theme === 'dark' ? '#454545' : '#D8E2F3'}`,
       },
       '&:active': {
-        backgroundColor: `${theme === 'dark' ? '#16202F' : '#D8E2F3'}`,
+        backgroundColor: `${theme === 'dark' ? '#454545' : '#D8E2F3'}`,
       }
     }),
     menu: (provided) => ({
       ...provided,
-      color: `${theme === 'dark' ? '#f1e1cf' : '#16202F'}`,
-      backgroundColor: `${theme === 'dark' ? '#060e1c' : '#EBF1FB'}`,
+      color: `${theme === 'dark' ? '#f1e1cf' : '#454545'}`,
+      backgroundColor: `${theme === 'dark' ? '#0b0b0b' : '#EBF1FB'}`,
       borderRadius: '5px',
       boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
       cursor: 'pointer',
-      border: `2px solid ${theme === 'dark' ? '#ffcc50' : '#2196f3'}`,
+      border: `2px solid ${theme === 'dark' ? '#61a146' : '#7c5f9a'}`,
     }),
   };
 
