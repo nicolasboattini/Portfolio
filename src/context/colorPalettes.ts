@@ -1,17 +1,18 @@
 export const darkThemeColors = {
   primary: {
-    light: '#cca340',
-    DEFAULT: "#ffcc50",
-    dark: "#cca340",
+    light: '#82bd69',
+    DEFAULT: "#61a146",
+    dark: "#4c8435",
   },
   secondary: {
-    light: '#89c4f3',
-    DEFAULT: '#2196f3',
-    dark: '#145c96',
+    light: '#b7a3cf',
+    DEFAULT: '#7c5f9a',
+    dark: '#554068',
   },
   background: {
-    DEFAULT: "#060e1c",
-    light: "#0e192b"
+    DEFAULT: "#171717",
+    light: "#454545",
+    dark: '#0b0b0b',
   },
   text: {
     DEFAULT: '#f1e1cf',
