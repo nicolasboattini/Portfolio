@@ -37,45 +37,49 @@ export default function Navbar() {
       </div>
       <ul className={`${isMenuOpen ? 'block' : 'hidden'
         } lg:flex lg:items-center lg:justify-center lg:flex-wrap lg:gap-4 
-         absolute lg:relative right-0 top-12 lg:top-0 z-10
-         w-full sm:w-1/2 md:w-auto rounded
+          max-lg:absolute max-lg:right-0 max-lg:top-12 max-lg:z-10
+          w-full sm:w-1/2 md:w-auto rounded
         bg-LIGHT-BG-dark dark:bg-DARK-BG-dark dark:text-CREMA text-LIGHT-AzulOscuro
         max-lg:border-2 max-lg:border-AZUL max-lg:dark:border-AMARILLO p-2 
         `}>
 
 
+          <li>
+            <LinkTo to="/home" label={t("global:navbar.home")} tabIndex={2} />
+          </li>
 
-        <li>
-          <LinkTo to="/home" label={t("global:navbar.home")} tabIndex={2} />
-        </li>
-        <li>
-          <LinkTo to="/projects" label={t("global:navbar.projects")} tabIndex={3} />
-        </li>
-        <li>
-          <LinkTo to="/cv" label={t("global:navbar.cv")} tabIndex={4} />
-        </li>
-        <li>
+          <li>
+            <LinkTo to="/projects" label={t("global:navbar.projects")} tabIndex={3} />
+          </li>
+
+          <li>
+            <LinkTo to="/cv" label={t("global:navbar.cv")} tabIndex={4} />
+          </li>
+
           {
             dataProfile?.workExperience &&
-            <LinkTo to="/experience" label={t("global:navbar.experience")} tabIndex={5} />
+            <li>
+              <LinkTo to="/experience" label={t("global:navbar.experience")} tabIndex={5} />
+            </li>
           }
-        </li>
-        <li>
+
           {
             dataProfile?.certificates &&
-            <LinkTo to="/education" label={t("global:navbar.education")} tabIndex={6} />
+            <li>
+              <LinkTo to="/education" label={t("global:navbar.education")} tabIndex={6} />
+            </li>
           }
-        </li>
-        <li>
-          <LinkTo to="/contact" label={t("global:navbar.contact")} tabIndex={7} />
-        </li>
+          <li>
 
-        <li className="flex items-center justify-between gap-2">
-          <ChangeLanguage />
-          <Tooltip text={t("global:navbar.changeTheme")} position="left">
-            <ChangeTheme />
-          </Tooltip>
-        </li>
+            <LinkTo to="/contact" label={t("global:navbar.contact")} tabIndex={7} />
+          </li>
+          
+          <li className="flex items-center justify-between gap-2">
+            <ChangeLanguage />
+            <Tooltip text={t("global:navbar.changeTheme")} position="left">
+              <ChangeTheme />
+            </Tooltip>
+          </li>
       </ul>
     </nav>
   )
