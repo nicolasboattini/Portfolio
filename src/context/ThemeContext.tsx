@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import Cookies from 'js-cookie';
+import { lightThemeColors, darkThemeColors } from "./colorPalettes.ts";
 
 // Definir el tipo para el contexto
 interface ThemeContextType {
@@ -18,7 +19,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     const savedTheme = Cookies.get('theme');
     if (savedTheme && (savedTheme === 'dark' || savedTheme === 'light')) {
-      return savedTheme as 'dark' | 'light'; // Asegurarse de que savedTheme sea del tipo correcto
+      return savedTheme as 'dark' | 'light';
     }
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
@@ -61,8 +62,35 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     };
   }, [theme]);
 
+
+  // Determinar qué paleta de colores usar según el tema actual
+  const themeColors = theme === 'dark' ? darkThemeColors : lightThemeColors;
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      {/* Aquí se pueden incluir las variables CSS para los colores del tema */}
+      <style>
+        {`
+          :root {
+            --color-primary: ${themeColors.primary.DEFAULT};
+            --color-primary-light: ${themeColors.primary.light};
+            --color-primary-dark: ${themeColors.primary.dark};
+            --color-secondary: ${themeColors.secondary.DEFAULT};
+            --color-secondary-light: ${themeColors.secondary.light};
+            --color-secondary-dark: ${themeColors.secondary.dark};
+            --color-background: ${themeColors.background.DEFAULT};
+            --color-background-light: ${themeColors.background.light};
+            --color-text: ${themeColors.text.DEFAULT};
+            --color-text-dark: ${themeColors.text.dark};
+            --color-border: ${themeColors.border.DEFAULT};
+            --color-border-light: ${themeColors.border.light};
+            --color-border-dark: ${themeColors.border.dark};
+            --color-accent1: ${themeColors.accent1};
+            --color-accent2: ${themeColors.accent2};
+            --color-accent3: ${themeColors.accent3};
+          }
+        `}
+      </style>
       {children}
     </ThemeContext.Provider>
   );

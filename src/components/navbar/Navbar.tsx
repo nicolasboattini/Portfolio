@@ -55,13 +55,14 @@ export default function Navbar() {
             <LinkTo to="/experience" label={t("global:navbar.experience")} tabIndex={5} />
           </li>
         }
-        {
 
+        {
           dataProfile?.certificates &&
           <li>
             <LinkTo to="/education" label={t("global:navbar.education")} tabIndex={6} />
           </li>
         }
+
         <li>
           <LinkTo to="/contact" label={t("global:navbar.contact")} tabIndex={7} />
         </li>
