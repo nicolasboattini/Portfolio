@@ -1,10 +1,10 @@
-import ChangeTheme from "./ChangeTheme.tsx";
-import LinkTo from "./LinkTo.tsx";
 import Tooltip from "@/components/tooltip/Tooltip.tsx";
-import { useTranslation } from "react-i18next";
-import ChangeLanguage from "./ChangeLanguage.tsx";
 import { useProfile } from "@/context/ProfileContext.tsx";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import ChangeLanguage from "./ChangeLanguage.tsx";
+import ChangeTheme from "./ChangeTheme.tsx";
+import LinkTo from "./LinkTo.tsx";
 
 export default function Navbar() {
   const { dataProfile } = useProfile();
@@ -20,9 +20,7 @@ export default function Navbar() {
     <nav className="w-full min-h-12 p-2 gap-2 
      flex flex-wrap items-center justify-between lg:justify-around
      bg-LIGHT-BG-dark dark:bg-DARK-BG-dark dark:text-CREMA text-LIGHT-AzulOscuro">
-
       <p tabIndex={1} className="text-center text-sm md:text-xl text-AZUL dark:text-AMARILLO">{dataProfile?.fullname ?? 'Nombre no disponible'}</p>
-
       <div className="lg:hidden">
         <button
           className="flex items-center text-AZUL dark:text-AMARILLO"
@@ -37,14 +35,11 @@ export default function Navbar() {
       </div>
       <ul className={`${isMenuOpen ? 'block' : 'hidden'
         } lg:flex lg:items-center lg:justify-center lg:flex-wrap lg:gap-4 
-         absolute lg:relative right-0 top-12 lg:top-0 z-10
+         max-lg:absolute max-lg:right-0 max-lg:top-12 max-lg:z-10
          w-full sm:w-1/2 md:w-auto rounded
         bg-LIGHT-BG-dark dark:bg-DARK-BG-dark dark:text-CREMA text-LIGHT-AzulOscuro
         max-lg:border-2 max-lg:border-AZUL max-lg:dark:border-AMARILLO p-2 
         `}>
-
-
-
         <li>
           <LinkTo to="/home" label={t("global:navbar.home")} tabIndex={2} />
         </li>
@@ -54,18 +49,19 @@ export default function Navbar() {
         <li>
           <LinkTo to="/cv" label={t("global:navbar.cv")} tabIndex={4} />
         </li>
-        <li>
-          {
-            dataProfile?.workExperience &&
+        {
+          dataProfile?.workExperience &&
+          <li>
             <LinkTo to="/experience" label={t("global:navbar.experience")} tabIndex={5} />
-          }
-        </li>
-        <li>
-          {
-            dataProfile?.certificates &&
+          </li>
+        }
+        {
+
+          dataProfile?.certificates &&
+          <li>
             <LinkTo to="/education" label={t("global:navbar.education")} tabIndex={6} />
-          }
-        </li>
+          </li>
+        }
         <li>
           <LinkTo to="/contact" label={t("global:navbar.contact")} tabIndex={7} />
         </li>

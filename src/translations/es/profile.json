@@ -1,6 +1,6 @@
 {
   "fullname": "Nicolas Boattini",
-  "descript": "",
+  "descript": "Comencé como desarrollador de videojuegos en Unity durante el transcurso de mi último año de carrera universitaria. Gracias a mis habilidades y los conocimientos académicos adquiridos, llevé adelante la gestión de equipos de desarrollo y proyectos en el área de los videojuegos. Soy un apasionado de la tecnología, innovación, hardware, transformación digital, el gaming y la gamificación. Cuento con una formación de grado en Ingeniería en Sistemas de Información. También me formé en la lengua extranjera Inglés culminando mis estudios con una certificación del Cambridge Michigan ECCE alcanzando un nivel de proficiencia B2. Además, poseo habilidades nativas para el habla, escucha y escritura del Portugués, al ser un idioma familiar.",
   "hobbies": "",
   "dev": "Ingeniero en Sistemas de Información",
   "titles": [
@@ -62,41 +62,80 @@
   "profilePicture": "/profile/fotoDePerfil.jpg",
   "workExperience": [
     {
-      "title": "Administrativo",
-      "company": "Subsecretaria de la Familia de la Municipalidad de la Ciudad de Corrientes",
-      "date": "Nov. 2023 - Jun. 2024 · 8 meses",
-      "modality": "Presencial",
+      "title": "Freelancer",
+      "company": "",
+      "date": "Jun. 2024 - Actualidad",
+      "modality": "Remoto",
       "workplace": "Corrientes, Argentina",
       "country": "Argentina",
       "description": [
-        "Pasantía laboral (8 meses) en el marco del programa E.T.P (Entrenamiento Para el Trabajo Público). Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras."
+        "Me desenvuelvo como  desarrollador independiente, trabajando en proyectos asociados a videojuegos para plataformas mobile y desktop. Me encuentro abierto a todo tipo de propuestas que me permitan continuar perfeccionando mis habilidades y mejorando la calidad de mis productos para mis clientes.",
+        "También tomo posiciones como líder de equipos, project manager o product owner de proyectos y brindo consultorías y asesoramiento.",
+        "Ocasionalmente tomo pedidos como técnico informático para reparación y mantenimiento de hardware."
       ],
-      "tasks": "",
+      "tasks":"",
+      
       "linkDescription": ""
     },
     {
-      "title": "Administrativo",
-      "company": "Dirección General de Discapacidad e Inclusión Social de la Municipalidad de la Ciudad de Corrientes",
-      "date": "Jun. 2022 - Ene. 2023 · 8 meses",
-      "modality": "Presencial",
+      "title": "Desarrollador de Videojuegos",
+      "company": "SuSTI - Subsecretaría de Sistemas y Tecnologías de la Información",
+      "date": "Feb. 2023 - Actualidad",
+      "modality": "Presencial - Jornada Parcial",
       "workplace": "Corrientes, Argentina",
       "country": "Argentina",
       "description": [
-        "Desempeño de tareas administrativas: carga y digitalización de expedientes, carga de base de datos, entre otras."
+        "La SuSTI es un ente gubernamental dependiente del Ministerio de Hacienda de la Provincia de Corrientes. Nuestro objetivo es exportar la cultura correntina a través de los videojuegos y contribuir a la sociedad con soluciones didácticas."
       ],
-      "tasks": "",
+      "tasks": [
+        "Desarrollar videojuegos 2D, 3D y de Realidad Virtual en Unity con .NET C#.",
+        "Redactar informes tipo: Game Concept, Game Treatment y Game Design Document (GDD).",
+        "Operar y realizar mantenimiento de impresoras 3D.",
+        "Liderar equipos de desarrollo utilizando metodología Kanban.",
+        "Organizar y gestionar equipos de atención al público y logística para eventos."
+      ],
+      "linkDescription": ""
+    },
+    {
+      "title": "Desarrollador .NET",
+      "company": "Desarrollos NEA S.R.L",
+      "date": "Jul. 2023 - Dic. 2023 · 6 meses",
+      "modality": "Híbrido - Contrato de Prácticas",
+      "workplace": "Corrientes, Argentina",
+      "country": "Argentina",
+      "description": [
+        "Desarrollos NEA (DesNEA) es una compañía con más de 10 años de antigüedad, situada al noreste de Argentina y cuya principal actividad es el desarrollo de web, APIs y aplicaciones móviles. Con la creciente demanda, han incursionado en el mundo de la Inteligencia Artificial y los chatbots."
+      ],
+      "tasks": [
+        "Agregar funcionalidades a un chatbot desarrollado con Bot Framework, QnA Maker y L.U.I.S.",
+        "Migrar el chatbot a WhatsApp empleando la API de WhatsApp Business de Meta.",
+        "Realizar flujos de conversación en cascada.",
+        "Integrar los endpoints de consulta del cliente dentro del chatbot con protocolo SOAP"
+      ],
+      "linkDescription": ""
+    },
+    {
+      "title": "Analista de Datos",
+      "company": "IPECD - Instituto Provincial de Estadística y Ciencia de Datos",
+      "date": "Ene. 2023 - Jun. 2023 · 6 meses",
+      "modality": "Híbrido - Contrato de Prácticas",
+      "workplace": "Corrientes, Argentina",
+      "country": "Argentina",
+      "description": [
+        "El Instituto Provincial de Estadística y Ciencia de Datos es el organismo público rector de la actividad estadística en la provincia de Corrientes. Su responsabilidad es coordinar los servicios estadísticos, tanto de los sectores públicos como privados dentro del estado provincial"
+      ],
+      "tasks": [
+        "Redactar un SRS (Software Requirement Specification) que contemple soluciones para los problemas identificados en la etapa de relevamiento y análisis de los sistemas del organismo.",
+        "Desarrollar un script para la detección de outliers que facilite la identificación de anomalías incoherencias o puntos de interés sobre los datos cargados en el sistema.",
+        "Aminorar la tasa de errores en los datos otorgados a los analistas para reducir el tiempo de análisis y de generación de reportes para la toma de decisiones"
+      ],
       "linkDescription": ""
     }
   ],
-  "certificates": [
-    "https://www.freecodecamp.org/certification/Schugu/responsive-web-design",
-    "https://www.udemy.com/certificate/UC-9609612f-f35d-4839-91f0-394373d2c884/",
-    "https://www.udemy.com/certificate/UC-b167edef-443e-481f-91fd-9fc64b04a8ca/",
-    "https://www.udemy.com/certificate/UC-0093498b-eb62-4522-95e5-847afcf2d80c/",
-    "https://www.udemy.com/certificate/UC-294ca089-e6e2-4c1a-86e5-57a1f7e01f69/",
-    "https://www.udemy.com/certificate/UC-4ca8e86d-e5e7-4696-be4b-aa738bc426fd/"
-  ],
+  "certificates": "",
   "textContact": [
-    "¿Estás buscando a alguien con habilidades y experiencia para un nuevo proyecto o puesto? Estoy disponible para nuevas oportunidades y estaría encantado de escuchar sobre tu propuesta. Si crees que mi perfil encaja con lo que necesitas, no dudes en ponerte en contacto conmigo. Por favor, completa el siguiente formulario y me pondré en contacto contigo lo antes posible."
+    "Esoy interesado en propuestas de empleo que me permitan expandir mis conocimientos y despierten mi curiosidad y ambición, mejorando así mis habilidades y conocimientos explorando mis límites.",
+    "También estoy abierto a la participación y colaboración en proyectos individuales.",
+    "¡No dudes en contactarme! =)"
   ]
 }
