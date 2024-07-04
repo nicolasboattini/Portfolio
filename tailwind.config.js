@@ -15,8 +15,8 @@ const config = {
       },
       colors: {
         'CREMA': {
-          DEFAULT: '#f1e1cf',
-          dark: '#ab9f92',
+          DEFAULT: '#fcf7f1',
+          dark: '#d0ccc9',
         },
         'AMARILLO': {
           light: '#82bd69',
