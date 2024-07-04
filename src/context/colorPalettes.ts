@@ -15,8 +15,8 @@ export const darkThemeColors = {
     dark: '#0b0b0b',
   },
   text: {
-    DEFAULT: '#f1e1cf',
-    dark: '#ab9f92',
+    DEFAULT: '#fcf7f1',
+    dark: '#d0ccc9',
   },
   border: {
     light: '#637591',
